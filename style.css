@@ -1,0 +1,895 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: poppins;
+  background-color: rgba(22,22,23,255);
+  background-position: center;
+  /*animation: scrolling 18s; /*-----------------------------------Comment for faster testing*/
+}
+
+@font-face {
+  font-family: 'Nord';
+  src: url('static/fonts/Nord-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PC+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#burger,
+.content-burger,
+.title,
+.menu-btn,
+#active,
+#menu1,
+#menu2,
+#menu3,
+.carousel {
+  display: none;
+}
+@keyframes scrolling {
+  0% {
+    overflow: hidden;
+    animation-delay: 4s;
+  }
+  50% {
+    animation-delay: 4s;
+  }
+  100% {
+    animation-delay: 4s;
+    overflow: visible;
+  }
+}
+/*-------------------------------------------------------------------Smooth Scrolling Class--------------------------------------------------*/
+.reveal {
+  position: relative;
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.active {
+  opacity: 1;
+}
+/*-------------------------------------------------------------------Smooth Scrolling Class END----------------------------------------------*/
+
+/*-------------------------------------------------------------------Header------------------------------------------------------------------*/
+
+header {
+  background: transparent;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+  height: 10%;
+  position: fixed;
+  display: block;
+  opacity: 96%;
+  top: 0;
+  width: 100%;
+  padding-bottom: 6%;
+  z-index: 1000000000000000000;
+}
+
+nav {
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  display: flex;
+  transition: 0.1s;
+  position: fixed;
+}
+
+#nav-right {
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background: rgba(216, 216, 216, 255);
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
+#nav-right img {
+  height: 60px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  margin-right: 34vw;
+}
+
+#nav-right ul {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  position: static;
+  text-align: right;
+}
+
+#nav-right li {
+  text-align: center;
+  display: inline;
+  width: auto;
+  margin-right: 40px;
+}
+
+#nav-right a {
+  position: relative;
+  color: rgba(96, 97, 97, 255);
+  text-decoration: none;
+  transition: 0.2s;
+  font-size: 1.3vw;
+}
+
+
+
+#nav-right a:hover {
+  color: #ffffff;
+}
+
+#nav-right a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.signup-button {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -9%;
+  padding-right: 10%;
+  width: 100%;
+  display: inline-block;
+  padding: 15px 25px;
+  background-color: #fe6f34;
+  color: white !important;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+  font-size: 18px !important; /* Adjust the font size as desired */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Add the box shadow */
+}
+
+.signup-button:hover {
+  background-color: darkorange;
+}
+
+/*-------------------------------------------------------------------Header END------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------Background------------------------------------------------------------------*/
+
+#bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  width: 100%;
+  position: static;
+  margin-bottom: -1%;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  display: block;
+  width: 50%;
+  z-index: 1000;
+}
+#txt-container {
+  position: relative;
+  display: block;
+  width: 80%;
+  z-index: 1000;
+  margin-top: 5%;
+}
+
+#txt-container h1 {
+  font-weight: 200;
+  font-size: 6vw;
+  color: #ffffff;
+  z-index: -10;
+  background-color: transparent;
+  margin-top: 5%;
+  margin-left: 1%;
+  font-family: "Nord", sans-serif;
+  position: absolute;
+  top: 5%; /* Adjust the top position as needed */
+  left: 1%; /* Adjust the left position as needed */
+}
+
+p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.container .txt-rotate {
+  z-index: 100000;
+  position: relative;
+  display: block;
+  padding-top: 20vh;
+  font-family: 'Nord', sans-serif;
+}
+
+.container .subtxt-rotate {
+  z-index: 100000;
+  position: relative;
+  display: block;
+  font-size: 50%;
+  font-family: "Nord", sans-serif;
+
+}
+
+
+.space-filler {
+  bottom: 0;
+  height: 20%;
+  width: 100%;
+  background-color: rgba(22,22,23,255);
+}
+
+/*-------------------------------------------------------------------Background END--------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------Main Content----------------------------------------------------------------*/
+.main-content {
+  height: 100%;
+  z-index: 100000000000000000000;
+  background-color: rgba(22,22,23,255);
+}
+
+.word {
+  font-family: "Montserrat", serif;
+  perspective: 1000px;
+}
+.word span {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 8vw;
+  z-index: 10000000000000000000000000000000000000000000000000000000000000000;
+  user-select: none;
+  line-height: 0.8;
+  color: #ffffff;
+}
+
+.title-line {
+  width: 150px; /* Adjust the width as needed */
+  height: 1px; /* Adjust the height as needed */
+  background-color: #FF8515; /* Adjust the line color */
+  margin: 10% auto 20px auto; /* Center the line horizontally and add bottom margin */
+}
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#pricing h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#pricing h2 {
+
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff7a48;
+  
+
+}
+#howContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  
+}
+
+.blockHow {
+  background-repeat: no-repeat;
+  background-image: url(static/images/how_circles.png);
+  position: relative;
+  height: 500px;
+  width: 1040px;
+  
+}
+
+#howContainer h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+
+#howContainer h2 {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  /* or 133% */
+  
+  text-align: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+
+}
+
+.circle.left {
+  left: 0;
+}
+
+.circle.right {
+  right: 0;
+}
+
+.howText {
+  display: none;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.4;
+  bottom: -40px;
+}
+
+.circle.left:hover+.howText.left {
+  display: block;
+  margin-left: -5%;
+  top: 100%;
+  left: 0;
+  width: 30%;
+  transform: translate(0, -260px) scale(1.1);
+}
+
+.circle.right:hover+.howText.right {
+  display: block;
+  margin-right: -5%;
+  top: 100%;
+  right: 0;
+  width: 30%;
+  transform: translate(0, -260px) scale(1.1);
+}
+
+
+#whyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  display: block;
+  width: 80%;
+  height: 500px;
+  margin: auto auto 50% auto;
+}
+#whyContainer h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+
+#whyContainer h2 {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  /* or 133% */
+  
+  text-align: center;
+}
+
+
+.content-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.why-text-container {
+  text-align: left;
+  width: 40%;
+}
+
+.why-text-container h3 {
+  margin: 0;
+}
+
+.why-text-container p {
+  margin: 0;
+  line-height: 1.4;
+  font-size: 26px;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.why-image-container img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+}
+.infoPricing{
+  width: 15%;
+  height: 10%;
+  text-align: center;
+}
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.section-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.section-container img {
+  padding-left: 21px;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.card {
+  width: 379px;
+  height: 607px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 10px 20px;
+  justify-content: center;
+  background: linear-gradient(180deg, #454545 0%, #2D2D2D 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card.huge {
+  background: linear-gradient(180deg, #838383 0%, #515151 100%);
+  width: 407px;
+  height: 796px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+
+.card h2,
+.card h3 {
+  font-family: 'Nord', sans-serif;
+}
+
+.card p {
+  margin-top: 24px;
+  padding-right: 21px;
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #FAFAF9;
+}
+
+.list-container {
+  padding: 0 16px 0 90px;
+}
+
+.card li {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #FAFAF9;
+}
+
+/*-------------------------------------------------------------------What I Do-------------------------------------------------------------------*/
+#whatido {
+  padding-left: 2%;
+  padding-top: 90px;
+  margin-bottom: 30%;
+  background: rgba(22,22,23,255);
+}
+#whatido p {
+  font-size: 0.7vw;
+  margin-top: 1%;
+  margin-left: 17vw;
+}
+#whatido h2 {
+  color: #ffffff;
+  margin-top: 7%;
+  font-size: 2vw;
+  padding-right: 2%;
+}
+/*-------------------------------------------------------------------What I Do END---------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------3D Carousel-----------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------3D Carousel END-------------------------------------------------------------*/
+/*-------------------------------------------------------------------Contact Hover --------------------------------------------------------------*/
+.contact {
+  margin-top: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 20% 30px 20%;
+}
+
+.contact__right-side {
+  text-align: left;
+  margin-left: auto;
+  width: 400px;
+}
+
+.contact__title {
+  font-family: 'Nord';
+  font-weight: 200;
+  margin-bottom: 20px;
+  color: white;
+  text-align: left; /* Align the title to the left */
+
+}
+
+.contact__social-media-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 1vw;
+  margin-top: -100px;
+}
+
+.contact__social-media-icon {
+  margin-right: 15%;
+}
+
+.contact__social-media-icon img {
+  width: 44px;
+  height: 44px;
+}
+
+.contact__form-wrapper {
+  padding: 20px 0 20px 0;
+  text-align: left;
+}
+
+.contact__input-line {
+  margin-bottom: 20px;
+}
+
+.contact__input {
+  display: block;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  color: white;
+  background-color: #3C3C3C;
+  border: none;
+}
+
+.contact__input--textarea {
+  background-color: #3C3C3C;
+  width: 100%;
+  border: none;
+  height: 150px;
+}
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #B5B5B5;
+  /* Set the desired placeholder color */
+}
+.contact__submit-button {
+  background: linear-gradient(106.62deg, #FF8B37 29.09%, #FF6D36 81.53%);
+  border-radius: 5%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/*-------------------------------------------------------------------Contact Hover END-----------------------------------------------------------*/
+/*-------------------------------------------------------------------Main Content END------------------------------------------------------------*/
+/*-------------------------------------------------------------------Footer----------------------------------------------------------------------*/
+
+footer {
+  display: table;
+  margin: 20px auto 0 auto;
+  margin-bottom: 2%;
+}
+footer .copyright {
+  font-size: 15px;
+  color: #757575;
+  width: 100%;
+}
+
+footer .copyright p{
+  text-align: center;
+  font-size: 15px;
+}
+/*-------------------------------------------------------------------Footer END------------------------------------------------------------------*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PC END+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++MOBILE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media only screen and (max-width: 420px) {
+  #nav-right,
+  .content-all,
+  .content-carrousel {
+    display: none;
+  }
+  #burger,
+  .content-burger,
+  .title,
+  .menu-btn,
+  #menu1,
+  #menu2,
+  #menu3 {
+    display: block;
+  }
+
+  /*--------------------------------------------------------------------Burger Menú-----------------------------------------------------------------*/
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .circle-open-close {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-135deg, #000000, #171a25);
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+    opacity: 1000%;
+  }
+  #burger {
+    z-index: 100;
+    opacity: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #burger #menu2 {
+    padding: 20% 0 20% 0px;
+  }
+  #active:checked ~ #burger {
+    clip-path: circle(75%);
+  }
+  .menu-btn {
+    position: absolute;
+    z-index: 100000;
+    right: 20px;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn {
+    background: #fff;
+    color: #000000;
+  }
+  #active:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  #burger ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+  #burger li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+  }
+  /*------------------------------------------------------------------Burger Menú END---------------------------------------------------------------*/
+  /*------------------------------------------------------------------Moon and text Background------------------------------------------------------*/
+  .wrapper {
+    display: table;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    padding-bottom: 200px;
+  }
+  #bg {
+    display: block;
+    position: static;
+    transform: scale(2.4);
+    width: 100%;
+    height: 300px;
+    margin-left: -10%;
+    margin-right: -10%;
+  }
+  .container {
+    display: block;
+    margin-top: 35%;
+  }
+  .container h1 {
+    /*JS text write/erase*/
+    margin: 0 2% 0 2%;
+    width: 70%;
+    font-size: 15vw;
+  }
+  /*------------------------------------------------------------------Moon and text Background END--------------------------------------------------*/
+  #pricing {
+    display: block;
+    padding-left: -2%;
+    padding-top: 100px;
+  }
+  #pricing span {
+    font-size: 15vw;
+  }
+  #pricing p {
+    font-size: 2.5vw;
+    margin-top: 2%;
+    margin-left: 26vw;
+  }
+  #pricing h2 {
+    margin-top: 20%;
+    font-size: 8vw;
+    line-height: 160%;
+  }
+  .glassmorphism .container .card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 400px;
+    margin: 50px;
+    box-shadow: 0px 0px 50px #171a25;
+    border-radius: 15px;
+    background: rgb(17, 17, 17);
+    overflow: hidden;
+  }
+
+  .glassmorphism .container .card .content .skills span {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background: linear-gradient(to right, rgb(51, 42, 94), rgb(212, 85, 0));
+    height: 6px;
+    align-items: left;
+    text-align: left;
+    align-content: left;
+  }
+  .glassmorphism .container .card .content .skills h3 {
+    font-size: 30px;
+    margin-bottom: 30%;
+  }
+  .extrainfo {
+    margin: 0;
+    margin-right: 40%;
+    margin-left: -25%;
+    padding: 0;
+    width: 125%;
+    height: 600px;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    left: 0;
+    transform: translateX(0%);
+  }
+  .extrainfo container {
+    margin: 0;
+    display: block;
+    left: 62.5%;
+    transform: translateX(-60%);
+    height: 40%;
+    width: 40%;
+    margin-top: 30%;
+  }
+  .extrainfo container .count {
+    font-size: 18vw;
+  }
+  .extrainfo container .phrase {
+    font-size: 4vw;
+  }
+  #whatido {
+    background: #000000;
+    display: block;
+    padding-top: 100px;
+  }
+  #whatido span {
+    font-size: 15vw;
+  }
+  #whatido p {
+    font-size: 2.5vw;
+    margin-top: 2%;
+    margin-left: 30vw;
+  }
+  #whatido h2 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 8vw;
+    line-height: 160%;
+    color: #ffffff;
+  }
+
+  #contact {
+    background: #000000;
+    display: block;
+    padding-top: 100px;
+    margin-top: 30%;
+  }
+  #contact span {
+    font-size: 15vw;
+  }
+  #contact p {
+    font-size: 2.5vw;
+    margin-top: 2%;
+    margin-left: 29vw;
+  }
+  #contact a {
+    padding: 10px 20px;
+  }
+  #contact .container {
+    margin-top: 15%;
+    padding-top: 10px;
+  }
+  footer {
+    margin: 30% auto 10% auto;
+  }
+
+
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: opacity linear;
+    }
+  }
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++MOBILE END++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
