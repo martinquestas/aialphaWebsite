@@ -63,7 +63,7 @@ body {
 header {
   background: transparent;
   font-size: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nord", sans-serif;
   height: 10%;
   position: fixed;
   display: block;
@@ -94,9 +94,9 @@ nav {
 }
 
 #nav-right img {
-  height: 60px; /* Adjust the height as needed */
-  width: 200px; /* Adjust the width as needed */
-  margin-right: 34vw;
+  height: 90px; /* Adjust the height as needed */
+  width: 300px; /* Adjust the width as needed */
+  margin-right: 30vw;
 }
 
 #nav-right ul {
@@ -115,6 +115,7 @@ nav {
   display: inline;
   width: auto;
   margin-right: 40px;
+  
 }
 
 #nav-right a {
@@ -123,6 +124,17 @@ nav {
   text-decoration: none;
   transition: 0.2s;
   font-size: 1.3vw;
+  font-family: 'Nord';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 22px;
+/* or 110% */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 1px;
 }
 
 
@@ -145,7 +157,7 @@ nav {
   padding: 15px 25px;
   background-color: #fe6f34;
   color: white !important;
-  border-radius: 8px;
+  border-radius: 14px;
   transition: background-color 0.2s;
   font-size: 18px !important; /* Adjust the font size as desired */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Add the box shadow */
