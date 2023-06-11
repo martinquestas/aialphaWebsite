@@ -264,35 +264,7 @@ p {
   color: #ffffff;
 }
 
-.title-line {
-  width: 150px; /* Adjust the width as needed */
-  height: 1px; /* Adjust the height as needed */
-  background-color: #FF8515; /* Adjust the line color */
-  margin: 10% auto 20px auto; /* Center the line horizontally and add bottom margin */
-}
 
-#pricing {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-}
-
-#pricing h1 {
-  font-family: 'Nord', sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #ffffff;
-}
-
-#pricing h2 {
-
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #ff7a48;
-  
-
-}
 #howContainer {
   display: flex;
   flex-direction: column;
@@ -382,11 +354,11 @@ p {
   align-items: center;
   padding: 0;
   text-align: center;
-  display: block;
-  width: 80%;
-  height: 500px;
-  margin: auto auto 50% auto;
+  width: 60%;
+  height: auto;
+  margin: auto;
 }
+
 #whyContainer h1 {
   font-family: 'Nord', sans-serif;
   font-size: 32px;
@@ -394,28 +366,27 @@ p {
   color: #ffffff;
 }
 
-
 #whyContainer h2 {
   font-family: 'Prompt';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 30px;
   line-height: 40px;
-  /* or 133% */
-  
-  text-align: center;
+  text-align: left;
 }
 
-
 .content-container {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
-
+  align-content: center;
+  width: 100%;
 }
 
 .why-text-container {
   text-align: left;
-  width: 40%;
+  width: 50%;
 }
 
 .why-text-container h3 {
@@ -426,8 +397,31 @@ p {
   margin: 0;
   line-height: 1.4;
   font-size: 26px;
-  width: 400px;
-  margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.number-icon {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  margin-right: 1vw;
+}
+
+.number-icon img {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.why-image-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .why-image-container img {
@@ -435,7 +429,10 @@ p {
   width: 300px;
   height: 300px;
   padding: 20px;
+  margin-bottom: 20px;
 }
+
+
 .infoPricing{
   width: 15%;
   height: 10%;
@@ -460,6 +457,41 @@ p {
 .section-container img {
   padding-left: 21px;
 }
+
+.title-line {
+  width: 150px; /* Adjust the width as needed */
+  height: 1px; /* Adjust the height as needed */
+  background-color: #FF8515; /* Adjust the line color */
+  margin: 10% auto 20px auto; /* Center the line horizontally and add bottom margin */
+}
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  width: 90vw;
+  margin: auto;
+  height: auto;
+}
+
+
+#pricing h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+#pricing h2 {
+
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff7a48;
+
+}
+
 
 #card-container {
   display: flex;
@@ -573,6 +605,71 @@ p {
 
 }
 
+#rules-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#rules-container h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.rules-block {
+  width: 50%;
+  padding: 20px;
+}
+
+.rules-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rules-section img {
+  padding-left: 21px;
+}
+
+.rules-block h2 {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  color:#FF8B37;
+  margin: 0;
+  margin-left: 150px;
+}
+
+.rules-block p {
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 34px;
+  text-align: justify;
+  letter-spacing: -1px;
+  margin-top: 10px;
+  margin-bottom: 10%;
+  display: flex;
+  align-items: flex-start;
+
+}
+
+
+.rule-icon {
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  margin-right: 60px;
+}
+
+.rule-icon img {
+  display: block;
+}
 
 /*-------------------------------------------------------------------Contact Hover --------------------------------------------------------------*/
 .contact {
@@ -647,6 +744,7 @@ p {
 .contact__submit-button {
   background: linear-gradient(106.62deg, #FF8B37 29.09%, #FF6D36 81.53%);
   border-radius: 5%;
+  width: 100%;
   color: white;
   border: none;
   padding: 10px 20px;
