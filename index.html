@@ -42,18 +42,30 @@
 <body>
 
     <header>
-        <nav id="nav-right" role="navigation">
-            <a href="https://aialpha.ai/">
-                <img src="static/images/AIAlphalogo.png" alt="Logo">
-            </a>
-            <ul>
-                <li><a href="#how" class="title-button">HOW?</a></li>
-                <li><a href="#why" class="title-button">WHY?</a></li>
-                <li><a href="#pricingLine" class="title-button">PRICING</a></li>
-                <li><a href="#rules" class="title-button">RULES</a></li>
-                <li><a href="story.html" class="title-button">OUR STORY</a></li>
-                <li><a href="https://example.com" class="signup-button">Sign Up</a></li>
-            </ul>
+        <nav role="navigation">
+            <div class="logo">
+                <a href="https://aialpha.ai/">
+                    <img src="static/images/AIAlphalogo.png" alt="Logo" class="desktop-logo">
+                    <img src="static/images/AIAlphalogoMobile.png" alt="Logo" class="mobile-logo">
+                </a>
+            </div>
+            <div class="nav-right">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="titulos">
+                    <ul>
+                        <li><a href="#how" class="title-button">HOW?</a></li>
+                        <li><a href="#why" class="title-button">WHY?</a></li>
+                        <li><a href="#pricingLine" class="title-button">PRICING</a></li>
+                        <li><a href="#rules" class="title-button">RULES</a></li>
+                        <li><a href="story.html" class="title-button">OUR STORY</a></li>
+                        <li><a href="https://example.com" class="signup-button">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -61,18 +73,27 @@
 
 
 
+
     <div class="container" id="txt-container">
         <h1>
+
             <span class="txt-rotate" data-period="2000" data-rotate='[ "HELLO.", "WELCOME TO AI ALPHA" ]'></span>
             <span class="subtxt-rotate" data-period="2000"
                 data-rotate='[ "I am the first AI Crypto Virtual Assistant.", "How may I help you today?" ]'></span>
+
         </h1>
     </div>
 
     <div class="wrapper">
-        <img id="bg" alt="Landing Background" src="static/images/bg.webp">
+
+        <img id="bg" alt="Landing Background" src="static/images/bg.webp" class="zoomed">
+        <div class="signup-container">
+            <h3>AI Alpha gives traders a competitive edge to make more profitable trades. </h3>
+            <button class="signup-button">Sign Up</button>
+        </div>
         <div class="space-filler"></div>
     </div>
+
 
 
     <div id="how" style="padding-top: 1vh;"></div>
@@ -304,7 +325,7 @@
         </div>
         <div class="contact__right-side">
             <h1 class="contact__title">Contact Us!</h1>
-            <form id="form" action="https://formsubmit.co/m.mengo@questasconsulting.org" method="POST"
+            <form id="form" action="https://formsubmit.co/support@aialpha.ai" method="POST"
                 class="contact__form-wrapper">
                 <div class="contact__input-line">
                     <input type="text" name="name" class="contact__input" autocomplete="off" required

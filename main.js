@@ -89,83 +89,25 @@ window.addEventListener("DOMContentLoaded", function () {
 //Text Writing-Deleting END
 
 //Burger Menu
-/* 
-document.getElementById("active").checked = false;
-document.getElementById("menu1").style.display = "none";
-document.getElementById("menu2").style.display = "none";
-document.getElementById("menu3").style.display = "none";
 
-active.onclick = function () {
-  document.getElementById("burger").style.display = "block";
-  document.getElementById("menu1").style.display = "block";
-  document.getElementById("menu2").style.display = "block";
-  document.getElementById("menu3").style.display = "block";
-  if (document.getElementById("active").clicked == false) {
-    document.getElementById("burger").style.display = "none";
-    document.getElementById("menu1").style.display = "none";
-    document.getElementById("menu2").style.display = "none";
-    document.getElementById("menu3").style.display = "none";
-  }
-};
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-right ul");
+const navLinksItems = document.querySelectorAll(".nav-right ul li");
 
-menu1.onclick = function () {
-  document.getElementById("burger").style.display = "none";
-  document.getElementById("menu1").style.display = "none";
-  document.getElementById("menu2").style.display = "none";
-  document.getElementById("menu3").style.display = "none";
-  if (document.getElementById("active").checked) {
-    document.getElementById("active").checked = false;
-    document.getElementById("burger").style.display = "block";
-    document.getElementById("menu1").style.display = "none";
-    document.getElementById("menu2").style.display = "none";
-    document.getElementById("menu3").style.display = "none";
-  }
-};
-menu2.onclick = function () {
-  document.getElementById("burger").style.display = "none";
-  document.getElementById("menu1").style.display = "none";
-  document.getElementById("menu2").style.display = "none";
-  document.getElementById("menu3").style.display = "none";
-  if (document.getElementById("active").checked) {
-    document.getElementById("active").checked = false;
-    document.getElementById("burger").style.display = "block";
-    document.getElementById("menu1").style.display = "none";
-    document.getElementById("menu2").style.display = "none";
-    document.getElementById("menu3").style.display = "none";
-  }
-};
-menu3.onclick = function () {
-  document.getElementById("burger").style.display = "none";
-  document.getElementById("menu1").style.display = "none";
-  document.getElementById("menu2").style.display = "none";
-  document.getElementById("menu3").style.display = "none";
-  if (document.getElementById("active").checked) {
-    document.getElementById("active").checked = false;
-    document.getElementById("burger").style.display = "block";
-    document.getElementById("menu1").style.display = "none";
-    document.getElementById("menu2").style.display = "none";
-    document.getElementById("menu3").style.display = "none";
-  }
-};
-*/
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("active");
+  navLinks.classList.toggle("active");
+});
+
+// Close the hamburger menu when a title within the <li> elements is clicked
+navLinksItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+  });
+});
+
 //Burger Menu END
-//Reveal elements on scroll
-window.addEventListener("scroll", reveal);
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowheight = window.innerHeight;
-    var revealtop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-
-    if (revealtop < windowheight - revealpoint) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-//Reveal elements on scroll ENDD
 
 //Get all the hyperlink elements
 var links = document.getElementsByTagName("a");
