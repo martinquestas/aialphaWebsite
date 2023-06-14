@@ -401,8 +401,8 @@ p {
 #galleryView {
   height: 100vh;
   width: 89vw;
-  background: #3B3B3B;
-
+  /*background: #3B3B3B;*/
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,7 +435,6 @@ p {
   justify-content: center;
   align-items: center;
   transition: all 1s;
-  margin-left: -4.1%;
 }
 
 #leftView:hover {
@@ -494,12 +493,15 @@ p {
 }
 
 #dotsContainer {
+
+  padding: 0;
   display: flex;
   width: 900px;
   justify-content: center;
   align-items: center;
+  align-content: center;
   margin-top: 10px;
-  margin-left: 75px;
+  margin-left: 4%;
   position: relative;
 }
 
