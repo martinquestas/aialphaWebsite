@@ -198,8 +198,8 @@ nav a:hover:after {
   color: #ffffff;
   z-index: -10;
   background-color: transparent;
-  margin-top: 5%;
-  margin-left: 1%;
+  margin-top: 15%;
+  margin-left: 5%;
   font-family: "Nord", sans-serif;
   position: absolute;
   top: 5%;
@@ -762,7 +762,7 @@ line-height: 36px;
 
 .contact__right-side {
   text-align: left;
-  margin-left: auto;
+  margin-left: 25%;
   width: 700px;
   background: #464646;
   padding: 80px 100px;
