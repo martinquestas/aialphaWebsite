@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  zoom: 88%;
+  zoom: 78%;
   width: 100%;
   height: 100%;
   font-family: poppins;
@@ -169,6 +169,7 @@ nav a:hover:after {
   -webkit-background-size: cover;
   width: 100%;
   position: static;
+  margin-top: -2.5%;
   margin-bottom: -1%;
 }
 
@@ -358,6 +359,11 @@ line-height: 36px;
   width: 100%;
   margin-top: 5%;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex; /* Add this */
+  flex-direction: column;
 }
 
 #galleryContainer { 
@@ -372,30 +378,15 @@ line-height: 36px;
   position: relative;
 }
 
-#toggle {
-  height: 10vh;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-}
-
-#tilesView {
-  min-height: 90vh;
-  width: 100vw;
-  background:  #3B3B3B;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  
-}
-
 #galleryView {
+  margin: 0;
+  padding: 0;
   height: 100vh;
   width: 100vw;
   /*background: #3B3B3B;*/
   background-color: transparent;
   display: flex;
+  align-content: center;
   justify-content: center;
   align-items: center;
 }
@@ -421,8 +412,7 @@ line-height: 36px;
   width: 30%;
   opacity: 0.5;
   border-radius: 5px;
-  transform: skewy(4deg);
-  transform-origin: top right;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -439,8 +429,7 @@ line-height: 36px;
   width: 30%;
   opacity: 0.5;
   border-radius: 5px;
-  transform: skewy(-4deg);
-  transform-origin: top left;
+
   display: flex;
   justify-content: center;
   align-items: center;
