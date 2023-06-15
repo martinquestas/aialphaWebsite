@@ -94,12 +94,12 @@ function setActiveDot(index) {
 }
 
 let imgObject = [
-  "static/images/why1.png",
-  "static/images/why2.png",
-  "static/images/why3.png",
-  "static/images/why4.png",
-  "static/images/why4.png",
-  "static/images/why4.png",
+  "static/images/why1.svg",
+  "static/images/why2.svg",
+  "static/images/why3.svg",
+  "static/images/why4.svg",
+  "static/images/why5.svg",
+  "static/images/why6.svg",
 ];
 
 let mainImg = 0;

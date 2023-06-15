@@ -394,9 +394,9 @@ line-height: 36px;
 
 
 #mainView {
-  height: 789px;
-  width: 975px;  
-  border-radius: 5px;
+  height: 914px;
+  width: 1132px;  
+  border-radius: 5%;
   background-color: #eb9100;
   z-index: 1;
   transition: all 1s;  
@@ -411,7 +411,7 @@ line-height: 36px;
   height: 600px;
   width: 30%;
   opacity: 0.5;
-  border-radius: 5px;
+  border-radius: 5%;
 
   display: flex;
   justify-content: center;
@@ -428,8 +428,7 @@ line-height: 36px;
   height: 600px;
   width: 30%;
   opacity: 0.5;
-  border-radius: 5px;
-
+  border-radius: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -477,7 +476,7 @@ line-height: 36px;
 
   padding: 0;
   display: flex;
-  width: 900px;
+  width: 90%;
   justify-content: center;
   align-items: center;
   align-content: center;
