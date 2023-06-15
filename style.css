@@ -8,7 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  zoom: 78%;
+  zoom: 65%;
   width: 100%;
   height: 100%;
   font-family: poppins;
@@ -273,7 +273,7 @@ p {
   font-family: 'Nord';
 font-style: normal;
 font-weight: 400;
-font-size: 45px;
+font-size: 3vw;
 line-height: 22px;
   margin-bottom: 20px;
   color: #ffffff;
@@ -284,7 +284,7 @@ line-height: 22px;
   font-family: 'Prompt';
 font-style: normal;
 font-weight: 200;
-font-size: 26px;
+font-size: 1.8vw;
 line-height: 36px;
   text-align: center;
 }
@@ -340,7 +340,7 @@ line-height: 36px;
   font-family: 'Nord';
   font-style: normal;
   font-weight: 400;
-  font-size: 45px;
+  font-size: 3vw;
   line-height: 22px;
     margin-bottom: 20px;
     color: #ffffff;
@@ -350,7 +350,7 @@ line-height: 36px;
   font-family: 'Prompt';
 font-style: normal;
 font-weight: 200;
-font-size: 26px;
+font-size: 1.8vw;
 line-height: 36px;
   text-align: center;
 }
@@ -505,7 +505,7 @@ line-height: 36px;
 
 
 .infoPricing{
-  width: 290px;
+  width: 490px;
   height: 10%;
   text-align: center;
 }
@@ -547,7 +547,7 @@ line-height: 36px;
 
 #pricing h1 {
   font-family: 'Nord', sans-serif;
-  font-size: 32px;
+  font-size: 3vw;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -614,8 +614,8 @@ line-height: 36px;
   font-family: 'Prompt';
   font-style: normal;
   font-weight: 300;
-  font-size: 0.9vw;
-  line-height: 20px;
+  font-size: 1.1vw;
+  line-height: 28px;
   letter-spacing: 0.5px;
   text-align: left;
   color: #FAFAF9;
@@ -625,7 +625,7 @@ line-height: 36px;
   font-family: 'Prompt';
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 0.9vw;
   line-height: 20px;
   letter-spacing: 0.5px;
   color: #FAFAF9;
@@ -684,7 +684,7 @@ line-height: 36px;
 
 #rules-container h1 {
   font-family: 'Nord', sans-serif;
-  font-size: 32px;
+  font-size: 3vw;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -759,7 +759,7 @@ line-height: 36px;
 }
 
 .contact__right-side h1{
-  width: 490px;
+  width: 580px;
 }
 
 .contact__left-side {
@@ -773,10 +773,10 @@ line-height: 36px;
 .contact__left-side h1{
   color: white;
   font-family: 'Nord';
-  width: 300px;
+  width: 450px;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 2.6vw;
   letter-spacing: 2px;
 }
 
@@ -816,23 +816,16 @@ line-height: 36px;
 .contact__input {
   display: inline-block;
   width: 75%;
-  padding: 10px 0 10px 0;
+  padding: 20px 0 20px 0;
   color: white;
   background: #5F5E5E;
   margin-right: 10px;
   border: none;
 }
 
-.contact__input--textarea {
-  color: white;
-  background: #5F5E5E;
-
-  width: 100%;
-  border: none;
-  height: 150px;
-}
 .contact input::placeholder,
 .contact textarea::placeholder {
+  font-size: 1.6vw;
   color: #B5B5B5;
   /* Set the desired placeholder color */
 }
@@ -843,9 +836,9 @@ line-height: 36px;
   width: 20%;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 20px 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1.4vw;
   margin: 0 auto;
 }
 
@@ -861,14 +854,14 @@ footer {
   margin-bottom: 2%;
 }
 footer .copyright {
-  font-size: 15px;
   color: #757575;
   width: 100%;
 }
 
 footer .copyright p{
   text-align: center;
-  font-size: 15px;
+  font-size: 1.1vw;
+  margin-bottom: 20px;
 }
 /*-------------------------------------------------------------------Footer END------------------------------------------------------------------*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PC END+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
