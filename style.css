@@ -765,7 +765,11 @@ line-height: 36px;
   margin-left: 25%;
   width: 700px;
   background: #464646;
-  padding: 80px 100px;
+  padding: 80px 80px;
+}
+
+.contact__right-side h1{
+  width: 490px;
 }
 
 .contact__left-side {
@@ -779,6 +783,7 @@ line-height: 36px;
 .contact__left-side h1{
   color: white;
   font-family: 'Nord';
+  width: 300px;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
