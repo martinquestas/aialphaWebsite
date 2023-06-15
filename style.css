@@ -539,7 +539,7 @@ line-height: 36px;
   align-items: center;
   text-align: center;
   padding: 0;
-  width: 90vw;
+  width: 100vw;
   margin: auto;
   height: auto;
 }
@@ -570,7 +570,7 @@ line-height: 36px;
 }
 
 .card {
-  width: 35vw;
+  width: 32vw;
   height: 90vh;
   padding: 20px;
   border-radius: 5px;
