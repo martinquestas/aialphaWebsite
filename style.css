@@ -12,11 +12,12 @@ body {
   width: 100%;
   height: 100%;
   font-family: poppins;
-  background-color: rgba(22,22,23,255);
+  background-color:#171717;
   background-position: center;
   /*animation: scrolling 18s; /*-----------------------------------Comment for faster testing*/
 }
 .testMobile{display: none;}
+
 @font-face {
   font-family: 'Nord';
   src: url('static/fonts/Nord-Regular.ttf') format('truetype');
@@ -201,8 +202,8 @@ nav a:hover:after {
   margin-left: 1%;
   font-family: "Nord", sans-serif;
   position: absolute;
-  top: 5%; /* Adjust the top position as needed */
-  left: 1%; /* Adjust the left position as needed */
+  top: 5%;
+  left: 1%;
 }
 
 p {
@@ -214,17 +215,11 @@ p {
   z-index: 100000;
   position: relative;
   display: block;
-  padding-top: 20vh;
-  font-family: 'Nord', sans-serif;
-}
-
-.container .subtxt-rotate {
-  z-index: 100000;
-  position: relative;
-  display: block;
-  font-size: 50%;
-  font-family: "Nord", sans-serif;
-
+  font-family: 'Nord';
+  font-style: normal;
+  font-weight: 1000;
+  font-size: 85px;
+  line-height: 100px;
 }
 
 
@@ -263,17 +258,22 @@ p {
 }
 
 .blockHow {
-  background-repeat: no-repeat;
-  background-image: url(static/images/how_circles.png);
+  width: 1299px;
+  height: 897px;
+  margin: 0 auto;
   position: relative;
-  height: 500px;
-  width: 1040px;
+  background-image: url("static/images/Frame 17.svg");
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out; /* Added transition property */
   
 }
 
 #howContainer h1 {
-  font-family: 'Nord', sans-serif;
-  font-size: 32px;
+  font-family: 'Nord';
+font-style: normal;
+font-weight: 400;
+font-size: 45px;
+line-height: 22px;
   margin-bottom: 20px;
   color: #ffffff;
 }
@@ -281,60 +281,46 @@ p {
 
 #howContainer h2 {
   font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 40px;
-  /* or 133% */
-  
+font-style: normal;
+font-weight: 200;
+font-size: 26px;
+line-height: 36px;
   text-align: center;
 }
 
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+
+.column {
+  width: calc(100% / 3);
+  height: 697px;
+  position: relative;
+  float: left;
+}
+
+.rectangle {
+  width: 250px;
+  height: 140px;
   position: absolute;
-  top: 0;
-  cursor: pointer;
-
+  top: 550px;
+  left: 50%;
+  margin-left: -130px; /* Half the width of the rectangle */
+  background-color: rgba(0, 0, 0, 0); /* Invisible background */
+  z-index: 1;
+  cursor: pointer; /* Set the cursor style to indicate clickable */
 }
 
-.circle.left {
-  left: 0;
+
+#rectangle1{
+  height: 110px;
+  top: 420px;
+  margin-left: -20px;
 }
 
-.circle.right {
-  right: 0;
+#rectangle3{
+  height: 110px;
+  top: 420px;
+  margin-left: -245px;
 }
 
-.howText {
-  display: none;
-  position: absolute;
-  width: 200px;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.4;
-  bottom: -40px;
-}
-
-.circle.left:hover+.howText.left {
-  display: block;
-  margin-left: -5%;
-  top: 100%;
-  left: 0;
-  width: 30%;
-  transform: translate(0, -260px) scale(1.1);
-}
-
-.circle.right:hover+.howText.right {
-  display: block;
-  margin-right: -5%;
-  top: 100%;
-  right: 0;
-  width: 30%;
-  transform: translate(0, -260px) scale(1.1);
-}
 
 /*------------------------------------------------WHY------------------------------------------------------------------------------------*/
 #whyContainer {
@@ -350,22 +336,27 @@ p {
 }
 
 #whyContainer h1 {
-  font-family: 'Nord', sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #ffffff;
+  font-family: 'Nord';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
 }
 
 #whyContainer h2 {
   font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 40px;
+font-style: normal;
+font-weight: 200;
+font-size: 26px;
+line-height: 36px;
+  text-align: center;
 }
 #containerCarousel {
   height: 100vh;
   width: 100%;
+  margin-top: 5%;
   box-sizing: border-box;
 }
 
@@ -401,7 +392,7 @@ p {
 
 #galleryView {
   height: 100vh;
-  width: 89vw;
+  width: 100vw;
   /*background: #3B3B3B;*/
   background-color: transparent;
   display: flex;
@@ -427,10 +418,10 @@ p {
 
 #leftView {
   height: 600px;
-  width: 787px;
+  width: 30%;
   opacity: 0.5;
   border-radius: 5px;
-  transform: skewy(5deg);
+  transform: skewy(4deg);
   transform-origin: top right;
   display: flex;
   justify-content: center;
@@ -445,10 +436,10 @@ p {
 
 #rightView {
   height: 600px;
-  width: 787px;
+  width: 30%;
   opacity: 0.5;
   border-radius: 5px;
-  transform: skewy(-5deg);
+  transform: skewy(-4deg);
   transform-origin: top left;
   display: flex;
   justify-content: center;
@@ -525,12 +516,11 @@ p {
 
 
 .infoPricing{
-  width: 15%;
+  width: 290px;
   height: 10%;
   text-align: center;
 }
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   border-radius: 5px;
   padding: 20px;
@@ -545,15 +535,13 @@ p {
   align-items: center;
   gap: 20px;
 }
-.section-container img {
-  padding-left: 21px;
-}
+
 
 .title-line {
-  width: 150px; /* Adjust the width as needed */
+  width: 250px; /* Adjust the width as needed */
   height: 1px; /* Adjust the height as needed */
   background-color: #FF8515; /* Adjust the line color */
-  margin: 10% auto 20px auto; /* Center the line horizontally and add bottom margin */
+  margin: 5% auto 20px auto; /* Center the line horizontally and add bottom margin */
 }
 
 #pricing {
@@ -577,7 +565,7 @@ p {
 
 #pricing h2 {
 
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 20px;
   color: #ff7a48;
 
@@ -593,8 +581,8 @@ p {
 }
 
 .card {
-  width: 379px;
-  height: 607px;
+  width: 25vw;
+  height: 80vh;
   padding: 20px;
   border-radius: 5px;
   margin: 0 10px 20px;
@@ -608,10 +596,13 @@ p {
   align-items: center;
 }
 .card.huge {
-  background: linear-gradient(180deg, #838383 0%, #515151 100%);
-  width: 407px;
-  height: 796px;
+  background: linear-gradient(180deg, #5C5C5C 0%, #373737 100%);
+  width: 30vw;
+  height: 90vh;
+  border: #eb9100 2px solid;
 }
+
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -631,18 +622,14 @@ p {
 
 .card p {
   margin-top: 24px;
-  padding-right: 21px;
   font-family: 'Prompt';
   font-style: normal;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 0.9vw;
   line-height: 20px;
   letter-spacing: 0.5px;
+  text-align: left;
   color: #FAFAF9;
-}
-
-.list-container {
-  padding: 0 16px 0 90px;
 }
 
 .card li {
@@ -653,7 +640,10 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   color: #FAFAF9;
+  text-align: left;
 }
+
+
 
 #story {
   display: flex;
@@ -711,60 +701,59 @@ p {
 }
 
 .rules-block {
-  width: 50%;
-  padding: 20px;
+  width: 1110px;
+  height: 1250px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.rules-section {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.rules-section img {
-  padding-left: 21px;
-}
-
-.rules-block h2 {
-  font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 38px;
-  color:#FF8B37;
-  margin: 0;
-  margin-left: 150px;
+.square {
+  width: 510px;
+  height: 560px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.rules-block p {
-  font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 200;
-  font-size: 26px;
-  line-height: 34px;
-  text-align: justify;
-  letter-spacing: -1px;
-  margin-top: 10px;
-  margin-bottom: 10%;
-  display: flex;
-  align-items: flex-start;
+#square1 {
+  top: 0;
+  left: 0;
+  background-position: top left;
+  padding-bottom: 170px;
 
 }
 
+#square2 {
+  top: 0;
+  right: 0;
+  background-position: top right;
+  padding-bottom: 140px;
 
-.rule-icon {
-  display: inline-block;
-  width: 90px;
-  height: 30px;
-  margin-right: 60px;
 }
 
-.rule-icon img {
-  display: block;
+#square3 {
+  bottom: 0;
+  left: 0;
+  background-position: bottom left;
+  height: 590px;
 }
+
+#square4 {
+  bottom: 0;
+  right: 0;
+  background-position: bottom right;
+  height: 590px;
+
+}
+
 
 /*-------------------------------------------------------------------Contact Hover --------------------------------------------------------------*/
 .contact {
   margin-top: 10%;
+  margin-bottom: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -774,23 +763,42 @@ p {
 .contact__right-side {
   text-align: left;
   margin-left: auto;
-  width: 400px;
+  width: 700px;
+  background: #464646;
+  padding: 80px 100px;
+}
+
+.contact__left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+.contact__left-side h1{
+  color: white;
+  font-family: 'Nord';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
 
 .contact__title {
   font-family: 'Nord';
+  font-size: 29px;
   font-weight: 200;
   margin-bottom: 20px;
   color: white;
   text-align: left; /* Align the title to the left */
-
 }
 
 .contact__social-media-icons {
   display: flex;
   align-items: center;
-  margin-left: 1vw;
-  margin-top: -100px;
+  justify-content: center;
+  margin-top: 20px; /* Adjust the margin as needed */
 }
 
 .contact__social-media-icon {
@@ -803,7 +811,6 @@ p {
 }
 
 .contact__form-wrapper {
-  padding: 20px 0 20px 0;
   text-align: left;
 }
 
@@ -812,17 +819,19 @@ p {
 }
 
 .contact__input {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: 75%;
   padding: 10px 0 10px 0;
   color: white;
-  background-color: #3C3C3C;
+  background: #5F5E5E;
+  margin-right: 10px;
   border: none;
 }
 
 .contact__input--textarea {
   color: white;
-  background-color: #3C3C3C;
+  background: #5F5E5E;
+
   width: 100%;
   border: none;
   height: 150px;
@@ -833,15 +842,15 @@ p {
   /* Set the desired placeholder color */
 }
 .contact__submit-button {
+  display: inline-block;
   background: linear-gradient(106.62deg, #FF8B37 29.09%, #FF6D36 81.53%);
-  border-radius: 5%;
-  width: 100%;
+  border-radius: 10%;
+  width: 20%;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 14px;
-  display: block;
   margin: 0 auto;
 }
 

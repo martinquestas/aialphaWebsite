@@ -3,86 +3,38 @@ var TxtRotate = function (el, toRotate, period) {
   this.el = el;
   this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
-  this.txt = "";
-  this.onCompleteCallback = null; // Added property for onComplete callback
-  this.isDeleting = false;
+  this.fullTxt = "";
   this.tick();
 };
 
 TxtRotate.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
+  var txt = this.toRotate[i];
+  var fullTxt = this.fullTxt + txt.charAt(this.fullTxt.length);
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  if (fullTxt === txt) {
+    // Text has completed typing
+    this.el.innerHTML = '<span class="wrap">' + fullTxt + "</span>";
   } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
+    this.el.innerHTML = '<span class="wrap">' + fullTxt + "</span>";
+    var that = this;
+    setTimeout(function () {
+      that.tick();
+    }, this.period);
   }
 
-  this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
-
-  var that = this;
-  var delta = 60; // Adjust the typing speed here
-
-  if (this.isDeleting) {
-    delta /= 2;
-  }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    if (i === 0) {
-      // If "HELLO." is fully displayed
-      this.isDeleting = true;
-      delta = 1000; // Add a delay before starting to delete
-    } else if (i === 1 && typeof this.onCompleteCallback === "function") {
-      // Execute onComplete callback when "WELCOME TO AI ALPHA" is fully displayed
-      this.onCompleteCallback();
-    }
-  } else if (this.isDeleting && this.txt === "") {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-  }
-
-  setTimeout(function () {
-    that.tick();
-  }, delta);
+  this.fullTxt = fullTxt;
 };
 
 window.addEventListener("DOMContentLoaded", function () {
   var elements = document.getElementsByClassName("txt-rotate");
-  var foundWelcomeAlpha = false; // Flag variable
-  var foundSubTxtRotate = false; // Flag variable
 
   for (var i = 0; i < elements.length; i++) {
     var toRotate = JSON.parse(elements[i].getAttribute("data-rotate"));
     var period = elements[i].getAttribute("data-period");
     if (toRotate) {
-      var txtRotate = new TxtRotate(elements[i], toRotate, period);
-      console.log("LOL1");
-      if (toRotate.includes("WELCOME TO AI ALPHA")) {
-        // Check if it's the element for "WELCOME TO AI ALPHA"
-        console.log("Finished typing 'WELCOME TO AI ALPHA'");
-        txtRotate.onCompleteCallback = function () {
-          if (!foundSubTxtRotate) {
-            var subTxtRotate =
-              document.getElementsByClassName("subtxt-rotate")[0];
-            var subTxtToRotate = JSON.parse(
-              subTxtRotate.getAttribute("data-rotate")
-            );
-            var subTxtPeriod = subTxtRotate.getAttribute("data-period");
-            new TxtRotate(subTxtRotate, subTxtToRotate, subTxtPeriod);
-            console.log("Started typing subtxt-rotate");
-            foundSubTxtRotate = true; // Set the flag to true
-          }
-        };
-        foundWelcomeAlpha = true; // Set the flag to true
-      }
+      new TxtRotate(elements[i], toRotate, period);
     }
-  }
-
-  if (!foundWelcomeAlpha) {
-    console.log("Did not find 'WELCOME TO AI ALPHA' element");
   }
 });
 
@@ -210,3 +162,70 @@ document.addEventListener("keyup", function (e) {
 });
 
 loadGallery();
+
+//HowGraphic
+const blockHow = document.querySelector(".blockHow");
+const rectangle1 = document.getElementById("rectangle1");
+const rectangle2 = document.getElementById("rectangle2");
+const rectangle3 = document.getElementById("rectangle3");
+
+let activeRectangle = null;
+
+rectangle1.addEventListener("click", function () {
+  handleClick(0);
+});
+
+rectangle2.addEventListener("click", function () {
+  handleClick(1);
+});
+
+rectangle3.addEventListener("click", function () {
+  handleClick(2);
+});
+
+function handleClick(index) {
+  if (activeRectangle === index) {
+    // Clicked the same rectangle twice, set back to default image
+    activeRectangle = null;
+    blockHow.style.backgroundImage = 'url("static/images/Frame 17.svg")';
+  } else {
+    // Clicked a different rectangle, change the image
+    activeRectangle = index;
+    switch (index) {
+      case 0:
+        blockHow.style.backgroundImage = 'url("static/images/Frame 18.svg")';
+        break;
+      case 1:
+        blockHow.style.backgroundImage = 'url("static/images/Frame 19.svg")';
+        break;
+      case 2:
+        blockHow.style.backgroundImage = 'url("static/images/Frame 20.svg")';
+        break;
+      default:
+        break;
+    }
+  }
+}
+
+//Rules Animation
+window.addEventListener("scroll", function () {
+  const squares = document.querySelectorAll(".square");
+  const triggerBottom = window.innerHeight * 0.8;
+
+  squares.forEach((square, index) => {
+    const squareTop = square.getBoundingClientRect().top;
+
+    if (squareTop < triggerBottom) {
+      square.style.opacity = 1;
+      square.style.transform = "translateX(0)"; // Reset the transform to 0 for the initial state
+      square.style.transition = "opacity 1s ease, transform 1s ease"; // Add transition for opacity and transform
+      setTimeout(() => {
+        square.style.transform = "translateX(0%)"; // Slide animation by setting the transform to 0%
+      }, index * 200); // Delay the animation based on the index to create a sequential effect
+    } else {
+      square.style.opacity = 0;
+      square.style.transform = "translateX(-100%)"; // Move the element off the screen
+      square.style.transition = "opacity 0.5s ease, transform 0.5s ease"; // Add transition for opacity and transform
+    }
+  });
+});
