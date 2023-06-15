@@ -811,16 +811,20 @@ line-height: 36px;
 
 .contact__input-line {
   margin-bottom: 20px;
+  font-size: 1.2vw;
+
 }
 
 .contact__input {
   display: inline-block;
-  width: 75%;
+  width: 76%;
   padding: 20px 0 20px 0;
   color: white;
   background: #5F5E5E;
   margin-right: 10px;
   border: none;
+  font-size: 1.2vw;
+
 }
 
 .contact input::placeholder,
