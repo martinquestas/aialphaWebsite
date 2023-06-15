@@ -539,7 +539,7 @@ line-height: 36px;
   align-items: center;
   text-align: center;
   padding: 0;
-  width: 100vw;
+  width: 130vw;
   margin: auto;
   height: auto;
 }
@@ -586,7 +586,7 @@ line-height: 36px;
 }
 .card.huge {
   background: linear-gradient(180deg, #5C5C5C 0%, #373737 100%);
-  width: 30vw;
+  width: 35vw;
   height: 100vh;
   border: #eb9100 2px solid;
 }
