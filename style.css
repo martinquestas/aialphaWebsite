@@ -873,14 +873,14 @@ line-height: 36px;
 
 .rules-block {
   width: 1110px;
-  height: 1250px;
+  height: 1550px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
 }
 
 .square {
-  width: 510px;
+  width: 530px;
   height: 560px;
   position: absolute;
   opacity: 0;
@@ -893,6 +893,7 @@ line-height: 36px;
   top: 0;
   left: 0;
   background-position: top left;
+  height: 540px;
   padding-bottom: 170px;
 
 }
@@ -900,23 +901,24 @@ line-height: 36px;
 #square2 {
   top: 0;
   right: 0;
+  height: 540px;
   background-position: top right;
   padding-bottom: 140px;
 
 }
 
 #square3 {
-  bottom: 0;
+  bottom: 20%;
   left: 0;
   background-position: bottom left;
-  height: 590px;
+  height: 545px;
 }
 
 #square4 {
-  bottom: 0;
+  bottom: 10.5%;
   right: 0;
   background-position: bottom right;
-  height: 590px;
+  height: 690px;
 
 }
 /*---------------------------------------------------------------Our Story----------------------------------------------------------------*/
