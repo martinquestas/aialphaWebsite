@@ -588,11 +588,11 @@ line-height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 33vh;
+  height: 325px;
 }
 .rowComp{
   display: flex;
-  height: 33vh;
+  height: 325px;
 }
 #rectangle4 {
   top: 450px;
