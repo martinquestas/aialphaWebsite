@@ -1,6 +1,6 @@
 const sentences = [
   "HELLO.",
-  "WELCOME TO AI ALPHA",
+  "WELCOME TO AI ALPHA.",
   "I am the first AI Crypto Virtual Assistant.",
   "How may I help you today?",
 ];
@@ -162,47 +162,33 @@ loadGallery();
 
 //HowGraphic
 const blockHow = document.querySelector(".blockHow");
-const rectangle1 = document.getElementById("rectangle1");
-const rectangle2 = document.getElementById("rectangle2");
-const rectangle3 = document.getElementById("rectangle3");
+const rectangles = document.querySelectorAll(".rectangle");
 
-let activeRectangle = null;
+rectangles.forEach((rectangle, index) => {
+  rectangle.addEventListener("mouseenter", function () {
+    blockHow.classList.add(`hovered-${index + 1}`);
+  });
 
-rectangle1.addEventListener("click", function () {
-  handleClick(0);
+  rectangle.addEventListener("mouseleave", function () {
+    blockHow.classList.remove(`hovered-${index + 1}`);
+  });
 });
 
-rectangle2.addEventListener("click", function () {
-  handleClick(1);
+//HowToGraphic
+const blockHowTo = document.querySelector(".blockHowTo");
+const rectanglesTo = document.querySelectorAll(".rectangleTo");
+
+rectanglesTo.forEach((rectangleTo, index) => {
+  rectangleTo.addEventListener("mouseenter", function () {
+    blockHowTo.classList.add(`hoveredTo-${index + 1}`);
+  });
+
+  rectangleTo.addEventListener("mouseleave", function () {
+    blockHowTo.classList.remove(`hoveredTo-${index + 1}`);
+  });
 });
 
-rectangle3.addEventListener("click", function () {
-  handleClick(2);
-});
-
-function handleClick(index) {
-  if (activeRectangle === index) {
-    // Clicked the same rectangle twice, set back to default image
-    activeRectangle = null;
-    blockHow.style.backgroundImage = 'url("static/images/Frame 17.svg")';
-  } else {
-    // Clicked a different rectangle, change the image
-    activeRectangle = index;
-    switch (index) {
-      case 0:
-        blockHow.style.backgroundImage = 'url("static/images/Frame 18.svg")';
-        break;
-      case 1:
-        blockHow.style.backgroundImage = 'url("static/images/Frame 19.svg")';
-        break;
-      case 2:
-        blockHow.style.backgroundImage = 'url("static/images/Frame 20.svg")';
-        break;
-      default:
-        break;
-    }
-  }
-}
+//HowToGraphic END
 
 //Rules Animation
 window.addEventListener("scroll", function () {

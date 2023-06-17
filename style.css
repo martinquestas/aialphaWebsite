@@ -25,7 +25,7 @@ body {
   font-style: normal;
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PC+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-.signup-container,
+
 .hamburger {
   display: none;
 }
@@ -69,7 +69,7 @@ header {
 }
 
 nav {
-  background: #D8D8D8;
+  background: #EBEBEB;
   align-items: center;
   align-content: center;
   width: 100%;
@@ -83,19 +83,20 @@ nav {
   align-items: center;
   align-content: center;
   width: 100%;
-  background: #D8D8D8;
+  height: 80px;
+  background: #EBEBEB;
   display: flex;
   justify-content: flex-end; /* Modified: Adjust alignment */
   padding: 0 20px; /* Modified: Adjust padding */
 }
 
-.nav-right img {
-  height: 90px;
-  width: 300px;
+.logo img {
+  height: 70px;
+  width: 228px;
 }
 
 .nav-right ul {
-  margin-top: 3%;
+  margin-top: 4%;
   margin-bottom: 3%;
   display: flex;
   width: 100%;
@@ -131,7 +132,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffffff;
+  color: #bdbdbd;
 }
 
 nav a:hover:after {
@@ -145,7 +146,8 @@ nav a:hover:after {
   margin-top: -9%;
   padding-right: 10%;
   width: 100%;
-  display: inline-block;
+  /*display: inline-block; UNCOMMENT FOR NEXT VERSION*/ 
+  display: none;
   padding: 15px 25px;
   background-color: #fe6f34;
   color: white !important;
@@ -186,24 +188,24 @@ nav a:hover:after {
   width: 50%;
   z-index: 1000;
 }
+
 #txt-container {
-  position: relative;
   display: block;
   width: 80%;
   z-index: 1000;
-  margin-top: 5%;
-}
-
-#txt-container {
   font-weight: 400;
   font-size: 5vw;
   color: #ffffff;
   background-color: transparent;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-left: 5%;
   position: absolute;
   top: 5%;
   left: 1%;
+}
+
+#txt-container h2 {
+  line-height: 13vh;
 }
 
 #txt-container h3 {
@@ -214,12 +216,10 @@ nav a:hover:after {
   font-family: 'Prompt';
   font-style: normal;
   font-size: 4vw;
+  line-height: 9vh;
 
 }
 
-.sentence-container {
-  margin-bottom: 10px;
-}
 
 .typing-text {
   display: inline-block;
@@ -242,16 +242,6 @@ p {
   color: #ffffff;
 }
 
-.container .txt-rotate {
-  z-index: 100000;
-  position: relative;
-  display: block;
-  font-family: 'Nord';
-  font-style: normal;
-  font-weight: 1000;
-  font-size: 85px;
-  line-height: 100px;
-}
 
 
 .space-filler {
@@ -288,17 +278,6 @@ p {
   
 }
 
-.blockHow {
-  width: 1299px;
-  height: 897px;
-  margin: 0 auto;
-  position: relative;
-  background-image: url("static/images/Frame 17.svg");
-  background-size: cover;
-  transition: background-image 0.3s ease-in-out; /* Added transition property */
-  
-}
-
 #howContainer h1 {
   font-family: 'Nord';
 font-style: normal;
@@ -319,6 +298,15 @@ line-height: 36px;
   text-align: center;
 }
 
+.blockHow {
+  width: 1700px;
+  height: 1305px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("static/images/Frame 172.svg");
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
+}
 
 .column {
   width: calc(100% / 3);
@@ -326,31 +314,43 @@ line-height: 36px;
   position: relative;
   float: left;
 }
+.hovered-1 {
+  background-image: url("static/images/Frame 182.svg") !important;
+}
+
+.hovered-2 {
+  background-image: url("static/images/Frame 192.svg") !important;
+}
+
+.hovered-3 {
+  background-image: url("static/images/Frame 202.svg") !important;
+}
+
+
 
 .rectangle {
-  width: 250px;
-  height: 140px;
+  width: 360px;
+  height: 150px;
   position: absolute;
-  top: 550px;
+  top: 680px;
   left: 50%;
-  margin-left: -130px; /* Half the width of the rectangle */
+  margin-left: -180px; /* Half the width of the rectangle */
   background-color: rgba(0, 0, 0, 0); /* Invisible background */
   z-index: 1;
   cursor: pointer; /* Set the cursor style to indicate clickable */
+  pointer-events: auto; /* Re-enable pointer events */
 }
 
-
-#rectangle1{
-  height: 110px;
-  top: 420px;
-  margin-left: -20px;
+#rectangle1 {
+  top: 500px;
+  margin-left: -55px;
 }
 
-#rectangle3{
-  height: 110px;
-  top: 420px;
-  margin-left: -245px;
+#rectangle3 {
+  top: 500px;
+  margin-left: -300px;
 }
+
 
 
 /*------------------------------------------------WHY------------------------------------------------------------------------------------*/
@@ -547,6 +547,115 @@ line-height: 36px;
 
 .dot.active {
   opacity: 1;
+}
+/*--------------------------------------------------------HOW TO-----------------------------------------------------------------------*/
+#howToContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#howToContainer h1 {
+  font-family: 'Nord';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3vw;
+  line-height: 22px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.blockHowTo {
+  width: 1700px;
+  height: 1020px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("static/images/howto1.svg");
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
+}
+
+.rectangleTo {
+  width: 260px;
+  height: 150px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33vh;
+}
+.rowComp{
+  display: flex;
+  height: 33vh;
+}
+#rectangle4 {
+  top: 450px;
+  margin-left: -720px;
+}
+
+#rectangle5 {
+  margin-top: 75px;
+  margin-left: 160px; /* Set the desired margin from the left for rectangle5 */
+}
+
+#rectangle6 {
+  margin-top: 75px;
+  margin-left: 110px; /* Set the desired margin from the left for rectangle6 */
+
+}
+
+#rectangle7 {
+  margin-top: 75px;
+  margin-left: 85px; /* Set the desired margin from the left for rectangle7 */
+}
+
+#rectangle8 {
+  margin-top: 75px;
+  margin-left: 100px; /* Set the desired margin from the left for rectangle8 */
+}
+
+#rectangle9 {
+  margin-top: 60px;
+  margin-left: 350px;
+}
+
+#rectangle10 {
+  margin-top: 60px;
+  margin-left: 270px;
+}
+
+.hoveredTo-1 {
+  background-image: url("static/images/howto4.svg") !important;
+}
+
+.hoveredTo-2 {
+  background-image: url("static/images/howto5.svg") !important;
+}
+
+.hoveredTo-3 {
+  background-image: url("static/images/howto6.svg") !important;
+}
+
+.hoveredTo-4 {
+  background-image: url("static/images/howto7.svg") !important;
+}
+
+.hoveredTo-5 {
+  background-image: url("static/images/howto8.svg") !important;
+}
+
+.hoveredTo-6 {
+  background-image: url("static/images/howto9.svg") !important;
+}
+
+.hoveredTo-7 {
+  background-image: url("static/images/howto10.svg") !important;
 }
 
 /*-------------------------------------------------------PRICING-----------------------------------------------------------------------*/
