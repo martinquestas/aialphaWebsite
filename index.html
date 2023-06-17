@@ -82,28 +82,26 @@
 
 
     <div class="container" id="txt-container">
-        <h1>
-
-            <span class="txt-rotate" data-period="100" data-rotate='[ "HELLO." ]'></span>
-            <span class="txt-rotate" data-period="100" data-rotate='[ "WELCOME TO AI ALPHA" ]'></span>
-            <span
-                style="font-size: 80px; font-family: 'Prompt';font-style: normal;font-weight: 300;font-size: 55px;line-height: 100px;"
-                class="txt-rotate" data-period="50"
-                data-rotate='[ "I am the first AI Crypto Virtual Assistant." ]'></span>
-            <span
-                style="font-size: 80px; font-family: 'Prompt';font-style: normal;font-weight: 300;font-size: 55px;line-height: 100px;"
-                class="txt-rotate" data-period="50" data-rotate='[ "How may I help you today?" ]'></span>
-
-        </h1>
+        <div id="typing-animation">
+            <div class="sentence-container">
+                <h2 class="typing-text"></h2>
+            </div>
+            <div class="sentence-container">
+                <h2 class="typing-text"></h2>
+            </div>
+            <div class="sentence-container">
+                <h3 class="typing-text"></h3>
+            </div>
+            <div class="sentence-container">
+                <h3 class="typing-text"></h3>
+            </div>
+        </div>
     </div>
 
     <div class="wrapper">
-
-        <img id="bg" alt="Landing Background" src="static/images/bg.webp" class="zoomed">
-        <div class="signup-container">
-            <h3>AI Alpha gives traders a competitive edge to make more profitable trades. </h3>
-            <button class="signup-button">Sign Up</button>
-        </div>
+        <video id="bg" autoplay muted loop>
+            <source src="static/images/videotest.mp4" type="video/mp4">
+        </video>
         <div class="space-filler"></div>
     </div>
 
@@ -149,12 +147,10 @@
             <div id="galleryView">
                 <div id="galleryContainer">
                     <div id="leftView"></div>
-                    <button id="navLeft" class="navBtns"><i class="fas fa-arrow-left fa-3x"></i></button>
+                    <button id="navLeft" class="navBtns"><i class="arrowGeneral leftArrow"></i></button>
                     <a id="linkTag">
                         <div id="mainView"></div>
                         <div id="dotsContainer">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
                             <span class="dot"></span>
@@ -163,8 +159,28 @@
 
                     </a>
                     <div id="rightView"></div>
-                    <button id="navRight" class="navBtns"><i class="fas fa-arrow-right fa-3x"></i></button>
+                    <button id="navRight" class="navBtns"><i class="arrowGeneral rightArrow"></i></button>
                 </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="title-line"></div>
+    <div id="howToContainer">
+        <h1 style="margin-top: 80px;">How to Sign Up</h1>
+        <br>
+        <br>
+        <div class="blockHowTo">
+            <div class="column">
+                <a href="#" class="rectangle" id="rectangle1"></a>
+            </div>
+            <div class="column">
+                <a href="#" class="rectangle" id="rectangle2"></a>
+            </div>
+            <div class="column">
+                <a href="#" class="rectangle" id="rectangle3"></a>
             </div>
         </div>
 
@@ -303,20 +319,8 @@
 
 
     <section class="contact">
-        <div class="contact__left-side">
-            <h1>Find Us Here!</h1>
-            <div class="contact__social-media-icons">
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/twitter_logo.svg" alt="Twitter Logo" width="24" height="24">
-                </a>
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/instagram_logo.svg" alt="Instagram Logo" width="24" height="24">
-                </a>
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/tiktok_logo.svg" alt="TikTok Logo" width="24" height="24">
-                </a>
-            </div>
-        </div>
+        <!-- Now left side, is actually on the right side, as requested by design team smh-->
+
         <div class="contact__right-side">
             <h1 class="contact__title">Suscribe Now!</h1>
             <h1 class="contact__title"
@@ -334,7 +338,20 @@
                 </div>
                 <input type="hidden" name="_next" value="https://aialpha.ai">
             </form>
-
+        </div>
+        <div class="contact__left-side">
+            <h1>Find Us Here!</h1>
+            <div class="contact__social-media-icons">
+                <a href="#" class="contact__social-media-icon">
+                    <img src="static/images/twitter_logo.svg" alt="Twitter Logo" width="24" height="24">
+                </a>
+                <a href="#" class="contact__social-media-icon">
+                    <img src="static/images/instagram_logo.svg" alt="Instagram Logo" width="24" height="24">
+                </a>
+                <a href="#" class="contact__social-media-icon">
+                    <img src="static/images/tiktok_logo.svg" alt="TikTok Logo" width="24" height="24">
+                </a>
+            </div>
         </div>
     </section>
 

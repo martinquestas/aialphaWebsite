@@ -1,42 +1,41 @@
-var TxtRotate = function (el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.fullTxt = "";
-  this.tick();
-};
+const sentences = [
+  "HELLO.",
+  "WELCOME TO AI ALPHA",
+  "I am the first AI Crypto Virtual Assistant.",
+  "How may I help you today?",
+];
+const typingTextElements = document.querySelectorAll(".typing-text");
 
-TxtRotate.prototype.tick = function () {
-  var i = this.loopNum % this.toRotate.length;
-  var txt = this.toRotate[i];
-  var fullTxt = this.fullTxt + txt.charAt(this.fullTxt.length);
+function typeText(element, text) {
+  let currentCharIndex = 0;
 
-  if (fullTxt === txt) {
-    // Text has completed typing
-    this.el.innerHTML = '<span class="wrap">' + fullTxt + "</span>";
-  } else {
-    this.el.innerHTML = '<span class="wrap">' + fullTxt + "</span>";
-    var that = this;
-    setTimeout(function () {
-      that.tick();
-    }, this.period);
-  }
-
-  this.fullTxt = fullTxt;
-};
-
-window.addEventListener("DOMContentLoaded", function () {
-  var elements = document.getElementsByClassName("txt-rotate");
-
-  for (var i = 0; i < elements.length; i++) {
-    var toRotate = JSON.parse(elements[i].getAttribute("data-rotate"));
-    var period = elements[i].getAttribute("data-period");
-    if (toRotate) {
-      new TxtRotate(elements[i], toRotate, period);
+  const typingInterval = setInterval(() => {
+    if (currentCharIndex < text.length) {
+      element.textContent += text.charAt(currentCharIndex);
+      currentCharIndex++;
+    } else {
+      clearInterval(typingInterval);
+      showBlinkingCursor();
     }
-  }
-});
+  }, 55);
+}
+
+function startTypingAnimation() {
+  let delay = 0;
+
+  typingTextElements.forEach((element, index) => {
+    const sentence = sentences[index];
+    setTimeout(() => {
+      typeText(element, sentence);
+    }, delay);
+    delay += sentence.length * 100 + 10;
+    if (index < typingTextElements.length - 1) {
+      delay += 10; // Delay between sentences
+    }
+  });
+}
+
+setTimeout(startTypingAnimation, 1000);
 
 //Text Writing-Deleting END
 
@@ -98,8 +97,6 @@ let imgObject = [
   "static/images/why2.svg",
   "static/images/why3.svg",
   "static/images/why4.svg",
-  "static/images/why5.svg",
-  "static/images/why6.svg",
 ];
 
 let mainImg = 0;

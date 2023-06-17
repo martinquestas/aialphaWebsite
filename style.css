@@ -171,6 +171,7 @@ nav a:hover:after {
   position: static;
   margin-top: -2.5%;
   margin-bottom: -1%;
+  filter: brightness(0.4);
 }
 
 .wrapper {
@@ -193,18 +194,47 @@ nav a:hover:after {
   margin-top: 5%;
 }
 
-#txt-container h1 {
-  font-weight: 200;
-  font-size: 6vw;
+#txt-container {
+  font-weight: 400;
+  font-size: 5vw;
   color: #ffffff;
-  z-index: -10;
   background-color: transparent;
   margin-top: 15%;
   margin-left: 5%;
-  font-family: "Nord", sans-serif;
   position: absolute;
   top: 5%;
   left: 1%;
+}
+
+#txt-container h3 {
+  font-weight: 100;
+  color: #ffffff;
+  z-index: -10;
+  background-color: transparent;
+  font-family: 'Prompt';
+  font-style: normal;
+  font-size: 4vw;
+
+}
+
+.sentence-container {
+  margin-bottom: 10px;
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  animation: typing 2s steps(40, end);
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 
 p {
@@ -357,7 +387,7 @@ line-height: 36px;
 #containerCarousel {
   height: 100vh;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 15%;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -394,8 +424,8 @@ line-height: 36px;
 
 
 #mainView {
-  height: 914px;
-  width: 1132px;  
+  height: 829px;
+  width: 916px;  
   border-radius: 5%;
   background-color: #eb9100;
   z-index: 1;
@@ -449,7 +479,8 @@ line-height: 36px;
   opacity: 0.8;
   background-color: transparent;
   cursor: pointer;
-  color: white;
+  color:#FD8A42;
+
 }
 
 .navBtns:hover {
@@ -464,6 +495,24 @@ line-height: 36px;
 
 #navRight {
   right: 50px;
+}
+
+.arrowGeneral {
+  border: solid #FD8A42;
+  border-width: 0 10px 10px 0;
+  display: inline-block;
+  padding: 20px;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.rightArrow {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.leftArrow {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 #linkTag { 
@@ -750,8 +799,8 @@ line-height: 36px;
 
 .contact__right-side {
   text-align: left;
-  margin-left: 25%;
-  width: 700px;
+  margin-right: 25%;
+  width: 950px;
   background: #464646;
   border-radius: 5%;
   padding: 80px 80px;
