@@ -15,9 +15,8 @@ function typeText(element, text) {
       currentCharIndex++;
     } else {
       clearInterval(typingInterval);
-      showBlinkingCursor();
     }
-  }, 55);
+  }, 50);
 }
 
 function startTypingAnimation() {
@@ -189,7 +188,27 @@ rectanglesTo.forEach((rectangleTo, index) => {
 });
 
 //HowToGraphic END
+//Pricing Animation
+const cardRectangle = document.getElementById("cardRectangle");
+const cardHuge = document.querySelector(".card.huge");
 
+let originalImage = cardHuge.style.backgroundImage;
+let newImage = "url('static/images/card22.png')";
+let isOriginalImage = true;
+
+cardRectangle.addEventListener("click", function () {
+  if (isOriginalImage) {
+    cardHuge.style.backgroundImage = newImage;
+    cardRectangle.style.top = "770px";
+  } else {
+    cardHuge.style.backgroundImage = originalImage;
+    cardRectangle.style.top = "-225px";
+  }
+
+  isOriginalImage = !isOriginalImage;
+});
+
+//Price Animation END
 //Rules Animation
 window.addEventListener("scroll", function () {
   const squares = document.querySelectorAll(".square");
