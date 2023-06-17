@@ -231,3 +231,24 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+//Our Story
+// Get all the titleStory elements
+const titles = document.querySelectorAll(".titleStory");
+
+// Add click event listener to each titleStory
+titles.forEach((title) => {
+  title.addEventListener("click", function () {
+    // Get the corresponding contentStory element
+    const content = this.nextElementSibling;
+
+    // Toggle the visibility of the contentStory
+    content.classList.toggle("show");
+
+    // Toggle the border radius of the titleStory
+    this.classList.toggle("no-border-radius");
+
+    // Toggle the arrow orientation
+    const arrow = this.querySelector(".arrowStory");
+    arrow.classList.toggle("upside-down");
+  });
+});
