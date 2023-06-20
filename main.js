@@ -112,9 +112,6 @@ function loadGallery() {
   let rightView = document.getElementById("rightView");
   rightView.style.background = "url(" + imgObject[nextImg] + ")";
 
-  let linkTag = document.getElementById("linkTag");
-  linkTag.href = imgObject[mainImg];
-
   setActiveDot(mainImg);
 }
 
@@ -189,20 +186,20 @@ rectanglesTo.forEach((rectangleTo, index) => {
 
 //HowToGraphic END
 //Pricing Animation
-const cardRectangle = document.getElementById("cardRectangle");
+const cardRectangle = document.getElementById("cardRectangle2");
 const cardHuge = document.querySelector(".card.huge");
 
 let originalImage = cardHuge.style.backgroundImage;
-let newImage = "url('static/images/card22.png')";
+let newImage = "url('static/images/card22.svg')";
 let isOriginalImage = true;
 
 cardRectangle.addEventListener("click", function () {
   if (isOriginalImage) {
     cardHuge.style.backgroundImage = newImage;
-    cardRectangle.style.top = "770px";
+    cardRectangle.style.top = "670px";
   } else {
     cardHuge.style.backgroundImage = originalImage;
-    cardRectangle.style.top = "-225px";
+    cardRectangle.style.top = "-120px";
   }
 
   isOriginalImage = !isOriginalImage;
@@ -212,7 +209,7 @@ cardRectangle.addEventListener("click", function () {
 //Rules Animation
 window.addEventListener("scroll", function () {
   const squares = document.querySelectorAll(".square");
-  const triggerBottom = window.innerHeight * 0.8;
+  const triggerBottom = window.innerHeight * 1.2;
 
   squares.forEach((square, index) => {
     const squareTop = square.getBoundingClientRect().top;

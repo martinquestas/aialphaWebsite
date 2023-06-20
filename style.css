@@ -96,8 +96,8 @@ nav {
 }
 
 .nav-right ul {
-  margin-top: 4%;
-  margin-bottom: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
   display: flex;
   width: 100%;
   height: 100%;
@@ -105,6 +105,7 @@ nav {
   position: static;
   text-align: right;
   justify-content: flex-end; /* Modified: Adjust alignment */
+  align-items: center;
 }
 
 .nav-right li {
@@ -119,11 +120,10 @@ nav a {
   color: rgba(96, 97, 97, 255);
   text-decoration: none;
   transition: 0.2s;
-  font-size: 1.3vw;
   font-family: 'Nord';
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 22px;
   display: flex;
   align-items: center;
@@ -146,8 +146,7 @@ nav a:hover:after {
   margin-top: -9%;
   padding-right: 10%;
   width: 100%;
-  /*display: inline-block; UNCOMMENT FOR NEXT VERSION*/ 
-  display: none;
+  display: inline-block;
   padding: 15px 25px;
   background-color: #fe6f34;
   color: white !important;
@@ -300,10 +299,10 @@ line-height: 36px;
 
 .blockHow {
   width: 1700px;
-  height: 1305px;
+  height: 1050px;
   margin: 0 auto;
   position: relative;
-  background-image: url("static/images/Frame172.svg");
+  background-image: url("static/images/Frame17.svg");
   background-size: cover;
   transition: background-image 0.3s ease-in-out;
 }
@@ -315,15 +314,15 @@ line-height: 36px;
   float: left;
 }
 .hovered-1 {
-  background-image: url("static/images/Frame182.svg") !important;
+  background-image: url("static/images/Frame18.svg") !important;
 }
 
 .hovered-2 {
-  background-image: url("static/images/Frame192.svg") !important;
+  background-image: url("static/images/Frame19.svg") !important;
 }
 
 .hovered-3 {
-  background-image: url("static/images/Frame202.svg") !important;
+  background-image: url("static/images/Frame20.svg") !important;
 }
 
 
@@ -387,7 +386,8 @@ line-height: 36px;
 #containerCarousel {
   height: 100vh;
   width: 100%;
-  margin-top: 20%;
+  margin-top: 100px;
+  margin-bottom: 100px;
   box-sizing: border-box;
   justify-content: center;
   align-items: center;
@@ -515,7 +515,7 @@ line-height: 36px;
 }
 
 #linkTag { 
-  cursor: pointer;
+  cursor: auto;
   z-index: 1;
   box-sizing: border-box;
 }
@@ -580,7 +580,8 @@ line-height: 36px;
   height: 150px;
   margin: 10px;
   background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
+  cursor: pointer; /* Set the cursor style to indicate clickable */
+  pointer-events: auto; /* Re-enable pointer events */
 }
 
 .row {
@@ -661,7 +662,7 @@ line-height: 36px;
 
 
 .infoPricing{
-  width: 490px;
+  width: 520px;
   height: 10%;
   text-align: center;
 }
@@ -727,10 +728,10 @@ line-height: 36px;
 }
 
 .card {
-  width: 605px;
+  width: 480px;
   height: 980px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 2%;
   margin: 1vw 0.9vw 1vw 0.9vw;
   justify-content: center;
   background: linear-gradient(180deg, #454545 0%, #2D2D2D 100%);
@@ -740,14 +741,14 @@ line-height: 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .card.huge {
-  background-size: cover;
-  width: 585px;
-  height: 1150px;
+  background-size: 100% 100%;
+  width: 492px;
+  height: 940px;
   border: #eb9100 2px solid;
-  border-radius: 5px;
+  border-radius: 2%;
 }
 
 
@@ -757,6 +758,7 @@ line-height: 36px;
 }
 
 .columnRectangle{
+
   width: 100%;
   height: 697px;
   position: relative;
@@ -764,16 +766,54 @@ line-height: 36px;
   align-items: flex-start;
 }
 
-#cardRectangle{
+
+#cardRectangle1{
   width: 100%;
   height: 150px;
   position: absolute;
-  top: -225px;
+  top: 625px;
   background-color: rgba(0, 0, 0, 0); /* Invisible background */
   z-index: 1;
   cursor: pointer; /* Set the cursor style to indicate clickable */
   pointer-events: auto; /* Re-enable pointer events */
 }
+
+#cardRectangle1 a{
+  font-family: 'Nord';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 22px;
+  text-decoration: none;
+  background-color: #fe6f34;
+  color: white !important;
+  border-radius: 14px;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 20px 25px;
+
+}
+
+
+#cardRectangle1 a:hover {
+background-color: rgb(210, 115, 0);
+}
+
+
+
+
+#cardRectangle2{
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: -120px;
+  background-color: rgba(0, 0, 0, 0); /* Invisible background */
+  z-index: 1;
+  cursor: pointer; /* Set the cursor style to indicate clickable */
+  pointer-events: auto; /* Re-enable pointer events */
+}
+
+
 
 
 
@@ -978,11 +1018,9 @@ line-height: 36px;
   padding: 0 100px;
   width: 1050px;
   background: #313131;
-  position: relative;
-  opacity: 0;
+  max-height: 0;
   overflow: hidden;
-  color: white;
-  transition: opacity 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
 }
@@ -996,10 +1034,10 @@ line-height: 36px;
   padding-bottom: 20px;
 }
 
+
 .contentStory.show {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.5s ease-in-out;
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .arrowStory {
@@ -1155,6 +1193,8 @@ footer .copyright p{
   #txt-container,
   .wrapper,
   #how,
+  #howToContainer,
+  .containerStory,
   #why,
   #pricingLine,
   #pricing,
