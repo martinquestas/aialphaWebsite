@@ -196,10 +196,10 @@ let isOriginalImage = true;
 cardRectangle.addEventListener("click", function () {
   if (isOriginalImage) {
     cardHuge.style.backgroundImage = newImage;
-    cardRectangle.style.top = "670px";
+    cardRectangle.style.top = "770px";
   } else {
     cardHuge.style.backgroundImage = originalImage;
-    cardRectangle.style.top = "-120px";
+    cardRectangle.style.top = "0px";
   }
 
   isOriginalImage = !isOriginalImage;
