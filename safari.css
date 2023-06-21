@@ -1,0 +1,14 @@
+/* Safari-specific CSS hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    /* Safari-specific styles here */
+    #howContainer h1 {
+      font-size: 30.2vw;
+    }
+    
+    #howContainer h2 {
+      font-size: 1.9vw;
+    }
+    
+    /* Add any other Safari-specific styles here */
+  }
+  

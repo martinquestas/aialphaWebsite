@@ -20,6 +20,18 @@
     <meta property="og:image" content="https://aialpha.ai/static/images/AIAlphalogo.png" />
     <title>AI Alpha</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Check if the browser is Safari
+        var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+        // Conditionally include Safari-specific CSS file
+        if (isSafari) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'safari.css';
+            document.head.appendChild(link);
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
