@@ -1,14 +1,306 @@
-/* Safari-specific CSS hack */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Safari-specific styles here */
+    #howContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    
     #howContainer h1 {
-      font-size: 30.2vw;
+      font-family: 'Nord';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 3vw;
+      line-height: 22px;
+      margin-bottom: 20px;
+      color: #ffffff;
     }
     
     #howContainer h2 {
-      font-size: 1.9vw;
+      font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.8vw;
+    line-height: 36px;
+      text-align: center;
     }
     
-    /* Add any other Safari-specific styles here */
-  }
+    .blockHow {
+      width: 70vw;
+      height: 70vh;
+      margin: 0 auto;
+      position: relative;
+      background-image: url("static/images/Frame17.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: none;
+    }
+    
+    
+    .column {
+      width: calc(100% / 3);
+      height: 697px;
+      position: relative;
+      float: left;
+    }
+    .hovered-1 {
+      background-image: url("static/images/Frame18.svg");
+    }
+    
+    .hovered-2 {
+      background-image: url("static/images/Frame19.svg");
+    }
+    
+    .hovered-3 {
+      background-image: url("static/images/Frame20.svg");
+    }
+    
+    
+    
+    .rectangle {
+      width: 340px;
+      height: 150px;
+      position: absolute;
+      top: 480px;
+      left: 50%;
+      margin-left: -180px; /* Half the width of the rectangle */
+      background-color: rgba(0, 0, 0, 0); /* Invisible background */
+      z-index: 1;
+      cursor: pointer; /* Set the cursor style to indicate clickable */
+      pointer-events: auto; /* Re-enable pointer events */
+    }
+    
+    #rectangle1 {
+      top: 300px;
+      margin-left: -55px;
+    }
+    
+    #rectangle3 {
+      top: 300px;
+      margin-left: -300px;
+    }
+    /*-----------------------------------------------HOW END------------------------------------------------------------------------*/
+    /*------------------------------------------------WHY------------------------------------------------------------------------------------*/
+
+#galleryContainer { 
+  height: 500px;
+  width: 60%;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#galleryView {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  /*background: #3B3B3B;*/
+  background-color: transparent;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------------------------------WHY END------------------------------------------------------------------------------------*/
+/*------------------------------------------------How to------------------------------------------------------------------------------------*/
+#howToContainer {
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+.blockHowTo {
+  width: 60vw;
+  height: 90vh;
+  margin: auto auto;
+  position: relative;
+  padding-top: 10vh;
+  background-image: url("static/images/howto1.svg");
+  background-repeat: no-repeat;
+  transition: none;
+}
+
+
+
+.rectangleTo {
+  width: 220px;
+  height: 90px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer; /* Set the cursor style to indicate clickable */
+  pointer-events: auto; /* Re-enable pointer events */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 125px;
+}
+.rowComp{
+  display: flex;
+  height: 325px;
+}
+#rectangle4 {
+  margin-top: -5vh;
+  margin-left: -540px;
+}
+
+#rectangle5 {
+  margin-top:4.2vh;
+  margin-left: 110px; /* Set the desired margin from the left for rectangle5 */
+}
+
+#rectangle6 {
+  margin-top:4.2vh;
+  margin-left: 80px; /* Set the desired margin from the left for rectangle6 */
+
+}
+
+#rectangle7 {
+  margin-top:4.2vh;
+  margin-left: 45px; /* Set the desired margin from the left for rectangle7 */
+}
+
+#rectangle8 {
+  margin-top:4.2vh;
+  margin-left: 80px; /* Set the desired margin from the left for rectangle8 */
+}
+
+#rectangle9 {
+  margin-top: 0vh;
+  margin-left: 270px;
+}
+
+#rectangle10 {
+  margin-top: 0vh;
+  margin-left: 200px;
+}
+
+.hoveredTo-1 {
+  background-image: url("static/images/howto4.svg");
+}
+
+.hoveredTo-2 {
+  background-image: url("static/images/howto5.svg");
+}
+
+.hoveredTo-3 {
+  background-image: url("static/images/howto6.svg");
+}
+
+.hoveredTo-4 {
+  background-image: url("static/images/howto7.svg");
+}
+
+.hoveredTo-5 {
+  background-image: url("static/images/howto8.svg");
+}
+
+.hoveredTo-6 {
+  background-image: url("static/images/howto9.svg");
+}
+
+.hoveredTo-7 {
+  background-image: url("static/images/howto10.svg");
+}
+
+/*------------------------------------------------How to END------------------------------------------------------------------------------------*/
+/*------------------------------------------------Pricing------------------------------------------------------------------------------------*/
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  width: 75vw;
+  margin: auto;
+  height: auto;
+}
+/*------------------------------------------------Pricing END------------------------------------------------------------------------------------*/
+/*------------------------------------------------Rules------------------------------------------------------------------------------------*/
+
+
+#rules-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+#rules-container h1 {
+  font-family: 'Nord', sans-serif;
+  font-size: 3vw;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.rules-block {
+  width: 1110px;
+  height: 1550px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(150, 49, 49);
+
+}
+
+.square {
+  display: block;
+  position: absolute;
+  width: 530px;
+  height: 560px;
+  opacity: 1;
+  background-size: cover;
+  background-color: orange;
+  z-index: 100000;
+}
+
+#square1 {
+  top: 0;
+  left: 0;
+  background-position: top left;
+  height: 540px;
+  padding-bottom: 170px;
+  background-color: blue;
+
+}
+
+#square2 {
+  top: 0;
+  right: 0;
+  height: 540px;
+  background-position: top right;
+  padding-bottom: 140px;
+
+}
+
+#square3 {
+  bottom: 20%;
+  left: 0;
+  background-position: bottom left;
+  height: 545px;
+}
+
+#square4 {
+  bottom: 10.5%;
+  right: 0;
+  background-position: bottom right;
+  height: 690px;
+
+}
+
+/*------------------------------------------------Rules END------------------------------------------------------------------------------------*/
+
+
+}
   
