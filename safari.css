@@ -1,5 +1,10 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     /* Safari-specific styles here */
+    #bg {
+      height: 110vh;
+    }
+
+
     #howContainer {
       display: flex;
       flex-direction: column;
@@ -30,6 +35,7 @@
       width: 70vw;
       height: 70vh;
       margin: 0 auto;
+      margin-top: 5vh;
       position: relative;
       background-image: url("static/images/Frame17.svg");
       background-size: cover;
@@ -83,7 +89,17 @@
     }
     /*-----------------------------------------------HOW END------------------------------------------------------------------------*/
     /*------------------------------------------------WHY------------------------------------------------------------------------------------*/
-
+    #containerCarousel {
+      height: 70vh;
+      width: 100%;
+      margin-bottom: 200px;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      display: flex; /* Add this */
+      flex-direction: column;
+    }
 #galleryContainer { 
   height: 500px;
   width: 60%;
@@ -99,7 +115,7 @@
 #galleryView {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   /*background: #3B3B3B;*/
   background-color: transparent;
@@ -119,7 +135,7 @@
 }
 .blockHowTo {
   width: 60vw;
-  height: 90vh;
+  height: 70vh;
   margin: auto auto;
   position: relative;
   padding-top: 10vh;
@@ -250,7 +266,6 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background-color: rgb(150, 49, 49);
 
 }
 
@@ -261,8 +276,7 @@
   height: 560px;
   opacity: 1;
   background-size: cover;
-  background-color: orange;
-  z-index: 100000;
+  transition: none;
 }
 
 #square1 {
@@ -271,7 +285,7 @@
   background-position: top left;
   height: 540px;
   padding-bottom: 170px;
-  background-color: blue;
+  transition: none;
 
 }
 
@@ -281,6 +295,8 @@
   height: 540px;
   background-position: top right;
   padding-bottom: 140px;
+  z-index: 1000;
+  transition: none;
 
 }
 
@@ -289,6 +305,8 @@
   left: 0;
   background-position: bottom left;
   height: 545px;
+    transition: none;
+
 }
 
 #square4 {
@@ -296,6 +314,7 @@
   right: 0;
   background-position: bottom right;
   height: 690px;
+  transition: none;
 
 }
 
