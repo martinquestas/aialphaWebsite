@@ -208,7 +208,7 @@ cardRectangle.addEventListener("click", function () {
 //Price Animation END
 //Rules Animation
 window.addEventListener("scroll", function () {
-  const squares = document.querySelectorAll("styles.css .square"); // Select squares only from elements associated with "styles.css"
+  const squares = document.querySelectorAll("style.css .square"); // Select squares only from elements associated with "styles.css"
   const triggerBottom = window.innerHeight * 1.2;
 
   squares.forEach((square, index) => {
