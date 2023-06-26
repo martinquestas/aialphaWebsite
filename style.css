@@ -873,33 +873,6 @@ background-color: rgb(210, 115, 0);
   color: #ffffff;
 }
 
-.story-block {
-  width: 50%;
-  padding: 20px;
-}
-
-.story-block h2 {
-  font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 38px;
-  color:#FF8B37;
-  margin-top: 0;
-}
-
-.story-block p {
-  font-family: 'Prompt';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 34px;
-  text-align: justify;
-  letter-spacing: -1px;
-  margin-top: 10px;
-  margin-bottom: 10%;
-
-}
 
 #rules-container{
   display: flex;
@@ -932,7 +905,35 @@ background-color: rgb(210, 115, 0);
   background-size: cover;
   background-repeat: no-repeat;
 }
+.gif-overlay {
+  position: absolute;
+  top: 40px;
+  left: 95px;
+  object-fit: cover;
+}
 
+#gifrule1{
+  width: 350px;
+  height: 250px;
+}
+
+#gifrule2{
+  top: 5px;
+  left: 165px;
+  width: 180px;
+  height: 300px;
+}
+
+#gifrule3{
+  width: 350px;
+  height: 250px;
+}
+
+#gifrule4{
+  left: 125px;
+  width: 260px;
+  height: 250px;
+}
 #square1 {
   top: 0;
   left: 0;
