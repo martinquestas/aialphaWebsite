@@ -206,29 +206,6 @@ cardRectangle.addEventListener("click", function () {
 });
 
 //Price Animation END
-//Rules Animation
-window.addEventListener("scroll", function () {
-  const squares = document.querySelectorAll("style.css .square"); // Select squares only from elements associated with "styles.css"
-  const triggerBottom = window.innerHeight * 1.2;
-
-  squares.forEach((square, index) => {
-    const squareTop = square.getBoundingClientRect().top;
-
-    if (squareTop < triggerBottom) {
-      square.style.opacity = 1;
-      square.style.transform = "translateX(0)"; // Reset the transform to 0 for the initial state
-      square.style.transition = "opacity 1s ease, transform 1s ease"; // Add transition for opacity and transform
-      setTimeout(() => {
-        square.style.transform = "translateX(0%)"; // Slide animation by setting the transform to 0%
-      }, index * 200); // Delay the animation based on the index to create a sequential effect
-    } else {
-      square.style.opacity = 0;
-      square.style.transform = "translateX(-100%)"; // Move the element off the screen
-      square.style.transition = "opacity 0.5s ease, transform 0.5s ease"; // Add transition for opacity and transform
-    }
-  });
-});
-
 //Our Story
 // Get all the titleStory elements
 const titles = document.querySelectorAll(".titleStory");
