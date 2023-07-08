@@ -1225,12 +1225,16 @@ footer .copyright p{
   #storyLine,
   #pricingLine,
   #pricingLiner,
-  #pricing,
+  #pricing h1,
+  #pricing h2,
   .card,
+  .infoPricing,
   #howToLine,
+  #howToContainer h1,
+  .blockHowTo,
   #rules,
   #rulesLine,
-  #rules-container,
+  #rules-container h1,
   .rules-block,
   .desktop-logo{
     display: none;
@@ -1239,7 +1243,7 @@ footer .copyright p{
   /*--------------------------------------------------------------------Burger Menú-----------------------------------------------------------------*/
 
   /* Hamburger menu styles */
-.hamburger {
+  .hamburger {
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -1248,27 +1252,27 @@ footer .copyright p{
   overflow-x: hidden;
   position: relative; /* Ensure the hamburger stays on top */
   z-index: 2; /* Ensure the hamburger is on top of other elements */
-}
+  }
 
-.hamburger span {
+  .hamburger span {
   height: 3px;
   width: 25px;
   background-color: #ffffff;
   margin-bottom: 5px;
   transition: transform 0.3s ease-in-out;
-}
+  }
 
-.hamburger.active span:nth-child(1) {
+  .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 6px);
-}
+  }
 
-.hamburger.active span:nth-child(2) {
+  .hamburger.active span:nth-child(2) {
   opacity: 0;
-}
+  }
 
-.hamburger.active span:nth-child(3) {
+  .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(4px, -5px);
-}
+  }
 
   
   header {
@@ -1298,7 +1302,7 @@ footer .copyright p{
   .nav-right ul li{
     padding: 0 0 20px 0;
     margin: 0;
-}
+  }
   /* Show navigation links when hamburger menu is active */
   .nav-right ul.active {
       display: flex;
@@ -1377,9 +1381,10 @@ footer .copyright p{
   }
 
   .blockHow {
-    width: 500px;
-    height: 913px;
-    background-image: url("static/images/Frame17mobile.svg");
+    margin: 10px;
+    width: 375px;
+    height: 713px;
+    background-image: url("static/images/Frame17mobile.svg") !important;
   }
   .hovered-1 {
     background-image: url("static/images/Frame18mobile.svg") !important;
