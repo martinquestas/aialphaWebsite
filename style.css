@@ -1231,6 +1231,7 @@ footer .copyright p{
   #rules,
   #rulesLine,
   #rules-container,
+  .rules-block,
   .desktop-logo{
     display: none;
   }
