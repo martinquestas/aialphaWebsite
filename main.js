@@ -98,19 +98,31 @@ let imgObject = [
   "static/images/why4.svg",
 ];
 
+let mobileImgObject = [
+  "static/images/why1mobile.svg",
+  "static/images/why2mobile.svg",
+  "static/images/why3mobile.svg",
+  "static/images/why4mobile.svg",
+];
+
 let mainImg = 0;
 let prevImg = imgObject.length - 1;
 let nextImg = 1;
 
 function loadGallery() {
+  let isMobile = window.innerWidth < 768; // Check if the window width is less than 768px (you can adjust this value according to your breakpoints)
+
   let mainView = document.getElementById("mainView");
-  mainView.style.background = "url(" + imgObject[mainImg] + ")";
+  mainView.style.background =
+    "url(" + (isMobile ? mobileImgObject[mainImg] : imgObject[mainImg]) + ")";
 
   let leftView = document.getElementById("leftView");
-  leftView.style.background = "url(" + imgObject[prevImg] + ")";
+  leftView.style.background =
+    "url(" + (isMobile ? mobileImgObject[prevImg] : imgObject[prevImg]) + ")";
 
   let rightView = document.getElementById("rightView");
-  rightView.style.background = "url(" + imgObject[nextImg] + ")";
+  rightView.style.background =
+    "url(" + (isMobile ? mobileImgObject[nextImg] : imgObject[nextImg]) + ")";
 
   setActiveDot(mainImg);
 }
@@ -225,5 +237,25 @@ titles.forEach((title) => {
     // Toggle the arrow orientation
     const arrow = this.querySelector(".arrowStory");
     arrow.classList.toggle("upside-down");
+  });
+});
+
+//Our Story Mobile
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileStory = document.getElementById("mobileStory");
+  const rectangles = Array.from(
+    mobileStory.getElementsByClassName("rectangleMobileStory")
+  );
+  const images = [
+    "static/images/storymobile1.svg",
+    "static/images/storymobile2.svg",
+    "static/images/storymobile3.svg",
+  ];
+
+  rectangles.forEach((rectangle, index) => {
+    rectangle.addEventListener("click", function () {
+      mobileStory.style.backgroundImage = `url('${images[index]}')`;
+    });
   });
 });
