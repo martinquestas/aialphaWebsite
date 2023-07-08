@@ -19,7 +19,7 @@
     <meta property="og:url" content="https://aialpha.ai/">
     <meta property="og:image" content="https://aialpha.ai/static/images/AIAlphalogo.png" />
     <title>AI Alpha</title>
-    <link rel="stylesheet" href="style.css" id="js-stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
         // Check if the browser is Safari
         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -52,6 +52,13 @@
     <link rel="preload" as="image" href="static/images/Frame18.svg">
     <link rel="preload" as="image" href="static/images/Frame19.svg">
     <link rel="preload" as="image" href="static/images/Frame20.svg">
+    <link rel="preload" as="image" href="static/images/why1mobile.svg">
+    <link rel="preload" as="image" href="static/images/why2mobile.svg">
+    <link rel="preload" as="image" href="static/images/why3mobile.svg">
+    <link rel="preload" as="image" href="static/images/Frame17mobile.svg">
+    <link rel="preload" as="image" href="static/images/Frame18mobile.svg">
+    <link rel="preload" as="image" href="static/images/Frame19mobile.svg">
+    <link rel="preload" as="image" href="static/images/Frame20mobile.svg">
     <link rel="preload" as="image" href="static/images/howto1.svg">
     <link rel="preload" as="image" href="static/images/howto4.svg">
     <link rel="preload" as="image" href="static/images/howto5.svg">
@@ -72,9 +79,7 @@
 </head>
 
 <body>
-    <div class="testMobile">
-        <h1>Website's Mobile Version<br>is being finished!</h1>
-    </div>
+
 
     <header>
         <nav role="navigation">
@@ -116,7 +121,7 @@
                 <h2 class="typing-text"></h2>
             </div>
             <div class="sentence-container">
-                <h2 class="typing-text" style="margin-bottom: 70px;"></h2>
+                <h2 class="typing-text" id="finalH2"></h2>
             </div>
             <div class="sentence-container">
                 <h3 class="typing-text"></h3>
@@ -137,7 +142,7 @@
 
 
     <div id="how" style="padding-top: 1vh;"></div>
-    <div class="title-line"></div>
+    <div id="howLine" class="title-line"></div>
     <div id="howContainer">
         <h1 style="margin-top: 80px;">How does it work?</h1>
         <h2 style="color: white; width: 640px; margin-top: 50px;">AI Alpha gives traders a competitive edge to make more
@@ -162,13 +167,13 @@
     <div id="why" style="padding-top: 1vh;"></div>
     <div class="title-line"></div>
     <div id="whyContainer">
-        <h1 style="margin-top: 80px;">Why AI Alpha?</h1>
-        <h2 style="color: white;width: 1080px; margin-top: 50px;">Our mission is to simplify the
+        <h1>Why AI Alpha?</h1>
+        <h2>Our mission is to simplify the
             ability of gaining
             information on how
             to trade crypto
             to grow the adoption of it, as well as showing individuals how to make money from it.</h2><br>
-        <h2 style="color: white;">Our Alpha Involves More Than Just Generating Profitable Signals</h2>
+        <h2>Our Alpha Involves More Than Just Generating Profitable Signals</h2>
         <br>
         <br>
         <div id="containerCarousel">
@@ -196,7 +201,7 @@
 
 
     <div id="story" style="padding-top: 1vh;"></div>
-    <div class="title-line"></div>
+    <div id="storyLine" class="title-line"></div>
     <div class="containerStory">
         <h1 style="margin-top: 80px;">Our Story</h1>
         <br>
@@ -239,13 +244,18 @@
             </div>
         </div>
     </div>
+    <div id="mobileStory">
+        <div class="rectangleMobileStory"></div>
+        <div class="rectangleMobileStory"></div>
+        <div class="rectangleMobileStory"></div>
+    </div>
 
 
 
 
 
     <div id="howTo" style="padding-top: 1vh;"></div>
-    <div class="title-line"></div>
+    <div id="howToLine" class="title-line"></div>
     <div id="howToContainer">
         <h1 style="margin-top: 80px;">How to Sign Up</h1>
         <br>
@@ -270,7 +280,7 @@
 
 
     <div id="pricingLine" style="padding-top: 1vh;"></div>
-    <div class="title-line"></div>
+    <div id="pricingLiner" class="title-line"></div>
     <div id="pricing">
         <h1 style="margin-top: 80px;margin-bottom: 80px;">Pricing</h1>
         <h2 style="color: white;">Take a look at our signal groups on Telegram</h2>
@@ -302,9 +312,9 @@
     </div>
 
     <div id="rules" style="padding-top: 1vh;"></div>
-    <div class="title-line"></div>
+    <div id="rulesLine" class="title-line"></div>
     <div id="rules-container">
-        <h1 style="margin-top: 80px;">Rules and Regulations</h1>
+        <h1>Rules and Regulations</h1>
         <br>
         <br>
 
@@ -335,8 +345,7 @@
 
         <div class="contact__right-side">
             <h1 class="contact__title">Suscribe Now!</h1>
-            <h1 class="contact__title"
-                style="font-size: 1.5vw; font-weight: 50;font-family: 'Prompt';font-style: normal;font-weight: 100;line-height: 38px;letter-spacing: 0.5px;">
+            <h1 class="contact__title" id="contact__subtitle">
                 Want to know when we are launching?<br>
                 We will email you updates</h1>
             <form id="form" action="https://formsubmit.co/support@aialpha.ai" method="POST"
