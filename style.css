@@ -1416,24 +1416,21 @@ footer .copyright p{
   }
   
   #rectangle1 {
-    top: 315px;
     width: 140px;
     height: 100px;
-    margin-top: 20px;
-    margin-left: -75px;
+
   }
   #rectangle2{
-    top: 530px;
-    width: 140px;
-    height: 80px;
-    margin-left: -125px;
-  }
-  #rectangle3 {
-    top: -380px;
     width: 140px;
     height: 100px;
-    margin-top: 20px;
-    margin-left: 140px;
+    left: 170px;
+  }
+  #rectangle3 {
+    width: 140px;
+    height: 100px;
+    margin-left: 100px;
+    top: 200px;
+    left: 270px;
 
   }
   
