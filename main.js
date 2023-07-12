@@ -1,3 +1,10 @@
+// Video player
+
+document.addEventListener("DOMContentLoaded", function () {
+  var videoElement = document.getElementById("bg");
+  videoElement.play();
+});
+
 const sentences = [
   "HELLO.",
   "WELCOME TO AI ALPHA.",
