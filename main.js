@@ -179,13 +179,40 @@ loadGallery();
 const blockHow = document.querySelector(".blockHow");
 const rectangles = document.querySelectorAll(".rectangle");
 
+// Keep track of the current active class
+let activeClass = null;
+
+function activateClass(newClass) {
+  // If there's an active class, remove it
+  if (activeClass) {
+    blockHow.classList.remove(activeClass);
+  }
+
+  // Add the new class and set it as the active class
+  blockHow.classList.add(newClass);
+  activeClass = newClass;
+}
+
 rectangles.forEach((rectangle, index) => {
   rectangle.addEventListener("mouseenter", function () {
-    blockHow.classList.add(`hovered-${index + 1}`);
+    activateClass(`hovered-${index + 1}`);
   });
 
   rectangle.addEventListener("mouseleave", function () {
-    blockHow.classList.remove(`hovered-${index + 1}`);
+    if (activeClass) {
+      blockHow.classList.remove(activeClass);
+    }
+    activeClass = null;
+  });
+
+  rectangle.addEventListener("touchstart", function (e) {
+    e.preventDefault(); // Prevents the window from scrolling
+    activateClass(`hovered-${index + 1}`);
+  });
+
+  rectangle.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevents any unwanted behaviour
+    activateClass(`hovered-${index + 1}`);
   });
 });
 

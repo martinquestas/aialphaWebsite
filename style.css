@@ -1385,6 +1385,8 @@ footer .copyright p{
     margin: 10px;
     width: 375px;
     height: 713px;
+    min-width: 375px;
+    min-height: 713px;
     background-image: url("static/images/Frame17mobile.svg") !important;
   }
   .hovered-1 {
@@ -1396,15 +1398,17 @@ footer .copyright p{
   }
   
   .hovered-3 {
+    width: 375px;
     background-image: url("static/images/Frame20mobile.svg") !important;
+  }
+  .column{
+    width: calc(130% / 3);
+
   }
 
   .rectangle {
-    width: 160px;
-    height: 80px;
+    box-sizing: border-box;
     position: absolute;
-    top: 715px;
-    margin-left: -80px; /* Half the width of the rectangle */
     background-color: rgba(0, 0, 0, 0); /* Invisible background */
     z-index: 1;
     cursor: pointer; /* Set the cursor style to indicate clickable */
@@ -1412,15 +1416,27 @@ footer .copyright p{
   }
   
   #rectangle1 {
-    top: 470px;
-    margin-left: -55px;
+    top: 315px;
+    width: 140px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: -75px;
+  }
+  #rectangle2{
+    top: 530px;
+    width: 140px;
+    height: 80px;
+    margin-left: -125px;
+  }
+  #rectangle3 {
+    top: -380px;
+    width: 140px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 140px;
+
   }
   
-  #rectangle3 {
-    top: 470px;
-    margin-left: -105px;
-  }
-
 
   /*--------------------------------------------------------------------How End-----------------------------------------------------------------*/
 
