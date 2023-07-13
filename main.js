@@ -287,6 +287,12 @@ document.addEventListener("DOMContentLoaded", function () {
     "static/images/storymobile3.svg",
   ];
 
+  // Preload the images
+  images.forEach((image) => {
+    const img = new Image();
+    img.src = image;
+  });
+
   rectangles.forEach((rectangle, index) => {
     rectangle.addEventListener("click", function () {
       mobileStory.style.backgroundImage = `url('${images[index]}')`;
