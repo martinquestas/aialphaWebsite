@@ -1647,15 +1647,19 @@ footer .copyright p{
   
   /*--------------------------------------------------------------------Story-----------------------------------------------------------------*/
   #mobileStory {
-    margin-left: -75px;
     display: block;
     position: relative;
-    width: 650px;
-    height: 190vh;
+    width: 400px;
+    height: 852px;
     background-image: url('static/images/storymobile1.svg');
     background-size: cover;
     transition: background-image 0.5s ease;
-  }
+
+    /* Horizontal centering */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
   .transition {
     transition: none !important;
   }
