@@ -1651,40 +1651,59 @@ footer .copyright p{
   
   /*--------------------------------------------------------------------Story-----------------------------------------------------------------*/
   #mobileStory {
-    display: block;
     position: relative;
     width: 560px;
-    height: 1290px;
-    background: url('static/images/storymobile1.svg') no-repeat center / cover;
-    transition: background 0.5s ease;
-
-    /* Horizontal centering */
-    left: 50%;
-    transform: translateX(-50%);
+    height: 1250px;
+    display: block;
 }
 
-  .transition {
-    transition: none !important;
-  }
-  .rectangleMobileStory {
+.storyImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+}
+
+.storyImage1 {
+    opacity: 1;  /* make the first image visible initially */
+    background-image: url('static/images/storymobile1.svg');
+}
+
+.storyImage2 {
+    background-image: url('static/images/storymobile2.svg');
+}
+
+.storyImage3 {
+    background-image: url('static/images/storymobile3.svg');
+}
+
+.rectangleMobileStory {
     position: absolute;
     width: 100%;
     height: 140px;
     opacity: 0;
     cursor: pointer;
-  }
+}
+
+.rectangleMobileStory:nth-child(5) { /*segundo*/
+    top: 420px;
+}
+
+.rectangleMobileStory:nth-child(6) {
+    top: 680px;
+}
+
+.rectangleMobileStory:nth-child(4) {
+    top: 150px;
+}
+
   
-  .rectangleMobileStory:nth-of-type(1) {
-    top: 170px;
-  }
-  
-  .rectangleMobileStory:nth-of-type(2) {
-    top: 440px;
-  }
-  
-  .rectangleMobileStory:nth-of-type(3) {
-    top: 700px;
-  }
+
+
+
   
   /*--------------------------------------------------------------------Story End-----------------------------------------------------------------*/
   /*--------------------------------------------------------------------Rules-----------------------------------------------------------------*/

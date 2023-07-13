@@ -281,21 +281,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const rectangles = Array.from(
     mobileStory.getElementsByClassName("rectangleMobileStory")
   );
-  const images = [
-    "static/images/storymobile1.svg",
-    "static/images/storymobile2.svg",
-    "static/images/storymobile3.svg",
-  ];
-
-  // Preload the images
-  images.forEach((image) => {
-    const img = new Image();
-    img.src = image;
-  });
+  const images = Array.from(mobileStory.getElementsByClassName("storyImage"));
 
   rectangles.forEach((rectangle, index) => {
     rectangle.addEventListener("click", function () {
-      mobileStory.style.background = `url('${images[index]}') no-repeat center / cover`;
+      images.forEach((image) => {
+        image.style.opacity = "0";
+      });
+      images[index].style.opacity = "1";
     });
   });
 });
