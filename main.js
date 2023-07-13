@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   rectangles.forEach((rectangle, index) => {
     rectangle.addEventListener("click", function () {
-      mobileStory.style.backgroundImage = `url('${images[index]}')`;
+      mobileStory.style.background = `url('${images[index]}') no-repeat center / cover`;
     });
   });
 });

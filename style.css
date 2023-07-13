@@ -1655,9 +1655,8 @@ footer .copyright p{
     position: relative;
     width: 560px;
     height: 1290px;
-    background-image: url('static/images/storymobile1.svg');
-    background-size: cover;
-    transition: background-image 0.5s ease;
+    background: url('static/images/storymobile1.svg') no-repeat center / cover;
+    transition: background 0.5s ease;
 
     /* Horizontal centering */
     left: 50%;
