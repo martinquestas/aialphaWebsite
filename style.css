@@ -1332,13 +1332,13 @@ footer .copyright p{
     background-size: cover;
     -webkit-background-size: cover;
     width: 100%;
-    height: 150vh;
+    height: 1000px;
     object-fit: cover;
   }
 
   .wrapper {
     position: relative;
-    height: 100vh;
+    height: 1000px;
     width: 100%;
   }
   
