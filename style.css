@@ -1347,14 +1347,14 @@ footer .copyright p{
     width: 80%;
     font-weight: 400;
     font-size: 7vw;
-    margin-top: 60%;
+    margin-top: 300px;
     margin-left: 5%;
-    top: 5%;
+    top: 100px;
     left: 1%;
   }
   
   #txt-container h2 {
-    line-height: 7vh;
+    line-height: 40px;
     font-size: 9.5vw;
   }
   
@@ -1366,7 +1366,7 @@ footer .copyright p{
     font-family: 'Prompt';
     font-style: normal;
     font-size: 6.5vw;
-    line-height: 5vh;
+    line-height: 30px;
   }
 
   #finalH2{
@@ -1409,6 +1409,8 @@ footer .copyright p{
 
   .rectangle {
     box-sizing: border-box;
+    width: 140px;
+    height: 100px;
     position: absolute;
     background-color: rgba(0, 0, 0, 0); /* Invisible background */
     z-index: 1;
@@ -1416,22 +1418,24 @@ footer .copyright p{
     pointer-events: auto; /* Re-enable pointer events */
   }
   
-  #rectangle1 {
+  #rectangle1.rectangle {
+    top: 330px;
     width: 140px;
     height: 100px;
 
   }
-  #rectangle2{
+  #rectangle2.rectangle{
     width: 140px;
     height: 100px;
     left: 170px;
+    top: 510px;
   }
-  #rectangle3 {
+  #rectangle3.rectangle {
     width: 140px;
     height: 100px;
     margin-left: 100px;
-    top: 200px;
-    left: 270px;
+    top: 330px;
+    left: -130px;
 
   }
   
@@ -1649,8 +1653,8 @@ footer .copyright p{
   #mobileStory {
     display: block;
     position: relative;
-    width: 400px;
-    height: 852px;
+    width: 560px;
+    height: 990px;
     background-image: url('static/images/storymobile1.svg');
     background-size: cover;
     transition: background-image 0.5s ease;
