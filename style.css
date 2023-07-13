@@ -1355,6 +1355,7 @@ footer .copyright p{
   
   #txt-container h2 {
     line-height: 7vh;
+    font-size: 9.5vw;
   }
   
   #txt-container h3 {
@@ -1364,7 +1365,7 @@ footer .copyright p{
     background-color: transparent;
     font-family: 'Prompt';
     font-style: normal;
-    font-size: 7vw;
+    font-size: 6.5vw;
     line-height: 5vh;
   }
 
