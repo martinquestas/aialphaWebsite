@@ -228,6 +228,15 @@ rectanglesTo.forEach((rectangleTo, index) => {
   rectangleTo.addEventListener("mouseleave", function () {
     blockHowTo.classList.remove(`hoveredTo-${index + 1}`);
   });
+
+  // Added touch events
+  rectangleTo.addEventListener("touchstart", function () {
+    blockHowTo.classList.add(`hoveredTo-${index + 1}`);
+  });
+
+  rectangleTo.addEventListener("touchend", function () {
+    blockHowTo.classList.remove(`hoveredTo-${index + 1}`);
+  });
 });
 
 //HowToGraphic END
