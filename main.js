@@ -220,22 +220,23 @@ rectangles.forEach((rectangle, index) => {
 const blockHowTo = document.querySelector(".blockHowTo");
 const rectanglesTo = document.querySelectorAll(".rectangleTo");
 
+// Function to remove all possible classes
+function removeClasses() {
+  for (let i = 0; i < rectanglesTo.length; i++) {
+    blockHowTo.classList.remove(`hoveredTo-${i + 1}`);
+  }
+}
+
 rectanglesTo.forEach((rectangleTo, index) => {
   rectangleTo.addEventListener("mouseenter", function () {
+    removeClasses();
     blockHowTo.classList.add(`hoveredTo-${index + 1}`);
-  });
-
-  rectangleTo.addEventListener("mouseleave", function () {
-    blockHowTo.classList.remove(`hoveredTo-${index + 1}`);
   });
 
   // Added touch events
   rectangleTo.addEventListener("touchstart", function () {
+    removeClasses();
     blockHowTo.classList.add(`hoveredTo-${index + 1}`);
-  });
-
-  rectangleTo.addEventListener("touchend", function () {
-    blockHowTo.classList.remove(`hoveredTo-${index + 1}`);
   });
 });
 
