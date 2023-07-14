@@ -1716,48 +1716,48 @@ footer .copyright p{
     width: 160px;
     height: 90px;
     margin-left: 20px;
-    margin-top: 10px;
+    margin-top: -10px;
   }
   
   #rectangle5.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: -160px; 
   }
   
   #rectangle6.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-top: -120px;
+    margin-top: -140px;
     margin-left: 180px;
   }
   
   #rectangle7.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 30px;
   }
   
   #rectangle8.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-bottom: -90px;
+    margin-bottom: -110px;
     margin-left: 20px;
   }
   
   #rectangle9.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-top: 120px;
+    margin-top: 100px;
     margin-left: -150px;
   }
   
   #rectangle10.rectangleTo {
     width: 160px;
     height: 90px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 50px;
   }
   
