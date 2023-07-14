@@ -558,6 +558,7 @@ line-height: 36px;
   line-height: 22px;
   margin-bottom: 20px;
   color: #ffffff;
+  margin-top: 80px;
 }
 
 .blockHowTo {
@@ -1209,7 +1210,7 @@ footer .copyright p{
 
   }
 
-  #howToContainer,
+  
   #howLine,
   .containerStory,
   #storyLine,
@@ -1219,9 +1220,6 @@ footer .copyright p{
   #pricing h2,
   .card,
   .infoPricing,
-  #howToLine,
-  #howToContainer h1,
-  .blockHowTo,
   #rules,
   #rulesLine,
   #rules-container h1,
@@ -1574,11 +1572,11 @@ footer .copyright p{
   }
   
   #navLeft {
-    left: -125px;
+    left: -105px;
   }
   
   #navRight {
-    right: -115px;
+    right: -95px;
   }
 
   
@@ -1675,6 +1673,124 @@ footer .copyright p{
 
   
   /*--------------------------------------------------------------------Story End-----------------------------------------------------------------*/
+  /*--------------------------------------------------------------------How To-----------------------------------------------------------------*/
+  #howToContainer h1{
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  .blockHowTo {
+    padding-top: 0px;
+    margin-top: 0px;
+    width: 375px;
+    height: 913px;
+    min-width: 375px;
+    min-height: 913px;
+    background-image: url("static/images/howto1mobile.svg") !important;
+  }
+
+  .rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer; /* Set the cursor style to indicate clickable */
+    pointer-events: auto; /* Re-enable pointer events */
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 325px;
+    margin-top: -40px
+  }
+  .rowComp {
+    flex-direction: column; /* Stacks the elements vertically instead of horizontally */
+    align-items: center; /* Centers the elements horizontally */
+    justify-content: space-around; /* Distributes the space evenly between the elements */
+  }
+
+  /* Then you can remove the left margins for the rectangles */
+  #rectangle4.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  
+  #rectangle5.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: -160px; 
+  }
+  
+  #rectangle6.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-top: -120px;
+    margin-left: 180px;
+  }
+  
+  #rectangle7.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  
+  #rectangle8.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-bottom: -90px;
+    margin-left: 20px;
+  }
+  
+  #rectangle9.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-top: 120px;
+    margin-left: -150px;
+  }
+  
+  #rectangle10.rectangleTo {
+    width: 160px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  
+  .hoveredTo-1 {
+    background-image: url("static/images/howto5mobile.svg") !important;
+  }
+  
+  .hoveredTo-2 {
+    background-image: url("static/images/howto9mobile.svg") !important;
+  }
+  
+  .hoveredTo-3 {
+    background-image: url("static/images/howto4mobile.svg") !important;
+  }
+  
+  .hoveredTo-4 {
+    background-image: url("static/images/howto6mobile.svg") !important;
+  }
+  
+  .hoveredTo-5 {
+    background-image: url("static/images/howto7mobile.svg") !important;
+  }
+  
+  .hoveredTo-6 {
+    background-image: url("static/images/howto10mobile.svg") !important;
+  }
+  
+  .hoveredTo-7 {
+    background-image: url("static/images/howto8mobile.svg") !important;
+  }
+  
+  /*--------------------------------------------------------------------How To End-----------------------------------------------------------------*/
+
   /*--------------------------------------------------------------------Rules-----------------------------------------------------------------*/
   
   
