@@ -51,8 +51,8 @@ def callback():
 @app.route("/login")
 def login():
     return oauth.auth0.authorize_redirect(
-        redirect_uri=url_for("callback", _external=True)
-    )
+    redirect_uri=url_for("callback", _external=True, _scheme="https"))
+
 
 
 @app.route("/logout")
@@ -70,7 +70,3 @@ def logout():
             quote_via=quote_plus,
         )
     )
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=env.get("PORT", 3000))
