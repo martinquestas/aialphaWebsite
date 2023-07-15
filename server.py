@@ -1,6 +1,3 @@
-"""Python Flask WebApp Auth0 integration example
-"""
-
 import json
 from os import environ as env
 from urllib.parse import quote_plus, urlencode
@@ -16,7 +13,6 @@ if ENV_FILE:
 app = Flask(__name__)
 app.secret_key = env.get("APP_SECRET_KEY")
 
-
 oauth = OAuth(app)
 
 oauth.register(
@@ -30,7 +26,6 @@ oauth.register(
 )
 
 
-# Controllers API
 @app.route("/")
 def home():
     return render_template(
@@ -40,23 +35,14 @@ def home():
     )
 
 
-
-@app.route("/callback", methods=["GET", "POST"])
+@app.route("/callback")
 def callback():
     token = oauth.auth0.authorize_access_token()
     session["user"] = token
     return redirect("/")
 
 
-@app.route("/login")
-def login():
-    return oauth.auth0.authorize_redirect(
-    redirect_uri=url_for("callback", _external=True, _scheme="https")
-)
-
-
-
-@app.route("/logout")
+@app.route("/")
 def logout():
     session.clear()
     return redirect(
@@ -71,7 +57,6 @@ def logout():
             quote_via=quote_plus,
         )
     )
-
 
 # if __name__ == "__main__":
 #     app.run(host="0.0.0.0", port=env.get("PORT", 3000))
