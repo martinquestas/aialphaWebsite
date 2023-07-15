@@ -399,15 +399,16 @@
     <script src="main.js"></script>
     <script>
         document.getElementById('profileButton').addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default anchor action
+            event.preventDefault();
             fetch('/profile')
-                .then(response => response.json())
+                .then(response => response.text())
                 .then(data => {
                     // do something with the profile data
                     console.log(data);
                 })
                 .catch(error => console.error('Error:', error));
         });
+
     </script>
 
     <noscript>Your browser does not support JavaScript!</noscript>
