@@ -1406,7 +1406,7 @@ footer .copyright p{
   }
   
   #rectangle1.rectangle {
-    top: 350px;
+    top: 400px;
     width: 140px;
     height: 100px;
 
@@ -1415,13 +1415,13 @@ footer .copyright p{
     width: 140px;
     height: 100px;
     left: 170px;
-    top: 530px;
+    top: 580px;
   }
   #rectangle3.rectangle {
     width: 140px;
     height: 100px;
     margin-left: 100px;
-    top: 350px;
+    top: 400px;
     left: -130px;
 
   }
@@ -1722,14 +1722,14 @@ footer .copyright p{
   #rectangle5.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-top: 110px;
+    margin-top: 100px;
     margin-left: -240px; 
   }
   
   #rectangle6.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-top: -130px;
+    margin-top: -140px;
     margin-left: 260px;
   }
   
@@ -1751,7 +1751,7 @@ footer .copyright p{
     width: 200px;
     height: 90px;
     margin-top: 160px;
-    margin-bottom: -300px;
+    margin-bottom: -280px;
     margin-left: -200px;
   }
   
