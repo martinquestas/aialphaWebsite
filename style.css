@@ -661,6 +661,11 @@ line-height: 36px;
   width: 520px;
   height: 10%;
   text-align: center;
+  color: #FF8B37;
+}
+.infoPricing p{
+  font-size: 1.5vw;
+  color: #FF8B37;
 }
 .glassmorphism {
   backdrop-filter: blur(20px);
@@ -686,6 +691,10 @@ line-height: 36px;
   margin: 5% auto 20px auto; /* Center the line horizontally and add bottom margin */
 }
 
+.pricingCarouselMobile{
+  display: none;
+}
+
 #pricing {
   display: flex;
   flex-direction: column;
@@ -706,6 +715,8 @@ line-height: 36px;
   line-height: 22px;
   margin-bottom: 20px;
   color: #ffffff;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 #pricing h2 {
@@ -1216,12 +1227,7 @@ footer .copyright p{
   #howLine,
   .containerStory,
   #storyLine,
-  #pricingLine,
-  #pricingLiner,
-  #pricing h1,
-  #pricing h2,
   .card,
-  .infoPricing,
   .rules-block,
   .desktop-logo{
     display: none;
@@ -1287,9 +1293,14 @@ footer .copyright p{
       margin: 0;
   }
   .nav-right ul li{
-    padding: 0 0 20px 0;
+    padding: 0 0 50px 0;
     margin: 0;
   }
+  .nav-right ul li a{
+    color: white;
+  }
+
+
   /* Show navigation links when hamburger menu is active */
   .nav-right ul.active {
       display: flex;
@@ -1305,7 +1316,9 @@ footer .copyright p{
       height: 101%;
       z-index: 1; /* Ensure the menu is on top of other elements */
   }
-
+  a#profileButton.signup-button{
+    margin: 0;
+  }
 
   /*------------------------------------------------------------------Burger Menú END---------------------------------------------------------------*/
   /*--------------------------------------------------------------------Video-----------------------------------------------------------------*/
@@ -1438,6 +1451,10 @@ footer .copyright p{
     text-align: center;
     height: auto;
     margin: auto;
+  }
+
+  #whyLine{
+    margin-top: 80px;
   }
   
   #whyContainer h1 {
@@ -1679,6 +1696,9 @@ footer .copyright p{
     font-size: 30px;
     margin-top: 30px;
   }
+  #howToLine{
+    margin-top: 80px;
+  }
 
   .blockHowTo {
     padding-top: 0px;
@@ -1792,7 +1812,103 @@ footer .copyright p{
   }
   
   /*--------------------------------------------------------------------How To End-----------------------------------------------------------------*/
+  /*--------------------------------------------------------------------Pricing-----------------------------------------------------------------*/
+  .pricingCarouselMobile {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    overflow-y: hidden; /* prevent vertical scroll */
+    width: 500px;
+    height: 750px; /* adjust this value as needed */
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .pricingCarouselMobile::-webkit-scrollbar { /* Chrome, Safari and Opera */
+    display: none;
+  }
+  .pricingCarousel__image-container {
+    display: flex;
+    height: 100%;
+    padding: 0 50px;
+  }
+  
+  .pricingCarousel__item {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pricingCarousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+  }
+  
+  img#pricing1Mobile.pricingCarousel__image{
+    border-radius: 2%;
+    height: 570px;
+    margin-top: 60px;
+  }
+  #pricing2Mobile.pricingCarousel__image{
+    background-image: url('static/images/pricing2mobile.svg');
+  }
+  
+  
+  img#pricing3Mobile.pricingCarousel__image{
+    height: 730px;
+    margin-top: 10px;
+  }
 
+  
+  div#cardRectangle2Mobile{
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    top: 40px;
+    background-color: rgba(0, 0, 0, 0); /* Invisible background */
+    z-index: 1;
+    cursor: pointer; /* Set the cursor style to indicate clickable */
+    pointer-events: auto; /* Re-enable pointer events */
+    transition: top 0.5s ease-in-out;
+  }
+
+  #pricing h1{
+    margin-top: 0px;
+    font-size: 30px;
+  }
+
+  #pricing h2{
+    width: 450px;
+    font-size: 25px;
+  }
+
+  .infoPricing p{
+    font-size: 19px;
+    margin-top: 20px;
+  }
+  #pricingLiner{
+    margin-top: 80px;
+  }
+
+  .centered-button {
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Modify dimensions as needed */
+    width: 200px;
+    height: 90px;
+    background-color: transparent;
+}
+
+  /*--------------------------------------------------------------------Pricing End-----------------------------------------------------------------*/
   /*--------------------------------------------------------------------Rules-----------------------------------------------------------------*/
   div#rules-container h1{
     font-family: 'Nord';
