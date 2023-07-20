@@ -1856,15 +1856,11 @@ footer .copyright p{
     height: 570px;
     margin-top: 60px;
   }
-  #pricing2Mobile.pricingCarousel__image {
+  #pricing2Mobile.pricingCarousel__image{
     background-image: url('static/images/pricing2mobile.svg');
-    opacity: 1;
   }
   
-  #pricing22Mobile.pricingCarousel__image {
-    background-image: url('static/images/pricing22mobile.svg');
-    opacity: 0;
-  }
+  
   img#pricing3Mobile.pricingCarousel__image{
     height: 730px;
     margin-top: 10px;
