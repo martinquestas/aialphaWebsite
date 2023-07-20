@@ -310,12 +310,6 @@ let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
 let newImageMobile = 'url("static/images/pricing22mobile.svg")';
 let isOriginalImageMobile = true;
 
-// Preload the images
-const image1 = new Image();
-image1.src = "static/images/pricing2mobile.svg";
-const image2 = new Image();
-image2.src = "static/images/pricing22mobile.svg";
-
 cardRectangleMobile.addEventListener("click", function () {
   if (isOriginalImageMobile) {
     pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
