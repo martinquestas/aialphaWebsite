@@ -1856,9 +1856,12 @@ footer .copyright p{
     height: 570px;
     margin-top: 60px;
   }
-  #pricing2Mobile.pricingCarousel__image{
-    background-image: url('static/images/pricing2mobile.svg');
+  #pricing2Mobile.pricingCarousel__image {
+    background-image: url('static/images/pricing2mobile.svg'), url('static/images/pricing22mobile.svg');
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
   }
+  
   
   
   img#pricing3Mobile.pricingCarousel__image{
@@ -1908,13 +1911,6 @@ footer .copyright p{
     background-color: transparent;
 }
 
-.preload {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-}
 
 
   /*--------------------------------------------------------------------Pricing End-----------------------------------------------------------------*/

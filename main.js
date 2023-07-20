@@ -305,18 +305,18 @@ document.addEventListener("DOMContentLoaded", function () {
 //Pricing Mobile
 const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
 const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
-const preload1Mobile = document.getElementById("preload1Mobile");
-const preload2Mobile = document.getElementById("preload2Mobile");
 
+let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
+let newImageMobile = 'url("static/images/pricing22mobile.svg")';
 let isOriginalImageMobile = true;
 
 cardRectangleMobile.addEventListener("click", function () {
   if (isOriginalImageMobile) {
-    pricingCarouselImageMobile.style.backgroundImage = `url(${preload2Mobile.src})`;
+    pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
     cardRectangleMobile.style.top = "auto";
     cardRectangleMobile.style.bottom = "0";
   } else {
-    pricingCarouselImageMobile.style.backgroundImage = `url(${preload1Mobile.src})`;
+    pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
     cardRectangleMobile.style.top = "0";
     cardRectangleMobile.style.bottom = "200px";
   }
