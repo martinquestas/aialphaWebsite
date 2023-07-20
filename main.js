@@ -302,34 +302,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 //Pricing Mobile
-window.onload = function () {
-  const pricing22Mobile = document.getElementById("pricing22Mobile");
-  pricing22Mobile.style.width = "400px";
-  pricing22Mobile.style.height = "750px";
 
-  const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
-  const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
+const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
+const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
 
-  let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
-  let newImageMobile = 'url("static/images/pricing22mobile.svg")';
-  let isOriginalImageMobile = true;
+let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
+let newImageMobile = 'url("static/images/pricing22mobile.svg")';
+let isOriginalImageMobile = true;
 
-  cardRectangleMobile.addEventListener("click", function () {
-    if (isOriginalImageMobile) {
-      pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
-      cardRectangleMobile.style.top = "auto";
-      cardRectangleMobile.style.bottom = "0";
-      pricing22Mobile.style.display = "block"; // Show it when the button is clicked
-    } else {
-      pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
-      cardRectangleMobile.style.top = "0";
-      cardRectangleMobile.style.bottom = "200px";
-      pricing22Mobile.style.display = "none"; // Hide it again when the button is clicked
-    }
-    isOriginalImageMobile = !isOriginalImageMobile;
-  });
-};
+cardRectangleMobile.addEventListener("click", function () {
+  if (isOriginalImageMobile) {
+    pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
+    cardRectangleMobile.style.top = "auto";
+    cardRectangleMobile.style.bottom = "0";
+  } else {
+    pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
+    cardRectangleMobile.style.top = "0";
+    cardRectangleMobile.style.bottom = "200px";
+  }
+  isOriginalImageMobile = !isOriginalImageMobile;
+});
 
 //Pricing Mobile End
