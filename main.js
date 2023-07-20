@@ -302,40 +302,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 //Pricing Mobile
-
 window.onload = function () {
-  let img = new Image();
-  img.src = "static/images/pricing22mobile.svg"; // replace with your actual image path
+  const pricing22Mobile = new Image();
+  pricing22Mobile.src = "static/images/pricing22mobile.svg";
+  pricing22Mobile.width = 400;
+  pricing22Mobile.height = 750;
+  pricing22Mobile.id = "pricing22Mobile";
+  pricing22Mobile.style.display = "none"; // Hide it initially
 
-  img.onload = function () {
-    // Set the dimensions as soon as the image loads
-    img.width = 400;
-    img.height = 750;
+  // Append it to the body or to any specific container
+  document.body.appendChild(pricing22Mobile);
 
-    // Add the image to the DOM (you may want to append it somewhere specific)
-    document.body.appendChild(img);
-  };
+  const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
+  const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
+
+  let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
+  let newImageMobile = 'url("static/images/pricing22mobile.svg")';
+  let isOriginalImageMobile = true;
+
+  cardRectangleMobile.addEventListener("click", function () {
+    if (isOriginalImageMobile) {
+      pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
+      cardRectangleMobile.style.top = "auto";
+      cardRectangleMobile.style.bottom = "0";
+      pricing22Mobile.style.display = "block"; // Show it when the button is clicked
+    } else {
+      pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
+      cardRectangleMobile.style.top = "0";
+      cardRectangleMobile.style.bottom = "200px";
+      pricing22Mobile.style.display = "none"; // Hide it again when the button is clicked
+    }
+    isOriginalImageMobile = !isOriginalImageMobile;
+  });
 };
-
-const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
-const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
-
-let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
-let newImageMobile = 'url("static/images/pricing22mobile.svg")';
-let isOriginalImageMobile = true;
-
-cardRectangleMobile.addEventListener("click", function () {
-  if (isOriginalImageMobile) {
-    pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
-    cardRectangleMobile.style.top = "auto";
-    cardRectangleMobile.style.bottom = "0";
-  } else {
-    pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
-    cardRectangleMobile.style.top = "0";
-    cardRectangleMobile.style.bottom = "200px";
-  }
-  isOriginalImageMobile = !isOriginalImageMobile;
-});
 
 //Pricing Mobile End
