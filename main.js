@@ -305,31 +305,20 @@ document.addEventListener("DOMContentLoaded", function () {
 //Pricing Mobile
 const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
 const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
-
-let originalImageMobile = 'url("static/images/pricing2mobile.svg")';
-let newImageMobileSrc = "static/images/pricing22mobile.svg";
-
-let newImageMobile = new Image(); // Create new img element
-newImageMobile.src = newImageMobileSrc; // Set source path
-
-newImageMobile.onload = function () {
-  // Once the image is loaded, you can use it as a background image
-  newImageMobile = `url(${newImageMobileSrc})`;
-};
-
-let isOriginalImageMobile = true;
+const pricingCarouselImage22Mobile = document.getElementById("pricing22Mobile");
 
 cardRectangleMobile.addEventListener("click", function () {
-  if (isOriginalImageMobile) {
-    pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
+  if (pricingCarouselImageMobile.style.display !== "none") {
+    pricingCarouselImageMobile.style.display = "none";
+    pricingCarouselImage22Mobile.style.display = "block";
     cardRectangleMobile.style.top = "auto";
     cardRectangleMobile.style.bottom = "0";
   } else {
-    pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
-    cardRectangleMobile.style.top = "40px"; // Change this to match the initial state
+    pricingCarouselImage22Mobile.style.display = "none";
+    pricingCarouselImageMobile.style.display = "block";
+    cardRectangleMobile.style.top = "0";
     cardRectangleMobile.style.bottom = "auto";
   }
-  isOriginalImageMobile = !isOriginalImageMobile;
 });
 
 //Pricing Mobile End
