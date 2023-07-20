@@ -313,12 +313,10 @@ let isOriginalImageMobile = true;
 cardRectangleMobile.addEventListener("click", function () {
   if (isOriginalImageMobile) {
     pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
-    cardRectangleMobile.style.top = "auto";
     cardRectangleMobile.style.bottom = "0";
   } else {
     pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
-    cardRectangleMobile.style.top = "0";
-    cardRectangleMobile.style.bottom = "200px";
+    cardRectangleMobile.style.bottom = "auto";
   }
   isOriginalImageMobile = !isOriginalImageMobile;
 });
