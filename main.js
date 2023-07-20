@@ -305,10 +305,17 @@ document.addEventListener("DOMContentLoaded", function () {
 //Pricing Mobile
 
 window.onload = function () {
-  const pricing22Mobile = document.getElementById("pricing22Mobile");
+  let img = new Image();
+  img.src = "static/images/pricing22mobile.svg"; // replace with your actual image path
 
-  pricing22Mobile.style.width = "400px";
-  pricing22Mobile.style.height = "750px";
+  img.onload = function () {
+    // Set the dimensions as soon as the image loads
+    img.width = 400;
+    img.height = 750;
+
+    // Add the image to the DOM (you may want to append it somewhere specific)
+    document.body.appendChild(img);
+  };
 };
 
 const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
