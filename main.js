@@ -305,15 +305,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Pricing Mobile
 window.onload = function () {
-  const pricing22Mobile = new Image();
-  pricing22Mobile.src = "static/images/pricing22mobile.svg";
-  pricing22Mobile.width = 400;
-  pricing22Mobile.height = 750;
-  pricing22Mobile.id = "pricing22Mobile";
-  pricing22Mobile.style.display = "none"; // Hide it initially
-
-  // Append it to the body or to any specific container
-  document.body.appendChild(pricing22Mobile);
+  const pricing22Mobile = document.getElementById("pricing22Mobile");
+  pricing22Mobile.style.width = "400px";
+  pricing22Mobile.style.height = "750px";
 
   const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
   const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
