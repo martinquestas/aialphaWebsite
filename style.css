@@ -1849,7 +1849,7 @@ footer .copyright p{
     height: 100%;
     background-size: 100% 100%;
     background-position: center;
-    transition: background-image 0.5s ease-in-out;
+    transition: opacity 1s; /* Adjust duration as needed */
   }
   
   img#pricing1Mobile.pricingCarousel__image{
@@ -1859,8 +1859,11 @@ footer .copyright p{
   }
   #pricing2Mobile.pricingCarousel__image{
     background-image: url('static/images/pricing2mobile.svg');
+    position: absolute;
   }
-  
+  #pricing22obile.pricingCarousel__image{
+    position: absolute;
+  }
   
   img#pricing3Mobile.pricingCarousel__image{
     height: 730px;

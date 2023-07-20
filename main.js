@@ -308,14 +308,14 @@ const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
 const pricingCarouselImage22Mobile = document.getElementById("pricing22Mobile");
 
 cardRectangleMobile.addEventListener("click", function () {
-  if (pricingCarouselImageMobile.style.display !== "none") {
-    pricingCarouselImageMobile.style.display = "none";
-    pricingCarouselImage22Mobile.style.display = "block";
+  if (getComputedStyle(pricingCarouselImageMobile).opacity !== "0") {
+    pricingCarouselImageMobile.style.opacity = "0";
+    pricingCarouselImage22Mobile.style.opacity = "1";
     cardRectangleMobile.style.top = "auto";
     cardRectangleMobile.style.bottom = "0";
   } else {
-    pricingCarouselImage22Mobile.style.display = "none";
-    pricingCarouselImageMobile.style.display = "block";
+    pricingCarouselImage22Mobile.style.opacity = "0";
+    pricingCarouselImageMobile.style.opacity = "1";
     cardRectangleMobile.style.top = "0";
     cardRectangleMobile.style.bottom = "auto";
   }
