@@ -303,6 +303,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //Pricing Mobile
+
+window.onload = function () {
+  const pricing22Mobile = document.getElementById("pricing22Mobile");
+
+  pricing22Mobile.style.width = "400px";
+  pricing22Mobile.style.height = "750px";
+};
+
 const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
 const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
 
@@ -313,10 +321,12 @@ let isOriginalImageMobile = true;
 cardRectangleMobile.addEventListener("click", function () {
   if (isOriginalImageMobile) {
     pricingCarouselImageMobile.style.backgroundImage = newImageMobile;
+    cardRectangleMobile.style.top = "auto";
     cardRectangleMobile.style.bottom = "0";
   } else {
     pricingCarouselImageMobile.style.backgroundImage = originalImageMobile;
-    cardRectangleMobile.style.bottom = "auto";
+    cardRectangleMobile.style.top = "0";
+    cardRectangleMobile.style.bottom = "200px";
   }
   isOriginalImageMobile = !isOriginalImageMobile;
 });
