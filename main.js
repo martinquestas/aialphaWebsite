@@ -262,7 +262,63 @@ cardRectangle.addEventListener("click", function () {
 });
 
 //Price Animation END
-//Our Story
+//Our Story Desktop
+window.addEventListener("DOMContentLoaded", (event) => {
+  const btn1 = document.getElementById("btn1");
+  const btn2 = document.getElementById("btn2");
+  const btn3 = document.getElementById("btn3");
+
+  const img1 = document.getElementById("img1");
+  const img2 = document.getElementById("img2");
+  const img3 = document.getElementById("img3");
+  const img4 = document.getElementById("img4");
+
+  img1.style.opacity = 1;
+
+  btn1.addEventListener("mouseover", () => {
+    img1.style.opacity = 0;
+    img2.style.opacity = 1;
+    img3.style.opacity = 0;
+    img4.style.opacity = 0;
+  });
+
+  btn2.addEventListener("mouseover", () => {
+    img1.style.opacity = 0;
+    img2.style.opacity = 0;
+    img3.style.opacity = 1;
+    img4.style.opacity = 0;
+  });
+
+  btn3.addEventListener("mouseover", () => {
+    img1.style.opacity = 0;
+    img2.style.opacity = 0;
+    img3.style.opacity = 0;
+    img4.style.opacity = 1;
+  });
+
+  btn1.addEventListener("mouseout", () => {
+    img1.style.opacity = 1;
+    img2.style.opacity = 0;
+    img3.style.opacity = 0;
+    img4.style.opacity = 0;
+  });
+
+  btn2.addEventListener("mouseout", () => {
+    img1.style.opacity = 1;
+    img2.style.opacity = 0;
+    img3.style.opacity = 0;
+    img4.style.opacity = 0;
+  });
+
+  btn3.addEventListener("mouseout", () => {
+    img1.style.opacity = 1;
+    img2.style.opacity = 0;
+    img3.style.opacity = 0;
+    img4.style.opacity = 0;
+  });
+});
+
+//Our Story Desktop END
 // Get all the titleStory elements
 const titles = document.querySelectorAll(".titleStory");
 
