@@ -896,82 +896,38 @@ background-color: rgb(210, 115, 0);
   color: #ffffff;
 }
 
-.rules-block {
-  width: 1110px;
-  height: 1550px;
-  margin: 0 auto;
+.carousel-container {
+  display: block;
+  width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari and Opera */
+}
+
+.carousel-image {
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 90vh;
+  scroll-snap-align: start;
+  overflow: hidden; /* This will cut-off the part of image-inner div that is outside of this div */
 }
 
-.square {
-  width: 530px;
-  height: 560px;
+.image-inner {
   position: absolute;
-  opacity: 1;
-  background-size: cover;
+  top: -190px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center top;
   background-repeat: no-repeat;
-}
-.gif-overlay {
-  position: absolute;
-  top: 40px;
-  left: 95px;
-  object-fit: cover;
-}
-
-#gifrule1{
-  width: 350px;
-  height: 250px;
-}
-
-#gifrule2{
-  top: 5px;
-  left: 165px;
-  width: 180px;
-  height: 300px;
-}
-
-#gifrule3{
-  width: 350px;
-  height: 250px;
-}
-
-#gifrule4{
-  left: 125px;
-  width: 260px;
-  height: 250px;
-}
-#square1 {
-  top: 0;
-  left: 0;
-  background-position: top left;
-  height: 540px;
-  padding-bottom: 170px;
-
-}
-
-#square2 {
-  top: 0;
-  right: 0;
-  height: 540px;
-  background-position: top right;
-  padding-bottom: 140px;
-
-}
-
-#square3 {
-  bottom: 20%;
-  left: 0;
-  background-position: bottom left;
-  height: 545px;
-}
-
-#square4 {
-  bottom: 10.5%;
-  right: 0;
-  background-position: bottom right;
-  height: 690px;
-
+  background-size: contain;
 }
 /*---------------------------------------------------------------Our Story----------------------------------------------------------------*/
 
@@ -1217,6 +1173,8 @@ footer .copyright p{
   .image-container,
   .btn-container,
   .rules-block,
+  .carousel-container,
+  .carousel-iamge,
   .desktop-logo{
     display: none;
   }
