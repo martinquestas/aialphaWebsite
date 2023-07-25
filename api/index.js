@@ -3,7 +3,7 @@ const express = require("express");
 const http = require("http");
 const logger = require("morgan");
 const path = require("path");
-const router = require("./routes/index");
+const router = require("./routes/index"); // Make sure the path is correct based on the new file location
 const { auth } = require("express-openid-connect");
 
 dotenv.load();
@@ -22,16 +22,6 @@ const config = {
   auth0Logout: true,
 };
 
-const port = process.env.PORT || 3000;
-if (
-  !config.baseURL &&
-  !process.env.BASE_URL &&
-  process.env.PORT &&
-  process.env.NODE_ENV !== "production"
-) {
-  config.baseURL = `http://localhost:${port}`;
-}
-
 app.use(auth(config));
 
 // Middleware to make the `user` object available for all views
@@ -40,7 +30,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use("/", router);
+app.use("/api", router); // This is updated to prefix all routes with '/api'
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -58,15 +48,5 @@ app.use(function (err, req, res, next) {
   });
 });
 
-const express = require("express");
-const server = express();
-
-server.get("/profile", (req, res) => {
-  res.send("Profile page");
-});
-
-module.exports = server;
-
-http.createServer(app).listen(port, () => {
-  console.log(`Listening on ${config.baseURL}`);
-});
+// Replace the old app.listen() with module.exports
+module.exports = app;
