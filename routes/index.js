@@ -8,11 +8,8 @@ router.get("/", function (req, res, next) {
   });
 });
 
-router.get("/profile", requiresAuth(), function (req, res, next) {
-  res.json({
-    userProfile: req.oidc.user,
-    title: "Profile page",
-  });
+router.get("/profile", function (req, res, next) {
+  res.render("index", { title: "Profile" });
 });
 
 module.exports = router;

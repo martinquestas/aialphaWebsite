@@ -1,3 +1,5 @@
+//Validation
+
 // Video player
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -114,7 +114,11 @@
                         <li><a href="#howTo" class="title-button">GETTING STARTED</a></li>
                         <li><a href="#pricingLine" class="title-button">PRICING</a></li>
                         <li><a href="#rules" class="title-button">RULES</a></li>
-                        <li><a href="#" id="profileButton" class="signup-button">Sign Up</a></li>
+                        <li><a href="http://127.0.0.1:3001/profile" id="profileButton" class="signup-button">Sign Up</a>
+                        </li>
+
+
+
 
                     </ul>
                 </div>
@@ -417,19 +421,7 @@
 
 
     <script src="main.js"></script>
-    <script>
-        document.getElementById('profileButton').addEventListener('click', function (event) {
-            event.preventDefault();
-            fetch('/profile')
-                .then(response => response.text())
-                .then(data => {
-                    // do something with the profile data
-                    console.log(data);
-                })
-                .catch(error => console.error('Error:', error));
-        });
 
-    </script>
 
     <noscript>Your browser does not support JavaScript!</noscript>
     <footer>
