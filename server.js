@@ -58,6 +58,15 @@ app.use(function (err, req, res, next) {
   });
 });
 
+const express = require("express");
+const server = express();
+
+server.get("/profile", (req, res) => {
+  res.send("Profile page");
+});
+
+module.exports = server;
+
 http.createServer(app).listen(port, () => {
   console.log(`Listening on ${config.baseURL}`);
 });
