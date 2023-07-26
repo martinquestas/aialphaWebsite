@@ -1,4 +1,21 @@
 //Validation
+window.onload = async () => {
+  await configureClient();
+
+  if (window.location.pathname === "/callback") {
+    await auth0.handleRedirectCallback();
+    window.history.replaceState({}, document.title, "/");
+  }
+
+  const isAuthenticated = await auth0.isAuthenticated();
+
+  if (isAuthenticated) {
+    console.log("User is authenticated");
+  } else {
+    console.log("User is not authenticated");
+  }
+};
+
 document.getElementById("profileButton").addEventListener("click", function () {
   auth0.loginWithRedirect({
     redirect_uri: "https://aialpha-website.vercel.app/callback",
