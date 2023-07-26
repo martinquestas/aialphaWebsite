@@ -55,9 +55,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Handle the authentication state of the user
   await handleAuthentication();
 });
-window.onload = async () => {
-  await configureClient();
-};
+
 // Video player
 
 document.addEventListener("DOMContentLoaded", function () {
