@@ -1,62 +1,46 @@
 //Validation
-window.onload = async () => {
-  await configureClient();
+let auth0 = null;
 
-  if (window.location.pathname === "/callback") {
-    await auth0.handleRedirectCallback();
-    window.history.replaceState({}, document.title, "/");
-  }
+const fetchAuthConfig = () => fetch("/auth_config.json");
 
+const configureClient = async () => {
+  const response = await fetchAuthConfig();
+  const config = await response.json();
+
+  auth0 = await createAuth0Client({
+    domain: config.domain,
+    client_id: config.clientId,
+  });
+};
+
+// Handle authentication
+const handleAuthentication = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
 
   if (isAuthenticated) {
     console.log("User is authenticated");
+    // User is authenticated, you can get the user profile or call protected endpoints using the token
+    const userProfile = await auth0.getUser();
+    console.log("User profile: ", userProfile);
   } else {
+    // User is not authenticated, you can show the login button or do nothing
     console.log("User is not authenticated");
+  }
+
+  // Check for redirect
+  const query = window.location.search;
+  if (query.includes("code=") && query.includes("state=")) {
+    await auth0.handleRedirectCallback();
+    window.history.replaceState({}, document.title, "/");
   }
 };
 
-document.getElementById("profileButton").addEventListener("click", function () {
-  auth0.loginWithRedirect({
-    redirect_uri: "https://aialpha-website.vercel.app/callback",
-  });
-});
-
 document.addEventListener("DOMContentLoaded", async function () {
-  let auth0 = null;
-  const fetchAuthConfig = () => fetch("/auth_config.json");
+  // Configure the Auth0 client
+  await configureClient();
 
-  const configureClient = async () => {
-    const response = await fetchAuthConfig();
-    const config = await response.json();
-
-    auth0 = await createAuth0Client({
-      domain: config.domain,
-      client_id: config.clientId,
-    });
-  };
-
-  // Handle authentication
-  const handleAuthentication = async () => {
-    const isAuthenticated = await auth0.isAuthenticated();
-
-    if (isAuthenticated) {
-      console.log("User is authenticated");
-      // User is authenticated, you can get the user profile or call protected endpoints using the token
-      const userProfile = await auth0.getUser();
-      console.log("User profile: ", userProfile);
-    } else {
-      // User is not authenticated, you can show the login button or do nothing
-      console.log("User is not authenticated");
-    }
-
-    // Check for redirect
-    const query = window.location.search;
-    if (query.includes("code=") && query.includes("state=")) {
-      await auth0.handleRedirectCallback();
-      window.history.replaceState({}, document.title, "/");
-    }
-  };
+  // Handle the authentication state of the user
+  await handleAuthentication();
 
   // Set event listener for the sign up button
   document
@@ -66,11 +50,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         redirect_uri: window.location.origin + "/callback",
       });
     });
-
-  // Configure the Auth0 client
-  await configureClient();
-  // Handle the authentication state of the user
-  await handleAuthentication();
 });
 
 // Video player
