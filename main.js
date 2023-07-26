@@ -1,7 +1,7 @@
 //Validation
 document.getElementById("profileButton").addEventListener("click", function () {
   auth0.loginWithRedirect({
-    redirect_uri: "https://Your-Vercel-App.vercel.app/callback",
+    redirect_uri: "https://aialpha-website.vercel.app/callback",
   });
 });
 
