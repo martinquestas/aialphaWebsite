@@ -430,9 +430,10 @@ line-height: 36px;
 
 
 #mainView {
-  height: 829px;
-  width: 916px;  
+  height: 749px;
+  width: 829px;  
   border-radius: 5%;
+  background-repeat: no-repeat;
   background-color: #eb9100;
   z-index: 1;
   transition: all 1s;  
@@ -1397,8 +1398,11 @@ footer .copyright p{
     text-align: center;
     height: auto;
     margin: auto;
+    overflow-x: hidden;
   }
-
+  #whyContainer::-webkit-scrollbar { /* Chrome, Safari and Opera */
+    display: none;
+  }
   #whyLine{
     margin-top: 80px;
   }
@@ -1424,7 +1428,7 @@ footer .copyright p{
   }
   #containerCarousel {
     height: 60vh;
-    width: 650px;
+    width: 90%;
     margin-top: 40px;
     margin-bottom: 200px;
     box-sizing: border-box;
@@ -1536,11 +1540,11 @@ footer .copyright p{
   }
   
   #navLeft {
-    left: -105px;
+    left: -90px;
   }
   
   #navRight {
-    right: -105px;
+    right: -90px;
   }
 
   
