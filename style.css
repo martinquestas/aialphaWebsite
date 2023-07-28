@@ -945,11 +945,12 @@ background-color: rgb(210, 115, 0);
   line-height: 22px;
     margin-bottom: 20px;
     color: #ffffff;
+    margin-top: 80px;
 }
 .image-container {
   position: relative;
-  width: 73%;
-  height: 1670px;
+  width: 58%;
+  height: 1370px;
 }
 @media only screen and (min-width: 1000px) and (max-width: 1600px){
   .image-container {
@@ -983,7 +984,8 @@ background-color: rgb(210, 115, 0);
 }
 
 .bg-image#img4{
-  margin-top: -80px;
+  margin-top: 2%;
+  height: 1390px;
 }
 
 .btn-container {
