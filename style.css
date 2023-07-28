@@ -949,7 +949,7 @@ background-color: rgb(210, 115, 0);
 }
 .image-container {
   position: relative;
-  width: 58%;
+  width: 68%;
   height: 1370px;
 }
 @media only screen and (min-width: 1000px) and (max-width: 1600px){
@@ -974,27 +974,27 @@ background-color: rgb(210, 115, 0);
 }
 
 .bg-image#img1 {
-  height: 1300px;
+  height: 1600px;
 }
 
 .bg-image#img2 {
   margin-top: -1%;
-  height: 1390px;
+  height: 1690px;
 }
 
 .bg-image#img3{
   margin-top: -1%;
-  height: 1420px;
+  height: 1720px;
 
 }
 .bg-image#img4{
   margin-top: 1%;
-  height: 1290px;
+  height: 1590px;
 }
 
 .btn-container {
   position: absolute;
-  bottom: 300px;
+  bottom: 500px;
   left: 0;
   width: 100%;
   display: flex;
