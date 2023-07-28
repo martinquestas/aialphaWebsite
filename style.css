@@ -974,23 +974,27 @@ background-color: rgb(210, 115, 0);
 }
 
 .bg-image#img1 {
-  height: 1200px;
+  height: 1300px;
 }
 
-.bg-image#img2,
-.bg-image#img3 {
-  margin-top: -10px;
+.bg-image#img2 {
+  margin-top: -1%;
   height: 1390px;
 }
 
+.bg-image#img3{
+  margin-top: -1%;
+  height: 1420px;
+
+}
 .bg-image#img4{
-  margin-top: 2%;
-  height: 1390px;
+  margin-top: 1%;
+  height: 1290px;
 }
 
 .btn-container {
   position: absolute;
-  bottom: 200px;
+  bottom: 300px;
   left: 0;
   width: 100%;
   display: flex;
@@ -999,7 +1003,7 @@ background-color: rgb(210, 115, 0);
 
 .btn {
   width: 400px;
-  height: 1050px;
+  height: 1250px;
   margin: 0 7%;
   background: transparent;
   border: none;
