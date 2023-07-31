@@ -892,32 +892,30 @@ background-color: rgb(210, 115, 0);
 
 #rules-container h1 {
   font-family: 'Nord', sans-serif;
+  font-weight: 100;
   font-size: 3vw;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   color: #ffffff;
 }
 
 .carousel-container {
-  display: block;
-  width: 100%;
-  height: 90vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
-
-.carousel-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari and Opera */
-}
-
-.carousel-image {
   position: relative;
   width: 100%;
   height: 90vh;
-  scroll-snap-align: start;
-  overflow: hidden; /* This will cut-off the part of image-inner div that is outside of this div */
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
 }
 
 .image-inner {
@@ -930,6 +928,47 @@ background-color: rgb(210, 115, 0);
   background-repeat: no-repeat;
   background-size: contain;
 }
+.buttons-container {
+  position: absolute;
+  top: 36%; /* Adjust as needed */
+  left: 40%;
+  transform: translateY(-50%); /* Center the buttons vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; /* Adjust as needed */
+  width: 200px; /* Adjust as needed */
+  z-index: 1;
+}
+
+.invisible-button {
+  width: 200px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+  background: transparent;
+  border: none;
+}
+
+.invisible-button:hover {
+  cursor: pointer;
+}
+
+.gif-inner {
+  position: absolute;
+  top: 70px;
+  margin-left: 15vw;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 500px;
+  height: 500px;
+}
+
+.gif-inner.active {
+  opacity: 1;
+}
+
 /*---------------------------------------------------------------Our Story----------------------------------------------------------------*/
 
 .containerStory {

@@ -394,6 +394,35 @@ titles.forEach((title) => {
   });
 });
 
+//R&R Desktop
+let images = Array.from(document.querySelectorAll(".carousel-image"));
+let gifs = Array.from(document.querySelectorAll(".gif-inner"));
+let buttons = Array.from(document.querySelectorAll(".invisible-button"));
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    let imageIndex = parseInt(button.getAttribute("data-image-index"), 10);
+
+    images.forEach((image, index) => {
+      if (index === imageIndex) {
+        image.classList.add("active");
+      } else {
+        image.classList.remove("active");
+      }
+    });
+
+    gifs.forEach((gif, index) => {
+      if (index === imageIndex) {
+        gif.style.opacity = "1";
+      } else {
+        gif.style.opacity = "0";
+      }
+    });
+  });
+});
+
+//R&R Desktop END
+
 //Our Story Mobile
 
 document.addEventListener("DOMContentLoaded", function () {
