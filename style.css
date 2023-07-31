@@ -940,9 +940,9 @@ background-color: rgb(210, 115, 0);
   width: 200px; /* Adjust as needed */
   z-index: 1;
 }
-@media only screen and (min-width: 1000px) and (max-width: 1300px){
+@media only screen and (min-width: 1000px) and (max-width: 1400px){
   .buttons-container{
-    top: 29vh;
+    top: 22vh;
   }
 
 }
