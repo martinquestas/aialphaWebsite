@@ -936,14 +936,14 @@ background-color: rgb(210, 115, 0);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 200px; /* Adjust as needed */
+  height: 20vh; /* Adjust as needed */
   width: 200px; /* Adjust as needed */
   z-index: 1;
 }
 
 .invisible-button {
   width: 200px; /* Adjust as needed */
-  height: 60px; /* Adjust as needed */
+  height: 4vh; /* Adjust as needed */
   background: transparent;
   border: none;
 }
@@ -955,7 +955,7 @@ background-color: rgb(210, 115, 0);
 .gif-inner {
   position: absolute;
   top: 70px;
-  margin-left: 15vw;
+  margin-left: 25vw;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
