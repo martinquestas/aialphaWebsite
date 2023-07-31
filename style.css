@@ -930,20 +930,20 @@ background-color: rgb(210, 115, 0);
 }
 .buttons-container {
   position: absolute;
-  top: 36%; /* Adjust as needed */
+  top: 35%; /* Adjust as needed */
   left: 40%;
   transform: translateY(-50%); /* Center the buttons vertically */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20vh; /* Adjust as needed */
+  height: 22vh; /* Adjust as needed */
   width: 200px; /* Adjust as needed */
   z-index: 1;
 }
 
 .invisible-button {
   width: 200px; /* Adjust as needed */
-  height: 4vh; /* Adjust as needed */
+  height: 10vh; /* Adjust as needed */
   background: transparent;
   border: none;
 }
@@ -954,8 +954,8 @@ background-color: rgb(210, 115, 0);
 
 .gif-inner {
   position: absolute;
-  top: 70px;
-  margin-left: 25vw;
+  top: 10px;
+  margin-left: 22vw;
   background-position: center top;
   background-repeat: no-repeat;
   background-size: contain;
