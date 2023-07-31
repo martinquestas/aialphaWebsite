@@ -930,7 +930,7 @@ background-color: rgb(210, 115, 0);
 }
 .buttons-container {
   position: absolute;
-  top: 35%; /* Adjust as needed */
+  top: 32vh; /* Adjust as needed */
   left: 40%;
   transform: translateY(-50%); /* Center the buttons vertically */
   display: flex;
