@@ -3,3 +3,4 @@ test.css
 test.js
 # Local Netlify folder
 .netlify
+.env

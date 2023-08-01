@@ -137,3 +137,22 @@ document
       });
     }
   });
+document
+  .getElementById("change-password")
+  .addEventListener("click", async () => {
+    const response = await fetch("/api/change-password", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: document.getElementById("user-email").value,
+      }),
+    });
+
+    if (response.ok) {
+      alert("A password reset email has been sent to your email address.");
+    } else {
+      alert("There was an error sending the password reset email.");
+    }
+  });
