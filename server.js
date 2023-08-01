@@ -1,7 +1,7 @@
 const express = require("express");
 const { join } = require("path");
 const app = express();
-
+const port = process.env.PORT || 3000;
 // Serve static assets from the /public folder
 app.use(express.static("public"));
 app.use("/static", express.static("static"));
@@ -20,5 +20,4 @@ app.get("/profiledashboard.html", (req, res) => {
   res.sendFile(join(__dirname, "profiledashboard.html"));
 });
 
-// Listen on port 3000
-app.listen(3000, () => console.log("Application running on port 3000"));
+app.listen(port, () => console.log(`Application running on port ${port}`));
