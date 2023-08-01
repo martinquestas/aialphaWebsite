@@ -8,18 +8,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="en">
     <meta name="AI Alpha">
-    <meta name="keywords" content="ai, ai alpha, questas, artificial, artificial intelligence, ia, information">
-    <meta name="description" content="AI Alpha Website. Questas Consulting Group.">
-    <meta property="og:locale" content="en_AR">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="AI Alpha">
-    <meta property="og:description" content="AI Alpha Official Website">
-    <meta property="og:site_name" content="AI Alpha">
-    <meta itemprop="name" content="AI Alpha">
-    <meta property="og:url" content="https://aialpha.ai/">
-    <meta property="og:image" content="https://aialpha.ai/static/images/AIAlphalogo.png" />
+
     <title>AI Alpha</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="shortcut icon" href="static/images/favicon.ico" />
     <script>
         // Check if the browser is Safari
         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
@@ -28,7 +20,7 @@
         if (isSafari) {
             var link = document.createElement('link');
             link.rel = 'stylesheet';
-            link.href = 'safari.css';
+            link.href = '/css/safari.css';
             document.head.appendChild(link);
         }
     </script>
@@ -41,49 +33,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Mulish:wght@200;300&family=Prompt:wght@200;400&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
-
-
-    <link rel="icon" href="static/images/favicon.webp" type="image/webp" />
-    <link rel="shortcut icon" href="static/images/favicon.ico" />
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="preload" as="image" href="static/images/Frame17.svg">
-    <link rel="preload" as="image" href="static/images/Frame18.svg">
-    <link rel="preload" as="image" href="static/images/Frame19.svg">
-    <link rel="preload" as="image" href="static/images/Frame20.svg">
-    <link rel="preload" as="image" href="static/images/why1mobile.svg">
-    <link rel="preload" as="image" href="static/images/why2mobile.svg">
-    <link rel="preload" as="image" href="static/images/why3mobile.svg">
-    <link rel="preload" as="image" href="static/images/Frame17mobile.svg">
-    <link rel="preload" as="image" href="static/images/Frame18mobile.svg">
-    <link rel="preload" as="image" href="static/images/Frame19mobile.svg">
-    <link rel="preload" as="image" href="static/images/Frame20mobile.svg">
-    <link rel="preload" as="image" href="static/images/storymobile1.svg">
-    <link rel="preload" as="image" href="static/images/storymobile2.svg">
-    <link rel="preload" as="image" href="static/images/storymobile3.svg">
-    <link rel="preload" as="image" href="static/images/howto1.svg">
-    <link rel="preload" as="image" href="static/images/howto4.svg">
-    <link rel="preload" as="image" href="static/images/howto5.svg">
-    <link rel="preload" as="image" href="static/images/howto6.svg">
-    <link rel="preload" as="image" href="static/images/howto7.svg">
-    <link rel="preload" as="image" href="static/images/howto8.svg">
-    <link rel="preload" as="image" href="static/images/howto9.svg">
-    <link rel="preload" as="image" href="static/images/howto10.svg">
-    <link rel="preload" as="image" href="static/images/howto1mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto4mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto5mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto6mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto7mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto8mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto9mobile.svg">
-    <link rel="preload" as="image" href="static/images/howto10mobile.svg">
-    <link rel="preload" as="image" href="static/images/card2.svg">
-    <link rel="preload" as="image" href="static/images/card22.svg">
-    <link rel="preload" as="image" href="static/images/pricing1mobile.svg">
-    <link rel="preload" as="image" href="static/images/pricing2mobile.svg">
-    <link rel="preload" as="image" href="static/images/pricing3mobile.svg">
-    <link rel="preload" as="image" href="static/images/pricing22mobile.svg">
 
 
 </head>
@@ -114,325 +64,371 @@
                         <li><a href="#howTo" class="title-button">GETTING STARTED</a></li>
                         <li><a href="#pricingLine" class="title-button">PRICING</a></li>
                         <li><a href="#rules" class="title-button">RULES</a></li>
-                        <li><a href="#" id="profileButton" class="signup-button">Sign Up</a></li>
+                        <li id="dropdown">
+                            <img id="btn-user" src="#" alt="User Avatar"
+                                style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div id="dropdown-content">
+                                <a href="profiledashboard.html" id="profile-link">Profile</a>
+                                <a href="#" onclick="logout()">Log out</a>
+                            </div>
+                        </li>
 
+                        <div class="hidden" id="gated-content">
+                        </div>
+                        <li> <button id="btn-signup" disabled="true" onclick="signup()"
+                                class="auth-button signup-button">Sign
+                                Up</button></li>
+                        <li> <button id="btn-login" disabled="true" onclick="login()"
+                                class="auth-button login-button">Log
+                                In</button></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
+    <section id="main-content">
 
 
-
-
-
-    <div class="container" id="txt-container">
-        <div id="typing-animation">
-            <div class="sentence-container">
-                <h2 class="typing-text"></h2>
-            </div>
-            <div class="sentence-container">
-                <h2 class="typing-text" id="finalH2"></h2>
-            </div>
-            <div class="sentence-container">
-                <h3 class="typing-text"></h3>
-            </div>
-            <div class="sentence-container">
-                <h3 class="typing-text"></h3>
-            </div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <video id="bg" autoplay muted loop playsinline>
-            <source src="static/images/videotest.mp4" type="video/mp4">
-        </video>
-        <div class="space-filler"></div>
-    </div>
-
-
-
-    <div id="how" style="padding-top: 1vh;"></div>
-    <div id="howLine" class="title-line"></div>
-    <div id="howContainer">
-        <h1 style="margin-top: 80px;">How does it work?</h1>
-        <h2 style="color: white; width: 640px; margin-top: 50px;">AI Alpha gives traders a competitive edge to make more
-            profitable
-            trades. 
-        </h2>
-
-        <div class="blockHow">
-            <div class="column">
-                <div class="rectangle" id="rectangle1"></div>
-            </div>
-            <div class="column">
-                <div class="rectangle" id="rectangle2"></div>
-            </div>
-            <div class="column">
-                <div class="rectangle" id="rectangle3"></div>
+        <div class="container" id="txt-container">
+            <div id="typing-animation">
+                <div class="sentence-container">
+                    <h2 class="typing-text"></h2>
+                </div>
+                <div class="sentence-container">
+                    <h2 class="typing-text" id="finalH2"></h2>
+                </div>
+                <div class="sentence-container">
+                    <h3 class="typing-text"></h3>
+                </div>
+                <div class="sentence-container">
+                    <h3 class="typing-text"></h3>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="wrapper">
+            <video id="bg" autoplay muted loop playsinline>
+                <source src="static/images/videotest.mp4" type="video/mp4">
+            </video>
+            <div class="space-filler"></div>
+        </div>
 
 
-    <div id="why" style="padding-top: 1vh;"></div>
-    <div id="whyLine" class="title-line"></div>
-    <div id="whyContainer">
-        <h1>Why AI Alpha?</h1>
-        <h2>Our mission is to simplify the
-            ability of gaining
-            information on how
-            to trade crypto
-            to grow the adoption of it, as well as showing individuals how to make money from it.</h2><br>
-        <h2>Our Alpha Involves More Than Just Generating Profitable Signals</h2>
-        <br>
-        <br>
-        <div id="containerCarousel">
-            <div id="galleryView">
-                <div id="galleryContainer">
-                    <div id="leftView"></div>
-                    <button id="navLeft" class="navBtns"><img src="static/images/leftArrow.svg"
-                            class="arrowGeneral leftArrow" />
-                    </button>
-                    <a id="linkTag">
-                        <div id="mainView"></div>
-                        <div id="dotsContainer">
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
+
+        <div id="how" style="padding-top: 1vh;"></div>
+        <div id="howLine" class="title-line"></div>
+        <div id="howContainer">
+            <h1 style="margin-top: 80px;">How does it work?</h1>
+            <h2 style="color: white; width: 640px; margin-top: 50px;">AI Alpha gives traders a competitive edge to make
+                more
+                profitable
+                trades. 
+            </h2>
+
+            <div class="blockHow">
+                <div class="column">
+                    <div class="rectangle" id="rectangle1"></div>
+                </div>
+                <div class="column">
+                    <div class="rectangle" id="rectangle2"></div>
+                </div>
+                <div class="column">
+                    <div class="rectangle" id="rectangle3"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="why" style="padding-top: 1vh;"></div>
+        <div id="whyLine" class="title-line"></div>
+        <div id="whyContainer">
+            <h1>Why AI Alpha?</h1>
+            <h2>Our mission is to simplify the
+                ability of gaining
+                information on how
+                to trade crypto
+                to grow the adoption of it, as well as showing individuals how to make money from it.</h2><br>
+            <h2>Our Alpha Involves More Than Just Generating Profitable Signals</h2>
+            <br>
+            <br>
+            <div id="containerCarousel">
+                <div id="galleryView">
+                    <div id="galleryContainer">
+                        <div id="leftView"></div>
+                        <button id="navLeft" class="navBtns"><img src="static/images/leftArrow.svg"
+                                class="arrowGeneral leftArrow" />
+                        </button>
+                        <a id="linkTag">
+                            <div id="mainView"></div>
+                            <div id="dotsContainer">
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+
+                        </a>
+                        <div id="rightView"></div>
+                        <button id="navRight" class="navBtns"><img src="static/images/rightArrow.svg"
+                                class="arrowGeneral rightArrow" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="story" style="padding-top: 5vh;"></div>
+        <div id="storyLine" class="title-line"></div>
+        <div class="containerStory">
+            <h1>Our Story</h1>
+            <br>
+            <br>
+            <div id="imageContainer" class="image-container">
+                <img id="img1" class="bg-image" src="static/images/story1.svg">
+                <img id="img2" class="bg-image" src="static/images/story2.svg">
+                <img id="img3" class="bg-image" src="static/images/story3.svg">
+                <img id="img4" class="bg-image" src="static/images/story4.svg">
+
+                <div class="btn-container">
+                    <button id="btn1" class="btn"> </button>
+                    <button id="btn2" class="btn"> </button>
+                    <button id="btn3" class="btn"> </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileStory">
+            <div class="storyImage storyImage1"></div>
+            <div class="storyImage storyImage2"></div>
+            <div class="storyImage storyImage3"></div>
+            <div class="rectangleMobileStory"></div>
+            <div class="rectangleMobileStory"></div>
+            <div class="rectangleMobileStory"></div>
+        </div>
+
+
+
+
+
+
+
+        <div id="howTo" style="padding-top: 1vh;"></div>
+        <div id="howToLine" class="title-line"></div>
+        <div id="howToContainer">
+            <h1>How to Sign Up</h1>
+            <br>
+            <br>
+            <div class="blockHowTo">
+                <div class="row">
+                    <a class="rectangleTo" id="rectangle4"></a>
+                </div>
+                <div class="rowComp">
+                    <a class="rectangleTo" id="rectangle5"></a>
+                    <a class="rectangleTo" id="rectangle6"></a>
+                    <a class="rectangleTo" id="rectangle7"></a>
+                    <a class="rectangleTo" id="rectangle8"></a>
+                </div>
+                <div class="rowComp">
+                    <a class="rectangleTo" id="rectangle9"></a>
+                    <a class="rectangleTo" id="rectangle10"></a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="pricingLine" style="padding-top: 1vh;"></div>
+        <div id="pricingLiner" class="title-line"></div>
+        <div id="pricing">
+            <h1>Pricing</h1>
+            <h2 style="color: white;">Take a look at our signal groups on Telegram</h2>
+            <div class="infoPricing">
+                <p>We accept card payments and cryptocurrency for our paid
+                    groups</p>
+            </div>
+            <br>
+            <br>
+            <div id="card-container">
+                <div class="card" style="background-image: url('static/images/card1.svg');">
+
+                    <div class="columnRectangle">
+                        <div id="cardRectangle1"><button id="btn-signup2" disabled="true" onclick="signup()"
+                                class="auth-button signup-button"
+                                style="font-size: 60px; width: 350px;height: 60px;">Sign
+                                Up</button></div>
+                    </div>
+                </div>
+
+                <div class="card huge" style="background-image: url('static/images/card2.svg');">
+                    <img src="static/images/comingsoon.svg" alt="comingsoon"
+                        style="margin-top: -255px;margin-left: 320px;">
+                    <div class="columnRectangle">
+                        <div id="cardRectangle2"></div>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('static/images/card3.svg');">
+                    <img src="static/images/comingsoon.svg" alt="comingsoon"
+                        style="margin-top: -762px;margin-left: 300px;">
+                </div>
+            </div>
+
+            <div class="pricingCarouselMobile">
+                <div class="pricingCarousel__image-container">
+                    <div class="pricingCarousel__item">
+                        <img class="pricingCarousel__image" src="static/images/pricing1mobile.svg" alt="Image 1"
+                            id="pricing1Mobile">
+                        <a href="your-target-url.html" class="centered-button"></a>
+                    </div>
+                    <div class="pricingCarousel__item">
+                        <div id="pricing2Mobile" class="pricingCarousel__image"
+                            style="background-image: url('static/images/pricing2mobile.svg');"></div>
+                        <div id="pricing22Mobile" class="pricingCarousel__image"
+                            style="background-image: url('static/images/pricing22mobile.svg'); opacity: 0;"></div>
+
+                        <div class="columnRectangleMobile">
+                            <div id="cardRectangle2Mobile"></div>
                         </div>
+                    </div>
 
+                    <div class="pricingCarousel__item">
+                        <img class="pricingCarousel__image" src="static/images/pricing3mobile.svg" alt="Image 3"
+                            id="pricing3Mobile">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="rules" style="padding-top: 1vh;"></div>
+        <div id="rulesLine" class="title-line"></div>
+        <div id="rules-container">
+            <h1>Rules and Regulations</h1>
+            <br>
+            <br>
+
+            <div class="carousel-container">
+                <div class="carousel-image active">
+                    <div class="image-inner" style="background-image: url('static/images/ruleCarousel1.svg');"></div>
+                    <div class="gif-inner active" style="background-image: url('static/images/newgif1.gif');">
+                    </div>
+                </div>
+                <div class="carousel-image">
+                    <div class="image-inner" style="background-image: url('static/images/ruleCarousel2.svg');"></div>
+                    <div class="gif-inner" style="background-image: url('static/images/newgif2.gif');"></div>
+                </div>
+                <div class="carousel-image">
+                    <div class="image-inner" style="background-image: url('static/images/ruleCarousel3.svg');"></div>
+                    <div class="gif-inner" style="background-image: url('static/images/newgif3.gif');"></div>
+                </div>
+                <div class="carousel-image">
+                    <div class="image-inner" style="background-image: url('static/images/ruleCarousel4.svg');"></div>
+                    <div class="gif-inner" style="background-image: url('static/images/newgif4.gif');"></div>
+                </div>
+
+                <div class="buttons-container">
+                    <button class="invisible-button" data-image-index="0"></button>
+                    <button class="invisible-button" data-image-index="1"></button>
+                    <button class="invisible-button" data-image-index="2"></button>
+                    <button class="invisible-button" data-image-index="3"></button>
+                </div>
+            </div>
+
+        </div>
+        <div class="ruleCarousel">
+            <div class="ruleCarousel__image-container">
+                <div class="ruleCarousel__item">
+                    <img class="ruleCarousel__image" src="static/images/rule1mobile.svg" alt="Image 1">
+                    <img class="rule-gif-overlay" src="static/images/newgif1.gif" alt="Gif 1" id="gifRule1">
+                </div>
+                <div class="ruleCarousel__item">
+                    <img class="ruleCarousel__image" src="static/images/rule2mobile.svg" alt="Image 2">
+                    <img class="rule-gif-overlay" src="static/images/newgif2.gif" alt="Gif 2" id="gifRule2">
+                </div>
+                <div class="ruleCarousel__item">
+                    <img class="ruleCarousel__image" src="static/images/rule3mobile.svg" alt="Image 3">
+                    <img class="rule-gif-overlay" src="static/images/newgif3.gif" alt="Gif 3" id="gifRule3">
+                </div>
+                <div class="ruleCarousel__item">
+                    <img class="ruleCarousel__image" src="static/images/rule4mobile.svg" alt="Image 4">
+                    <img class="rule-gif-overlay" src="static/images/newgif4.gif" alt="Gif 4" id="gifRule4">
+                </div>
+            </div>
+        </div>
+
+
+
+        <section class="contact">
+            <!-- Now left side, is actually on the right side, as requested by design team smh-->
+
+            <div class="contact__right-side">
+                <h1 class="contact__title">Suscribe Now!</h1>
+                <h1 class="contact__title" id="contact__subtitle">
+                    Want to know when we are launching?<br>
+                    We will email you updates</h1>
+                <form id="form" action="https://formsubmit.co/support@aialpha.ai" method="POST"
+                    class="contact__form-wrapper">
+                    <div class="contact__input-line">
+                        <div class="input-container">
+                            <input type="email" name="email" class="contact__input" autocomplete="off" required
+                                placeholder="   Email   *">
+                            <input type="submit" id="button" value="Send" class="contact__submit-button">
+                        </div>
+                    </div>
+                    <input type="hidden" name="_next" value="https://aialpha.ai">
+                </form>
+            </div>
+            <div class="contact__left-side">
+                <h1>Find Us Here!</h1>
+                <div class="contact__social-media-icons">
+                    <a href="#" class="contact__social-media-icon">
+                        <img src="static/images/twitter_logo.svg" alt="Twitter Logo" width="24" height="24">
                     </a>
-                    <div id="rightView"></div>
-                    <button id="navRight" class="navBtns"><img src="static/images/rightArrow.svg"
-                            class="arrowGeneral rightArrow" />
-                    </button>
+                    <a href="#" class="contact__social-media-icon">
+                        <img src="static/images/instagram_logo.svg" alt="Instagram Logo" width="24" height="24">
+                    </a>
+                    <a href="#" class="contact__social-media-icon">
+                        <img src="static/images/tiktok_logo.svg" alt="TikTok Logo" width="24" height="24">
+                    </a>
                 </div>
             </div>
-        </div>
-
-    </div>
-
-
-    <div id="story" style="padding-top: 5vh;"></div>
-    <div id="storyLine" class="title-line"></div>
-    <div class="containerStory">
-        <h1>Our Story</h1>
-        <br>
-        <br>
-        <div id="imageContainer" class="image-container">
-            <img id="img1" class="bg-image" src="static/images/story1.svg">
-            <img id="img2" class="bg-image" src="static/images/story2.svg">
-            <img id="img3" class="bg-image" src="static/images/story3.svg">
-            <img id="img4" class="bg-image" src="static/images/story4.svg">
-
-            <div class="btn-container">
-                <button id="btn1" class="btn"> </button>
-                <button id="btn2" class="btn"> </button>
-                <button id="btn3" class="btn"> </button>
-            </div>
-        </div>
-    </div>
-    <div id="mobileStory">
-        <div class="storyImage storyImage1"></div>
-        <div class="storyImage storyImage2"></div>
-        <div class="storyImage storyImage3"></div>
-        <div class="rectangleMobileStory"></div>
-        <div class="rectangleMobileStory"></div>
-        <div class="rectangleMobileStory"></div>
-    </div>
-
-
-
-
-
-
-
-    <div id="howTo" style="padding-top: 1vh;"></div>
-    <div id="howToLine" class="title-line"></div>
-    <div id="howToContainer">
-        <h1>How to Sign Up</h1>
-        <br>
-        <br>
-        <div class="blockHowTo">
-            <div class="row">
-                <a class="rectangleTo" id="rectangle4"></a>
-            </div>
-            <div class="rowComp">
-                <a class="rectangleTo" id="rectangle5"></a>
-                <a class="rectangleTo" id="rectangle6"></a>
-                <a class="rectangleTo" id="rectangle7"></a>
-                <a class="rectangleTo" id="rectangle8"></a>
-            </div>
-            <div class="rowComp">
-                <a class="rectangleTo" id="rectangle9"></a>
-                <a class="rectangleTo" id="rectangle10"></a>
-            </div>
-        </div>
-
-    </div>
-
-
-    <div id="pricingLine" style="padding-top: 1vh;"></div>
-    <div id="pricingLiner" class="title-line"></div>
-    <div id="pricing">
-        <h1>Pricing</h1>
-        <h2 style="color: white;">Take a look at our signal groups on Telegram</h2>
-        <div class="infoPricing">
-            <p>We accept card payments and cryptocurrency for our paid
-                groups</p>
-        </div>
-        <br>
-        <br>
-        <div id="card-container">
-            <div class="card" style="background-image: url('static/images/card1.svg');">
-
-                <div class="columnRectangle">
-                    <div id="cardRectangle1"><a href="https://example.com">Sign Up</a></div>
-                </div>
-            </div>
-
-            <div class="card huge" style="background-image: url('static/images/card2.svg');">
-                <img src="static/images/comingsoon.svg" alt="comingsoon" style="margin-top: -255px;margin-left: 320px;">
-                <div class="columnRectangle">
-                    <div id="cardRectangle2"></div>
-                </div>
-            </div>
-
-            <div class="card" style="background-image: url('static/images/card3.svg');">
-                <img src="static/images/comingsoon.svg" alt="comingsoon" style="margin-top: -762px;margin-left: 300px;">
-            </div>
-        </div>
-
-        <div class="pricingCarouselMobile">
-            <div class="pricingCarousel__image-container">
-                <div class="pricingCarousel__item">
-                    <img class="pricingCarousel__image" src="static/images/pricing1mobile.svg" alt="Image 1"
-                        id="pricing1Mobile">
-                    <a href="your-target-url.html" class="centered-button"></a>
-                </div>
-                <div class="pricingCarousel__item">
-                    <div id="pricing2Mobile" class="pricingCarousel__image"
-                        style="background-image: url('static/images/pricing2mobile.svg');"></div>
-                    <div id="pricing22Mobile" class="pricingCarousel__image"
-                        style="background-image: url('static/images/pricing22mobile.svg'); opacity: 0;"></div>
-
-                    <div class="columnRectangleMobile">
-                        <div id="cardRectangle2Mobile"></div>
-                    </div>
-                </div>
-
-                <div class="pricingCarousel__item">
-                    <img class="pricingCarousel__image" src="static/images/pricing3mobile.svg" alt="Image 3"
-                        id="pricing3Mobile">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div id="rules" style="padding-top: 1vh;"></div>
-    <div id="rulesLine" class="title-line"></div>
-    <div id="rules-container">
-        <h1>Rules and Regulations</h1>
-        <br>
-        <br>
-
-        <div class="carousel-container">
-            <div class="carousel-image active">
-                <div class="image-inner" style="background-image: url('static/images/ruleCarousel1.svg');"></div>
-                <div class="gif-inner active" style="background-image: url('static/images/newgif1.gif');">
-                </div>
-            </div>
-            <div class="carousel-image">
-                <div class="image-inner" style="background-image: url('static/images/ruleCarousel2.svg');"></div>
-                <div class="gif-inner" style="background-image: url('static/images/newgif2.gif');"></div>
-            </div>
-            <div class="carousel-image">
-                <div class="image-inner" style="background-image: url('static/images/ruleCarousel3.svg');"></div>
-                <div class="gif-inner" style="background-image: url('static/images/newgif3.gif');"></div>
-            </div>
-            <div class="carousel-image">
-                <div class="image-inner" style="background-image: url('static/images/ruleCarousel4.svg');"></div>
-                <div class="gif-inner" style="background-image: url('static/images/newgif4.gif');"></div>
-            </div>
-
-            <div class="buttons-container">
-                <button class="invisible-button" data-image-index="0"></button>
-                <button class="invisible-button" data-image-index="1"></button>
-                <button class="invisible-button" data-image-index="2"></button>
-                <button class="invisible-button" data-image-index="3"></button>
-            </div>
-        </div>
-
-    </div>
-    <div class="ruleCarousel">
-        <div class="ruleCarousel__image-container">
-            <div class="ruleCarousel__item">
-                <img class="ruleCarousel__image" src="static/images/rule1mobile.svg" alt="Image 1">
-                <img class="rule-gif-overlay" src="static/images/newgif1.gif" alt="Gif 1" id="gifRule1">
-            </div>
-            <div class="ruleCarousel__item">
-                <img class="ruleCarousel__image" src="static/images/rule2mobile.svg" alt="Image 2">
-                <img class="rule-gif-overlay" src="static/images/newgif2.gif" alt="Gif 2" id="gifRule2">
-            </div>
-            <div class="ruleCarousel__item">
-                <img class="ruleCarousel__image" src="static/images/rule3mobile.svg" alt="Image 3">
-                <img class="rule-gif-overlay" src="static/images/newgif3.gif" alt="Gif 3" id="gifRule3">
-            </div>
-            <div class="ruleCarousel__item">
-                <img class="ruleCarousel__image" src="static/images/rule4mobile.svg" alt="Image 4">
-                <img class="rule-gif-overlay" src="static/images/newgif4.gif" alt="Gif 4" id="gifRule4">
-            </div>
-        </div>
-    </div>
-
-
-
-    <section class="contact">
-        <!-- Now left side, is actually on the right side, as requested by design team smh-->
-
-        <div class="contact__right-side">
-            <h1 class="contact__title">Suscribe Now!</h1>
-            <h1 class="contact__title" id="contact__subtitle">
-                Want to know when we are launching?<br>
-                We will email you updates</h1>
-            <form id="form" action="https://formsubmit.co/support@aialpha.ai" method="POST"
-                class="contact__form-wrapper">
-                <div class="contact__input-line">
-                    <div class="input-container">
-                        <input type="email" name="email" class="contact__input" autocomplete="off" required
-                            placeholder="   Email   *">
-                        <input type="submit" id="button" value="Send" class="contact__submit-button">
-                    </div>
-                </div>
-                <input type="hidden" name="_next" value="https://aialpha.ai">
-            </form>
-        </div>
-        <div class="contact__left-side">
-            <h1>Find Us Here!</h1>
-            <div class="contact__social-media-icons">
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/twitter_logo.svg" alt="Twitter Logo" width="24" height="24">
-                </a>
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/instagram_logo.svg" alt="Instagram Logo" width="24" height="24">
-                </a>
-                <a href="#" class="contact__social-media-icon">
-                    <img src="static/images/tiktok_logo.svg" alt="TikTok Logo" width="24" height="24">
-                </a>
-            </div>
-        </div>
+        </section>
     </section>
 
 
+    <div id="content-wrap">
+        <section id="profile-dashboard" style="display: none;">
+            <form id="profile-form">
+                <h2>Your Account</h2>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="text" id="user-email" name="email" disabled>
+                </div>
+                <div class="form-row">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" id="user-nickname" name="nickname" disabled>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="text" id="user-password" name="password" value="**********" disabled>
+                </div>
+
+                <button type="submit" id="update-profile">Update Profile</button>
+            </form>
+        </section>
+    </div>
 
 
-    <script src="main.js"></script>
-    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+
+
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+
 
 
     <noscript>Your browser does not support JavaScript!</noscript>
