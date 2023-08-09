@@ -37,7 +37,7 @@
       margin: 0 auto;
       margin-top: 5vh;
       position: relative;
-      background-image: url("static/images/Frame17.svg");
+      background-image: url("../static/images/Frame17.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -52,15 +52,15 @@
       float: left;
     }
     .hovered-1 {
-      background-image: url("static/images/Frame18.svg");
+      background-image: url("../static/images/Frame18.svg");
     }
     
     .hovered-2 {
-      background-image: url("static/images/Frame19.svg");
+      background-image: url("../static/images/Frame19.svg");
     }
     
     .hovered-3 {
-      background-image: url("static/images/Frame20.svg");
+      background-image: url("../static/images/Frame20.svg");
     }
     
     
@@ -139,7 +139,7 @@
   margin: auto auto;
   position: relative;
   padding-top: 10vh;
-  background-image: url("static/images/howto1.svg");
+  background-image: url("../static/images/howto1.svg");
   background-repeat: no-repeat;
   transition: none;
 }
@@ -202,31 +202,31 @@
 }
 
 .hoveredTo-1 {
-  background-image: url("static/images/howto4.svg");
+  background-image: url("../static/images/howto4.svg");
 }
 
 .hoveredTo-2 {
-  background-image: url("static/images/howto5.svg");
+  background-image: url("../static/images/howto5.svg");
 }
 
 .hoveredTo-3 {
-  background-image: url("static/images/howto6.svg");
+  background-image: url("../static/images/howto6.svg");
 }
 
 .hoveredTo-4 {
-  background-image: url("static/images/howto7.svg");
+  background-image: url("../static/images/howto7.svg");
 }
 
 .hoveredTo-5 {
-  background-image: url("static/images/howto8.svg");
+  background-image: url("../static/images/howto8.svg");
 }
 
 .hoveredTo-6 {
-  background-image: url("static/images/howto9.svg");
+  background-image: url("../static/images/howto9.svg");
 }
 
 .hoveredTo-7 {
-  background-image: url("static/images/howto10.svg");
+  background-image: url("../static/images/howto10.svg");
 }
 
 /*------------------------------------------------How to END------------------------------------------------------------------------------------*/
