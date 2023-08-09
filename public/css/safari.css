@@ -52,15 +52,15 @@
       float: left;
     }
     .hovered-1 {
-      background-image: url("../static/images/Frame18.svg");
+      background-image: url("static/images/Frame18.svg");
     }
     
     .hovered-2 {
-      background-image: url("../static/images/Frame19.svg");
+      background-image: url("static/images/Frame19.svg");
     }
     
     .hovered-3 {
-      background-image: url("../static/images/Frame20.svg");
+      background-image: url("static/images/Frame20.svg");
     }
     
     
@@ -244,8 +244,9 @@
 }
 /*------------------------------------------------Pricing END------------------------------------------------------------------------------------*/
 /*------------------------------------------------Rules------------------------------------------------------------------------------------*/
-
-
+.ruleCarousel{
+  display: none;
+}
 #rules-container{
   display: flex;
   flex-direction: column;
@@ -255,67 +256,89 @@
 
 #rules-container h1 {
   font-family: 'Nord', sans-serif;
+  font-weight: 100;
   font-size: 3vw;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
   color: #ffffff;
 }
 
-.rules-block {
-  width: 1110px;
-  height: 1550px;
-  margin: 0 auto;
+.carousel-container {
   position: relative;
-  overflow: hidden;
-
+  width: 100%;
+  height: 90vh;
 }
 
-.square {
-  display: block;
+.carousel-image {
   position: absolute;
-  width: 530px;
-  height: 560px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
   opacity: 1;
-  background-size: cover;
-  transition: none;
 }
 
-#square1 {
-  top: 0;
+.image-inner {
+  position: absolute;
+  top: -190px;
   left: 0;
-  background-position: top left;
-  height: 540px;
-  padding-bottom: 170px;
-  transition: none;
-
-}
-
-#square2 {
-  top: 0;
   right: 0;
-  height: 540px;
-  background-position: top right;
-  padding-bottom: 140px;
-  z-index: 1000;
-  transition: none;
+  bottom: 0;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.buttons-container {
+  position: absolute;
+  top: 34vh; /* Adjust as needed */
+  left: 40%;
+  transform: translateY(-50%); /* Center the buttons vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 22vh; /* Adjust as needed */
+  width: 200px; /* Adjust as needed */
+  z-index: 1;
+}
+@media only screen and (min-width: 1000px) and (max-width: 1400px){
+  .buttons-container{
+    top: 27vh;
+    height: 25vh; /* Adjust as needed */
+
+  }
 
 }
 
-#square3 {
-  bottom: 20%;
-  left: 0;
-  background-position: bottom left;
-  height: 545px;
-    transition: none;
-
+.invisible-button {
+  width: 200px; /* Adjust as needed */
+  height: 10vh; /* Adjust as needed */
+  background: transparent;
+  border: none;
 }
 
-#square4 {
-  bottom: 10.5%;
-  right: 0;
-  background-position: bottom right;
-  height: 690px;
-  transition: none;
+.invisible-button:hover {
+  cursor: pointer;
+}
 
+.gif-inner {
+  position: absolute;
+  top: 200px;
+  margin-left: 15vw;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 500px;
+  height: 500px;
+}
+
+.gif-inner.active {
+  opacity: 1;
 }
 
 /*------------------------------------------------Rules END------------------------------------------------------------------------------------*/
