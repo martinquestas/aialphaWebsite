@@ -406,3 +406,49 @@ cardRectangleMobile.addEventListener("click", function () {
 });
 
 //Pricing Mobile End
+//Privacy Policy and more
+// Store the original state
+var originalMainContentDisplay =
+  document.getElementById("main-content").style.display;
+var originalLinkContentActive;
+
+function showContent(id) {
+  // If there was a previously active link content, store its ID
+  var elements = document.getElementsByClassName("link-content");
+  for (var i = 0; i < elements.length; i++) {
+    if (elements[i].classList.contains("active")) {
+      originalLinkContentActive = elements[i].id;
+      break;
+    }
+  }
+
+  // Save the current state to the history
+  window.history.pushState(null, null);
+
+  // Hide the main content
+  document.getElementById("main-content").style.display = "none";
+
+  // Hide all link-content elements and show the selected content by id
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.remove("active");
+  }
+  document.getElementById(id).classList.add("active");
+
+  // Scroll to the top of the page
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener("popstate", function (event) {
+  // Restore the original state
+  document.getElementById("main-content").style.display =
+    originalMainContentDisplay;
+  var elements = document.getElementsByClassName("link-content");
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].classList.remove("active");
+  }
+  if (originalLinkContentActive) {
+    document.getElementById(originalLinkContentActive).classList.add("active");
+  }
+});
+
+//Privacy Policy and more END
