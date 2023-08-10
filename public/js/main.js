@@ -242,20 +242,23 @@ rectanglesTo.forEach((rectangleTo, index) => {
 
 //HowToGraphic END
 //Pricing Animation
+const cardRectangle11 = document.getElementById("cardRectangle11");
 const cardRectangle = document.getElementById("cardRectangle2");
 const cardHuge = document.querySelector(".card.huge");
 
 let originalImage = cardHuge.style.backgroundImage;
-let newImage = "url('static/images/card22.svg')";
+let newImage = "url('static/images/card22test.svg')";
 let isOriginalImage = true;
 
 cardRectangle.addEventListener("click", function () {
   if (isOriginalImage) {
+    cardRectangle11.style.display = "none"; // Hide cardRectangle11
     cardHuge.style.backgroundImage = newImage;
     cardRectangle.style.top = "770px";
   } else {
+    cardRectangle11.style.display = "block"; // Show cardRectangle11
     cardHuge.style.backgroundImage = originalImage;
-    cardRectangle.style.top = "0px";
+    cardRectangle.style.top = "-160px";
   }
 
   isOriginalImage = !isOriginalImage;
