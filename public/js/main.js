@@ -455,3 +455,12 @@ window.addEventListener("popstate", function (event) {
 });
 
 //Privacy Policy and more END
+//Verify Captcha
+document.getElementById("form").addEventListener("submit", function (event) {
+  var recaptcha = document.querySelector("#g-recaptcha-response").value;
+  if (recaptcha === "") {
+    event.preventDefault();
+    alert("Please verify the reCAPTCHA.");
+  }
+});
+//Verify Captcha END
