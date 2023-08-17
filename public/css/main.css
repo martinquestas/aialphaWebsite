@@ -402,8 +402,8 @@ font-size: 3vw;
 line-height: 22px;
   margin-bottom: 20px;
   color: #ffffff;
+  margin-top: 100px;
 }
-
 
 #howContainer h2 {
   font-family: 'Prompt';
@@ -415,8 +415,8 @@ line-height: 36px;
 }
 
 .blockHow {
-  width: 1700px;
-  height: 1050px;
+  width: 1800px;
+  height: 1100px;
   margin: 0 auto;
   position: relative;
   background-image: url("../static/images/Frame17.svg");
@@ -460,12 +460,12 @@ line-height: 36px;
 
 #rectangle1 {
   top: 500px;
-  margin-left: -55px;
+  margin-left: 10px;
 }
 
 #rectangle3 {
   top: 500px;
-  margin-left: -300px;
+  margin-left: -390px;
 }
 
 
@@ -3146,6 +3146,10 @@ footer .copyright p{
   font-size: 1vw;
   margin-bottom: 20px;
 }
+
+footer .copyright img{
+  width: 200px;
+}
 /*-------------------------------------------------------------------Footer END------------------------------------------------------------------*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++PC END+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++MOBILE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -3170,7 +3174,6 @@ footer .copyright p{
   }
 
   
-  #howLine,
   .containerStory,
   #storyLine,
   .card,
@@ -3325,17 +3328,33 @@ footer .copyright p{
   
   /*--------------------------------------------------------------------Video End-----------------------------------------------------------------*/
   /*--------------------------------------------------------------------How-----------------------------------------------------------------*/
-  #howContainer h1{
-    display: none;
+  #howLine{
+    margin-top: 80px;
   }
-  #howContainer h2{
-    display: none;
+  
+  #howContainer h1 {
+    font-family: 'Nord';
+    font-weight: 100;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+  }
+  h2#howTitle2{
+    font-family: 'Prompt';
+    font-weight: 100;
+    line-height: 32px;
+    font-size: 5vw;
+    margin-bottom: 0px;
+    width: 300px;
+    margin-top: 20px;
+    color: red;
   }
 
   .blockHow {
     margin: 10px;
-    width: 375px;
-    height: 713px;
+    width: 520px;
+    height: 913px;
     min-width: 375px;
     min-height: 713px;
     background-image: url("../static/images/Frame17mobile.svg") !important;
@@ -3349,11 +3368,10 @@ footer .copyright p{
   }
   
   .hovered-3 {
-    width: 375px;
     background-image: url("../static/images/Frame20mobile.svg") !important;
   }
   .column{
-    width: calc(130% / 3);
+    width: calc(100% / 3);
 
   }
 
@@ -3369,22 +3387,23 @@ footer .copyright p{
   }
   
   #rectangle1.rectangle {
-    top: 400px;
-    width: 140px;
+    top: 370px;
+    margin-left: -40px;
+    width: 150px;
     height: 100px;
 
   }
   #rectangle2.rectangle{
-    width: 140px;
+    width: 150px;
     height: 100px;
-    left: 170px;
-    top: 580px;
+    left: 195px;
+    top: 620px;
   }
   #rectangle3.rectangle {
-    width: 140px;
+    width: 150px;
     height: 100px;
-    margin-left: 100px;
-    top: 400px;
+    margin-left: 120px;
+    top: 370px;
     left: -130px;
 
   }
