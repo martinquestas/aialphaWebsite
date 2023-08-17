@@ -412,6 +412,7 @@ font-weight: 200;
 font-size: 1.8vw;
 line-height: 36px;
   text-align: center;
+  color: #ffffff;
 }
 
 .blockHow {
@@ -679,7 +680,7 @@ line-height: 36px;
 
 .blockHowTo {
   width: 1700px;
-  height: 1020px;
+  height: 1120px;
   margin: 0 auto;
   position: relative;
   background-image: url("../static/images/howto1.svg");
@@ -706,40 +707,52 @@ line-height: 36px;
   display: flex;
   height: 325px;
 }
-#rectangle4 {
-  top: 450px;
-  margin-left: -720px;
+a#rectangle4.rectangleTo {
+  top: 250px;
+  margin-left: -280px;
+  padding-top: 100px;
+  margin-top: 100px;
 }
 
-#rectangle5 {
+a#rectangle5.rectangleTo {
   margin-top: 75px;
-  margin-left: 160px; /* Set the desired margin from the left for rectangle5 */
+  padding-left: 220px;
+  margin-left: 100px; /* Set the desired margin from the left for rectangle5 */
 }
 
-#rectangle6 {
+a#rectangle6.rectangleTo {
   margin-top: 75px;
-  margin-left: 110px; /* Set the desired margin from the left for rectangle6 */
+  padding-left: 220px;
+  margin-left: 0px; /* Set the desired margin from the left for rectangle6 */
 
 }
 
-#rectangle7 {
+a#rectangle7.rectangleTo {
+  padding-left: 220px;
   margin-top: 75px;
-  margin-left: 85px; /* Set the desired margin from the left for rectangle7 */
+  margin-left: 175px; /* Set the desired margin from the left for rectangle7 */
 }
 
-#rectangle8 {
+a#rectangle8.rectangleTo {
+  padding-left: 220px;
   margin-top: 75px;
-  margin-left: 100px; /* Set the desired margin from the left for rectangle8 */
+  margin-left: 20px; /* Set the desired margin from the left for rectangle8 */
 }
 
-#rectangle9 {
-  margin-top: 60px;
-  margin-left: 350px;
+a#rectangle9.rectangleTo {
+  padding-left: 220px;
+  margin-top: 75px;
+  margin-left: 0px;
 }
 
-#rectangle10 {
-  margin-top: 60px;
-  margin-left: 270px;
+a#rectangle10.rectangleTo {
+  margin-top: 10px;
+  margin-left: 590px;
+}
+
+a#rectangle11.rectangleTo {
+  margin-top: 10px;
+  margin-left: 250px;
 }
 
 .hoveredTo-1 {
@@ -768,6 +781,9 @@ line-height: 36px;
 
 .hoveredTo-7 {
   background-image: url("../static/images/howto10.svg") !important;
+}
+.hoveredTo-8 {
+  background-image: url("../static/images/howto11.svg") !important;
 }
 
 /*-------------------------------------------------------PRICING-----------------------------------------------------------------------*/
@@ -854,8 +870,8 @@ line-height: 36px;
 }
 
 .card {
-  width: 480px;
-  height: 735px;
+  width: 490px;
+  height: 835px;
   padding: 20px;
   border-radius: 2%;
   margin: 1vw 0.9vw 1vw 0.9vw;
@@ -932,9 +948,11 @@ line-height: 36px;
 
 
 #cardRectangle1 a:hover {
-background-color: rgb(210, 115, 0);
+background-color: rgb(210, 74, 0);
 }
-
+#cardRectangle11 a:hover {
+  background-color: rgb(210, 74, 0);
+  }
 
 
 
@@ -3335,12 +3353,12 @@ footer .copyright img{
   #howContainer h1 {
     font-family: 'Nord';
     font-weight: 100;
-    font-size: 30px;
+    font-size: 8vw;
     margin-top: 0px;
     margin-bottom: 20px;
     color: #FFFFFF;
   }
-  h2#howTitle2{
+  #howContainer h2{
     font-family: 'Prompt';
     font-weight: 100;
     line-height: 32px;
@@ -3348,7 +3366,7 @@ footer .copyright img{
     margin-bottom: 0px;
     width: 300px;
     margin-top: 20px;
-    color: red;
+    color: #FFFFFF;
   }
 
   .blockHow {
@@ -3387,14 +3405,14 @@ footer .copyright img{
   }
   
   #rectangle1.rectangle {
-    top: 370px;
+    top: 350px;
     margin-left: -40px;
     width: 150px;
     height: 100px;
 
   }
   #rectangle2.rectangle{
-    width: 150px;
+    width: 130px;
     height: 100px;
     left: 195px;
     top: 620px;
@@ -3403,7 +3421,7 @@ footer .copyright img{
     width: 150px;
     height: 100px;
     margin-left: 120px;
-    top: 370px;
+    top: 350px;
     left: -130px;
 
   }
@@ -3679,7 +3697,7 @@ footer .copyright img{
     width: 390px;
     height: 913px;
     min-width: 510px;
-    min-height: 1200px;
+    min-height: 1050px;
     background-image: url("../static/images/howto1mobile.svg") !important;
   }
 
@@ -3697,91 +3715,99 @@ footer .copyright img{
     justify-content: center;
     align-items: center;
     height: 375px;
-    margin-top: -40px
   }
   .rowComp {
     flex-direction: column; /* Stacks the elements vertically instead of horizontally */
     align-items: center; /* Centers the elements horizontally */
-    justify-content: space-around; /* Distributes the space evenly between the elements */
   }
 
   /* Then you can remove the left margins for the rectangles */
-  #rectangle4.rectangleTo {
+  a#rectangle4.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-left: 20px;
-    margin-top: 90px;
+    margin-top: 240px;
   }
   
-  #rectangle5.rectangleTo {
+  a#rectangle5.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-top: 100px;
-    margin-left: -240px; 
+    margin-top: -300px;
+    margin-left: 50px;
   }
   
-  #rectangle6.rectangleTo {
+  a#rectangle6.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-top: -140px;
-    margin-left: 260px;
+    margin-top: 40px;
+    margin-left: 50px;
   }
   
-  #rectangle7.rectangleTo {
+  a#rectangle7.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-bottom: 70px;
+    margin-top: 180px;
     margin-left: 40px;
   }
   
-  #rectangle8.rectangleTo {
+  a#rectangle8.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-bottom: -300px;
+    margin-bottom: -280px;
     margin-left: 30px;
   }
   
-  #rectangle9.rectangleTo {
-    width: 200px;
+  a#rectangle9.rectangleTo {
+    width: 100px;
     height: 90px;
-    margin-top: 160px;
-    margin-bottom: -280px;
-    margin-left: -200px;
+    margin-top: 290px;
+    margin-bottom: -460px;
+    margin-left: -220px;
   }
   
-  #rectangle10.rectangleTo {
+  a#rectangle10.rectangleTo {
     width: 200px;
     height: 90px;
-    margin-bottom: -475px;
+    margin-top: 180px;
+    margin-bottom: -675px;
     margin-left: 70px;
   }
-  
+
+  a#rectangle11.rectangleTo {
+    width: 200px;
+    height: 90px;
+    margin-top: 60px;
+    margin-left: 370px;
+  }
+
   .hoveredTo-1 {
-    background-image: url("../static/images/howto5mobile.svg") !important;
-  }
-  
-  .hoveredTo-2 {
-    background-image: url("../static/images/howto9mobile.svg") !important;
-  }
-  
-  .hoveredTo-3 {
-    background-image: url("../static/images/howto4mobile.svg") !important;
-  }
-  
-  .hoveredTo-4 {
-    background-image: url("../static/images/howto6mobile.svg") !important;
-  }
-  
-  .hoveredTo-5 {
-    background-image: url("../static/images/howto7mobile.svg") !important;
-  }
-  
-  .hoveredTo-6 {
     background-image: url("../static/images/howto10mobile.svg") !important;
   }
   
-  .hoveredTo-7 {
+  .hoveredTo-2 {
+    background-image: url("../static/images/howto5mobile.svg") !important;
+  }
+  
+  .hoveredTo-3 {
+    background-image: url("../static/images/howto6mobile.svg") !important;
+  }
+  
+  .hoveredTo-4 {
+    background-image: url("../static/images/howto7mobile.svg") !important;
+  }
+  
+  .hoveredTo-5 {
     background-image: url("../static/images/howto8mobile.svg") !important;
+  }
+  
+  .hoveredTo-6 {
+    background-image: url("../static/images/howto11mobile.svg") !important;
+  }
+  
+  .hoveredTo-7 {
+    background-image: url("../static/images/howto9mobile.svg") !important;
+  }
+  .hoveredTo-8 {
+    background-image: url("../static/images/howto4mobile.svg") !important;
   }
   
   /*--------------------------------------------------------------------How To End-----------------------------------------------------------------*/
@@ -3792,7 +3818,7 @@ footer .copyright img{
     overflow-x: scroll;
     overflow-y: hidden; /* prevent vertical scroll */
     width: 500px;
-    height: 750px; /* adjust this value as needed */
+    height: 840px; /* adjust this value as needed */
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* Internet Explorer and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -3804,6 +3830,32 @@ footer .copyright img{
     display: flex;
     height: 100%;
     padding: 0 50px;
+  }
+
+  #cardRectangle111{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 750px;
+    background-color: rgba(0, 0, 0, 0); /* Invisible background */
+    z-index: 1;
+    cursor: pointer; /* Set the cursor style to indicate clickable */
+    pointer-events: auto; /* Re-enable pointer events */
+  }
+  #cardRectangle111 a{
+    font-family: 'Nord';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 22px;
+    text-decoration: none;
+    background-color: #fe6f34;
+    color: white !important;
+    border-radius: 14px;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 20px 25px;
+  
   }
   
   .pricingCarousel__item {
@@ -3827,7 +3879,7 @@ footer .copyright img{
   
   img#pricing1Mobile.pricingCarousel__image{
     border-radius: 4%;
-    height: 570px;
+    height: 770px;
     margin-top: 60px;
   }
   #pricing2Mobile.pricingCarousel__image{
@@ -3839,7 +3891,7 @@ footer .copyright img{
   }
   
   img#pricing3Mobile.pricingCarousel__image{
-    height: 730px;
+    height: 810px;
     margin-top: 10px;
   }
 
@@ -3853,7 +3905,7 @@ footer .copyright img{
     z-index: 1;
     cursor: pointer; /* Set the cursor style to indicate clickable */
     pointer-events: auto; /* Re-enable pointer events */
-    transition: top 0.5s ease-in-out;
+    transition: top 0.1s ease-in-out;
   }
 
   #pricing h1{
@@ -3884,7 +3936,6 @@ footer .copyright img{
     height: 90px;
     background-color: transparent;
 }
-
 
 
   /*--------------------------------------------------------------------Pricing End-----------------------------------------------------------------*/

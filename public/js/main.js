@@ -247,7 +247,7 @@ const cardRectangle = document.getElementById("cardRectangle2");
 const cardHuge = document.querySelector(".card.huge");
 
 let originalImage = cardHuge.style.backgroundImage;
-let newImage = "url('static/images/card22test.svg')";
+let newImage = "url('static/images/card22.svg')";
 let isOriginalImage = true;
 
 cardRectangle.addEventListener("click", function () {
@@ -263,6 +263,29 @@ cardRectangle.addEventListener("click", function () {
 
   isOriginalImage = !isOriginalImage;
 });
+//Pricing Mobile
+const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
+const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
+const pricingCarouselImage22Mobile = document.getElementById("pricing22Mobile");
+const cardRectangle111 = document.getElementById("cardRectangle111");
+
+cardRectangleMobile.addEventListener("click", function () {
+  if (getComputedStyle(pricingCarouselImageMobile).opacity !== "0") {
+    pricingCarouselImageMobile.style.opacity = "0";
+    pricingCarouselImage22Mobile.style.opacity = "1";
+    cardRectangle111.style.display = "none";
+    cardRectangleMobile.style.top = "auto";
+    cardRectangleMobile.style.bottom = "0";
+  } else {
+    pricingCarouselImage22Mobile.style.opacity = "0";
+    pricingCarouselImageMobile.style.opacity = "1";
+    cardRectangle111.style.display = "block";
+    cardRectangleMobile.style.top = "0";
+    cardRectangleMobile.style.bottom = "auto";
+  }
+});
+
+//Pricing Mobile End
 
 //Price Animation END
 //Our Story Desktop
@@ -389,26 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-//Pricing Mobile
-const cardRectangleMobile = document.getElementById("cardRectangle2Mobile");
-const pricingCarouselImageMobile = document.getElementById("pricing2Mobile");
-const pricingCarouselImage22Mobile = document.getElementById("pricing22Mobile");
 
-cardRectangleMobile.addEventListener("click", function () {
-  if (getComputedStyle(pricingCarouselImageMobile).opacity !== "0") {
-    pricingCarouselImageMobile.style.opacity = "0";
-    pricingCarouselImage22Mobile.style.opacity = "1";
-    cardRectangleMobile.style.top = "auto";
-    cardRectangleMobile.style.bottom = "0";
-  } else {
-    pricingCarouselImage22Mobile.style.opacity = "0";
-    pricingCarouselImageMobile.style.opacity = "1";
-    cardRectangleMobile.style.top = "0";
-    cardRectangleMobile.style.bottom = "auto";
-  }
-});
-
-//Pricing Mobile End
 //Privacy Policy and more
 // Store the original state
 var originalMainContentDisplay =
