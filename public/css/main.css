@@ -3200,7 +3200,7 @@ footer .copyright img{
   .btn-container,
   .rules-block,
   .carousel-container,
-  .carousel-iamge,
+  .carousel-image,
   .desktop-logo{
     display: none;
   }
@@ -3347,24 +3347,27 @@ footer .copyright img{
   /*--------------------------------------------------------------------Video End-----------------------------------------------------------------*/
   /*--------------------------------------------------------------------How-----------------------------------------------------------------*/
   #howLine{
-    margin-top: 80px;
+    margin-top: 200px;
   }
   
-  #howContainer h1 {
+  h1#hdiwTitle {
     font-family: 'Nord';
     font-weight: 100;
-    font-size: 8vw;
-    margin-top: 0px;
+    font-size: 8vw !important;
     margin-bottom: 20px;
     color: #FFFFFF;
+    margin-top: 0px;
   }
-  #howContainer h2{
+  .biggerTitle{
+    font-size: 10vw;
+  }
+  h2#hdiwTitleSub{
     font-family: 'Prompt';
     font-weight: 100;
     line-height: 32px;
-    font-size: 5vw;
+    font-size: 5vw !important;
     margin-bottom: 0px;
-    width: 300px;
+    width: 400px !important;
     margin-top: 20px;
     color: #FFFFFF;
   }
@@ -3405,7 +3408,7 @@ footer .copyright img{
   }
   
   #rectangle1.rectangle {
-    top: 350px;
+    top: 270px;
     margin-left: -40px;
     width: 150px;
     height: 100px;
@@ -3414,14 +3417,14 @@ footer .copyright img{
   #rectangle2.rectangle{
     width: 130px;
     height: 100px;
-    left: 195px;
-    top: 620px;
+    left: 185px;
+    top: 470px;
   }
   #rectangle3.rectangle {
     width: 150px;
     height: 100px;
     margin-left: 120px;
-    top: 350px;
+    top: 270px;
     left: -130px;
 
   }
@@ -3628,7 +3631,7 @@ footer .copyright img{
   /*--------------------------------------------------------------------Story-----------------------------------------------------------------*/
   #mobileStory {
     position: relative;
-    width: 560px;
+    width: 570px;
     height: 1250px;
     display: block;
 }
@@ -3947,17 +3950,18 @@ footer .copyright img{
     margin-bottom: -45px;
   }
   
-  .ruleCarousel {
-    display: flex;
+  div.ruleCarousel {
+    display: block;
     justify-content: center;
     overflow-x: scroll;
     overflow-y: hidden; /* prevent vertical scroll */
     width: 100%;
-    height: 1100px; /* adjust this value as needed */
+    height: 1000px; /* adjust this value as needed */
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;  /* Internet Explorer and Edge */
     scrollbar-width: none;  /* Firefox */
     margin-bottom: 100px;
+    margin-left: 10px;
 }
 
 .ruleCarousel::-webkit-scrollbar { /* Chrome, Safari and Opera */
