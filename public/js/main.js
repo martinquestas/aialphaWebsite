@@ -120,26 +120,30 @@ function loadGallery() {
   let isMobile = window.innerWidth < 768;
 
   let mainView = document.getElementById("mainView");
-  let mainImgUrl = isMobile ? mobileImgObject[mainImg] : imgObject[mainImg];
-
-  let img = new Image();
-  img.src = mainImgUrl;
-  img.onload = function () {
-    mainView.style.backgroundImage = `url(${mainImgUrl})`;
-    mainView.style.backgroundSize = "cover";
-  };
-
   let leftView = document.getElementById("leftView");
-  leftView.style.background = `
-    url(${isMobile ? mobileImgObject[prevImg] : imgObject[prevImg]})
-    center center / cover`;
-
   let rightView = document.getElementById("rightView");
-  rightView.style.background = `
-    url(${isMobile ? mobileImgObject[nextImg] : imgObject[nextImg]})
-    center center / cover`;
+
+  mainView.style.transition = "none"; // Disable transition
+  leftView.style.transition = "none"; // Disable transition
+  rightView.style.transition = "none"; // Disable transition
+
+  mainView.style.backgroundImage = `url(${
+    isMobile ? mobileImgObject[mainImg] : imgObject[mainImg]
+  })`;
+  leftView.style.backgroundImage = `url(${
+    isMobile ? mobileImgObject[prevImg] : imgObject[prevImg]
+  })`;
+  rightView.style.backgroundImage = `url(${
+    isMobile ? mobileImgObject[nextImg] : imgObject[nextImg]
+  })`;
 
   setActiveDot(mainImg);
+
+  setTimeout(() => {
+    mainView.style.transition = ""; // Restore transition after setting background
+    leftView.style.transition = ""; // Restore transition after setting background
+    rightView.style.transition = ""; // Restore transition after setting background
+  }, 0);
 }
 
 dots.forEach((dot, index) => {
