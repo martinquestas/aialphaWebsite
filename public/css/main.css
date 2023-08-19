@@ -142,7 +142,9 @@ nav a:hover:after {
   transform: scaleX(1);
   transform-origin: left;
 }
-
+a#btn-signup.signup-button{
+  margin-left: 0;
+}
 .signup-button {
   font-family: 'Nord';
   font-style: normal;
@@ -3525,7 +3527,7 @@ footer .copyright img{
     background-color: #eb9100;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     overflow: hidden;
   }
   

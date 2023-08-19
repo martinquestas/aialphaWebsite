@@ -120,9 +120,14 @@ function loadGallery() {
   let isMobile = window.innerWidth < 768;
 
   let mainView = document.getElementById("mainView");
-  mainView.style.background = `
-    url(${isMobile ? mobileImgObject[mainImg] : imgObject[mainImg]})
-    center center / cover`;
+  let mainImgUrl = isMobile ? mobileImgObject[mainImg] : imgObject[mainImg];
+
+  let img = new Image();
+  img.src = mainImgUrl;
+  img.onload = function () {
+    mainView.style.backgroundImage = `url(${mainImgUrl})`;
+    mainView.style.backgroundSize = "cover";
+  };
 
   let leftView = document.getElementById("leftView");
   leftView.style.background = `
