@@ -117,19 +117,22 @@ let prevImg = imgObject.length - 1;
 let nextImg = 1;
 
 function loadGallery() {
-  let isMobile = window.innerWidth < 768; // Check if the window width is less than 768px (you can adjust this value according to your breakpoints)
+  let isMobile = window.innerWidth < 768;
 
   let mainView = document.getElementById("mainView");
-  mainView.style.background =
-    "url(" + (isMobile ? mobileImgObject[mainImg] : imgObject[mainImg]) + ")";
+  mainView.style.background = `
+    url(${isMobile ? mobileImgObject[mainImg] : imgObject[mainImg]})
+    center center / cover`;
 
   let leftView = document.getElementById("leftView");
-  leftView.style.background =
-    "url(" + (isMobile ? mobileImgObject[prevImg] : imgObject[prevImg]) + ")";
+  leftView.style.background = `
+    url(${isMobile ? mobileImgObject[prevImg] : imgObject[prevImg]})
+    center center / cover`;
 
   let rightView = document.getElementById("rightView");
-  rightView.style.background =
-    "url(" + (isMobile ? mobileImgObject[nextImg] : imgObject[nextImg]) + ")";
+  rightView.style.background = `
+    url(${isMobile ? mobileImgObject[nextImg] : imgObject[nextImg]})
+    center center / cover`;
 
   setActiveDot(mainImg);
 }
