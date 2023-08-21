@@ -52,15 +52,15 @@
       float: left;
     }
     .hovered-1 {
-      background-image: url("static/images/Frame18.svg");
+      background-image: url("../static/images/Frame18.svg");
     }
     
     .hovered-2 {
-      background-image: url("static/images/Frame19.svg");
+      background-image: url("../static/images/Frame19.svg");
     }
     
     .hovered-3 {
-      background-image: url("static/images/Frame20.svg");
+      background-image: url("../static/images/Frame20.svg");
     }
     
     
@@ -201,32 +201,36 @@
   margin-left: 200px;
 }
 
+
 .hoveredTo-1 {
-  background-image: url("../static/images/howto4.svg");
+  background-image: url("../static/images/howto4.svg") !important;
 }
 
 .hoveredTo-2 {
-  background-image: url("../static/images/howto5.svg");
+  background-image: url("../static/images/howto5.svg") !important;
 }
 
 .hoveredTo-3 {
-  background-image: url("../static/images/howto6.svg");
+  background-image: url("../static/images/howto6.svg") !important;
 }
 
 .hoveredTo-4 {
-  background-image: url("../static/images/howto7.svg");
+  background-image: url("../static/images/howto7.svg") !important;
 }
 
 .hoveredTo-5 {
-  background-image: url("../static/images/howto8.svg");
+  background-image: url("../static/images/howto8.svg") !important;
 }
 
 .hoveredTo-6 {
-  background-image: url("../static/images/howto9.svg");
+  background-image: url("../static/images/howto9.svg") !important;
 }
 
 .hoveredTo-7 {
-  background-image: url("../static/images/howto10.svg");
+  background-image: url("../static/images/howto10.svg") !important;
+}
+.hoveredTo-8 {
+  background-image: url("../static/images/howto11.svg") !important;
 }
 
 /*------------------------------------------------How to END------------------------------------------------------------------------------------*/
