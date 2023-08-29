@@ -233,6 +233,41 @@
   background-image: url("../static/images/howto11.svg") !important;
 }
 
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+  
+  .hoveredTo-1 {
+    background-image: url("../static/images/howto10mobile.svg") !important;
+  }
+  
+  .hoveredTo-2 {
+    background-image: url("../static/images/howto5mobile.svg") !important;
+  }
+  
+  .hoveredTo-3 {
+    background-image: url("../static/images/howto6mobile.svg") !important;
+  }
+  
+  .hoveredTo-4 {
+    background-image: url("../static/images/howto7mobile.svg") !important;
+  }
+  
+  .hoveredTo-5 {
+    background-image: url("../static/images/howto8mobile.svg") !important;
+  }
+  
+  .hoveredTo-6 {
+    background-image: url("../static/images/howto11mobile.svg") !important;
+  }
+  
+  .hoveredTo-7 {
+    background-image: url("../static/images/howto9mobile.svg") !important;
+  }
+  .hoveredTo-8 {
+    background-image: url("../static/images/howto4mobile.svg") !important;
+  }
+  
+}
 /*------------------------------------------------How to END------------------------------------------------------------------------------------*/
 /*------------------------------------------------Pricing------------------------------------------------------------------------------------*/
 

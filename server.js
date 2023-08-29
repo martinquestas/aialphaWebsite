@@ -19,6 +19,16 @@ const auth0 = new ManagementClient({
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Middleware para redireccionar www a non-www
+app.use((req, res, next) => {
+  if (req.headers.host.startsWith("www.")) {
+    res.redirect(301, "https://" + req.headers.host.slice(4) + req.url);
+  } else {
+    next();
+  }
+});
+
 // Serve static assets from the /public folder
 app.use(express.static("public"));
 app.use("/static", express.static("static"));
